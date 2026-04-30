@@ -272,7 +272,25 @@ section { padding: 80px 40px; }
 
 /* ─── FAQ ─── */
 .faq-section { background:var(--bg2); }
-.faq-list { margin-top:48px; max-width:800px; display:flex; flex-direction:column; gap:12px; }
+.faq-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 200px;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 48px;
+}
+.faq-img-left, .faq-img-right {
+  display: flex;
+  align-items: stretch;
+}
+.faq-img-left img, .faq-img-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+.faq-list { display:flex; flex-direction:column; gap:12px; }
 .faq-item {
   background:var(--card); border:1px solid var(--border);
   border-radius:12px; overflow:hidden;
@@ -560,26 +578,34 @@ footer {
   <div class="section-inner">
     <div class="section-tag">FAQ</div>
     <h2 class="section-title">Часто задаваемые вопросы</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">В каких странах работает Bybit Card? <span class="arrow">▼</span></div>
-        <div class="faq-a">Bybit Card работает в 160+ странах, где принимают Visa. Карта доступна для резидентов Европы, Азии и других регионов. Россия — уточняйте на сайте Bybit.</div>
+    <div class="faq-layout">
+      <div class="faq-img-left">
+        <img src="images/faq.webp" alt="FAQ" />
       </div>
-      <div class="faq-item">
-        <div class="faq-q">Какие монеты можно тратить? <span class="arrow">▼</span></div>
-        <div class="faq-a">USDT, BTC, ETH, BGB, USDC и другие основные активы. Конвертация в момент оплаты по рыночному курсу.</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">В каких странах работает Bybit Card? <span class="arrow">▼</span></div>
+          <div class="faq-a">Bybit Card работает в 160+ странах, где принимают Visa. Карта доступна для резидентов Европы, Азии и других регионов. Россия — уточняйте на сайте Bybit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Какие монеты можно тратить? <span class="arrow">▼</span></div>
+          <div class="faq-a">USDT, BTC, ETH, BGB, USDC и другие основные активы. Конвертация в момент оплаты по рыночному курсу.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Есть ли комиссия за снятие наличных? <span class="arrow">▼</span></div>
+          <div class="faq-a">Первые 2 снятия в месяц бесплатны. Далее — небольшая комиссия в зависимости от тарифного плана.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Безопасна ли карта? <span class="arrow">▼</span></div>
+          <div class="faq-a">Да. Bybit использует двухфакторную аутентификацию, биометрию, мгновенную блокировку и лимиты безопасности. Средства хранятся на защищённых счетах.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Как долго ждать физическую карту? <span class="arrow">▼</span></div>
+          <div class="faq-a">Виртуальная — мгновенно. Физическая карта доставляется 7–14 рабочих дней в зависимости от страны.</div>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">Есть ли комиссия за снятие наличных? <span class="arrow">▼</span></div>
-        <div class="faq-a">Первые 2 снятия в месяц бесплатны. Далее — небольшая комиссия в зависимости от тарифного плана.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Безопасна ли карта? <span class="arrow">▼</span></div>
-        <div class="faq-a">Да. Bybit использует двухфакторную аутентификацию, биометрию, мгновенную блокировку и лимиты безопасности. Средства хранятся на защищённых счетах.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Как долго ждать физическую карту? <span class="arrow">▼</span></div>
-        <div class="faq-a">Виртуальная — мгновенно. Физическая карта доставляется 7–14 рабочих дней в зависимости от страны.</div>
+      <div class="faq-img-right">
+        <img src="images/security.webp" alt="Security" />
       </div>
     </div>
   </div>
