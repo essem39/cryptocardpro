@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Приложение Bybit — скачать на iPhone и Android</title>
+<meta name="description" content="Скачайте приложение Bybit для iOS и Android. Торговля, криптовалютная карта, переводы — всё в одном приложении.">
+<link rel="canonical" href="https://cryptocardpro.com/prilozhenie/">
+<meta property="og:title" content="Приложение Bybit — скачать на iPhone и Android">
+<meta property="og:description" content="Скачайте приложение Bybit для iOS и Android. Торговля, криптовалютная карта, переводы — всё в одном приложении.">
+<meta property="og:url" content="https://cryptocardpro.com/prilozhenie/">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
+  --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
+  --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
+  --card:#161B26;--green:#0ECB81;--red:#F6465D;
+  --radius:12px;--max:1200px;
+}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+.accent{color:var(--yellow);}
+
+/* NAV DESKTOP */
+nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
+.nav-logo span{color:var(--yellow);}
+.nav-logo svg{width:32px;height:32px;}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
+.nav-links a{padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3);}
+.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700;border-radius:8px;padding:8px 16px;font-size:.82rem;white-space:nowrap;flex-shrink:0;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+
+/* DROPDOWN */
+.nav-more{position:relative;}
+.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
+.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);}
+.nav-more:hover .nav-dropdown{display:flex;flex-direction:column;}
+.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
+.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
+
+/* BURGER */
+.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
+
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
+.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
+.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
+
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .nav-burger{display:flex;align-items:center;justify-content:center;}
+}
+
+/* SECTIONS */
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;}
+.section-sm{padding:48px 0;}
+.section-title{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.section-sub{color:var(--text2);font-size:1.05rem;margin-bottom:48px;max-width:600px;}
+
+/* HERO */
+.hero{padding:100px 0 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(247,166,0,.08) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);border-radius:100px;padding:6px 16px;font-size:.82rem;color:var(--yellow);margin-bottom:24px;}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+.hero p{font-size:1.1rem;color:var(--text2);margin-bottom:36px;max-width:560px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .2s;border:none;font-family:'Sora',sans-serif;text-decoration:none;}
+.btn-primary{background:var(--yellow);color:#0C0E12;}
+.btn-primary:hover{background:var(--yellow2);transform:translateY(-1px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{border-color:var(--yellow);}
+.btn-group{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
+.card:hover{border-color:rgba(247,166,0,.3);}
+.card-icon{font-size:2rem;margin-bottom:16px;}
+.card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
+.card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:32px;}
+table{width:100%;border-collapse:collapse;}
+th{background:var(--bg3);padding:14px 20px;text-align:left;font-size:.85rem;color:var(--text2);border-bottom:1px solid var(--border);}
+td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:.9rem;}
+tr:last-child td{border-bottom:none;}
+.tag-green{color:var(--green);font-weight:600;}
+.tag-yellow{color:var(--yellow);font-weight:600;}
+
+/* FAQ */
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.faq-q{padding:20px 24px;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;align-items:center;background:var(--card);user-select:none;}
+.faq-q:hover{background:var(--bg3);}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;color:var(--text2);font-size:.92rem;}
+.faq-item.open .faq-a{padding:16px 24px 20px;max-height:500px;}
+.faq-arrow{transition:transform .3s;color:var(--yellow);}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+
+/* CTA BLOCK */
+.cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
+.cta-block h2{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.cta-block p{color:var(--text2);margin-bottom:32px;font-size:1.05rem;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 32px;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;}
+.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;}
+.footer-logo span{color:var(--yellow);}
+.footer-logo svg{width:28px;height:28px;}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;}
+.footer-links a{color:var(--text2);font-size:.88rem;transition:color .2s;}
+.footer-links a:hover{color:var(--yellow);}
+.footer-copy{color:var(--text2);font-size:.8rem;line-height:1.6;max-width:600px;}
+
+@media(max-width:600px){
+  .hero{padding:60px 0 48px;}
+  .section{padding:48px 0;}
+  .cta-block{padding:40px 24px;}
+  .btn{padding:12px 20px;font-size:.9rem;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">
+    <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+    Crypto<span>Card</span>Pro
+  </a>
+  <div class="nav-links">
+    <a href="/">Главная</a>
+    <a href="/kak-poluchit/">Как получить</a>
+    <a href="/keshbek/">Кешбэк</a>
+    <a href="/kupit-kriptu/">Купить крипту</a>
+    <a href="/birzha/">Биржа Bybit</a>
+    <a href="/bonusy/">Бонусный центр</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Блог</a>
+    <div class="nav-more">
+      <button class="nav-more-btn">Ещё ▾</button>
+      <div class="nav-dropdown">
+        <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
+      <a href="/o-birzhe/">🏦 О бирже</a>
+      <a href="/instrumenty/">🔧 Инструменты</a>
+      <a href="/konverter/">📊 Конвертер крипты</a>
+      <a href="/bezopasnost/">🔐 Безопасность</a>
+      <a href="/prilozhenie/" class="active">📱 Приложение Bybit</a>
+      <a href="/o-nas/">🌐 О нас</a>
+      
+      </div>
+    </div>
+  </div>
+  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta">Получить карту →</a>
+  <button class="nav-burger">☰</button>
+</nav>
+<div class="mobile-menu">
+  <a href="/">Главная</a>
+  <a href="/kak-poluchit/">Как получить</a>
+  <a href="/keshbek/">Кешбэк</a>
+  <a href="/kupit-kriptu/">Купить крипту</a>
+  <a href="/birzha/">Биржа Bybit</a>
+  <a href="/bonusy/">Бонусный центр</a>
+  <a href="/faq/">FAQ</a>
+  <a href="/blog/">Блог</a>
+  <span class="mobile-section">Ещё</span>
+  <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
+  <a href="/o-birzhe/">🏦 О бирже</a>
+  <a href="/instrumenty/">🔧 Инструменты</a>
+  <a href="/konverter/">📊 Конвертер крипты</a>
+  <a href="/bezopasnost/">🔐 Безопасность</a>
+  <a href="/prilozhenie/" class="active">📱 Приложение Bybit</a>
+  <a href="/o-nas/">🌐 О нас</a>
+  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
+  
+</div>
+
+<section class="hero">
+<div class="container">
+  <div class="hero-badge">📱 Мобильное приложение</div>
+  <h1>Приложение <span class="accent">Bybit</span></h1>
+  <p>Управляйте криптовалютой и картой прямо со смартфона. iOS и Android.</p>
+  <div class="btn-group">
+    <a href="https://www.bybit.com/en/landing/app-download" target="_blank" rel="noopener" class="btn btn-primary">Скачать приложение →</a>
+    <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">Получить карту</a>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="cards">
+    <div class="card"><div class="card-icon">💳</div><h3>Управление картой</h3><p>Проверяйте баланс, историю транзакций, управляйте лимитами и мгновенно блокируйте карту при необходимости.</p></div>
+    <div class="card"><div class="card-icon">📊</div><h3>Торговля</h3><p>Полнофункциональный торговый терминал в кармане. Графики, ордера, история — всё доступно с телефона.</p></div>
+    <div class="card"><div class="card-icon">💸</div><h3>Переводы</h3><p>Отправляйте и получайте криптовалюту мгновенно. Внутренние переводы между пользователями Bybit — бесплатно.</p></div>
+    <div class="card"><div class="card-icon">🔔</div><h3>Push-уведомления</h3><p>Мгновенные уведомления о транзакциях, движении цены и важных событиях на рынке.</p></div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Скачайте приложение Bybit</h2>
+    <p>Доступно для iPhone и Android. Более 50 миллионов загрузок.</p>
+    <a href="https://www.bybit.com/en/landing/app-download" target="_blank" rel="noopener" class="btn btn-primary">Скачать бесплатно →</a>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Crypto<span>Card</span>Pro
+    </div>
+    <div class="footer-links">
+      <a href="/kak-poluchit/">Как получить</a>
+      <a href="/keshbek/">Кешбэк</a>
+      <a href="/birzha/">Биржа</a>
+      <a href="/bonusy/">Бонусы</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/blog/">Блог</a>
+      <a href="/o-nas/">О нас</a>
+    </div>
+    <p class="footer-copy">© 2025 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
+  </div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const burger=document.querySelector('.nav-burger');
+  const mobile=document.querySelector('.mobile-menu');
+  if(burger&&mobile){
+    burger.addEventListener('click',function(){
+      mobile.classList.toggle('open');
+      burger.textContent=mobile.classList.contains('open')?'✕':'☰';
+    });
+  }
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      this.closest('.faq-item').classList.toggle('open');
+    });
+  });
+});
+</script>
+</body>
+</html>
