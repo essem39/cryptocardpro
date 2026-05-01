@@ -79,31 +79,43 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .btn-secondary:hover{border-color:var(--yellow);}
 .btn-group{display:flex;gap:12px;flex-wrap:wrap;}
 
+/* CHESS BLOCKS */
+.chess-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px;}
+.chess-block:last-child{margin-bottom:0;}
+.chess-block.reverse .chess-text{order:2;}
+.chess-block.reverse .chess-image{order:1;}
+.chess-text h2{font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.chess-text p{color:var(--text2);margin-bottom:16px;font-size:1rem;line-height:1.7;}
+.chess-text ul{list-style:none;margin:20px 0;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--yellow);font-weight:700;}
+.chess-image{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+.chess-image img{width:100%;height:100%;object-fit:cover;}
+.chess-image-placeholder{color:var(--text2);font-size:.9rem;text-align:center;padding:40px;}
+.chess-image-placeholder::before{content:'🖼️';display:block;font-size:3rem;margin-bottom:12px;opacity:.5;}
+@media(max-width:900px){
+  .chess-block{grid-template-columns:1fr;gap:40px;margin-bottom:60px;}
+  .chess-block.reverse .chess-text{order:1;}
+  .chess-block.reverse .chess-image{order:2;}
+}
+
+/* STATS */
+.stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 24px;}
+.stats-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center;}
+.stat-value{font-size:2.2rem;font-weight:800;color:var(--yellow);margin-bottom:8px;}
+.stat-label{color:var(--text2);font-size:.9rem;}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px;}}
+@media(max-width:480px){.stats-grid{grid-template-columns:1fr;}}
+
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
 .card:hover{border-color:rgba(247,166,0,.3);}
 .card-icon{font-size:2rem;margin-bottom:16px;}
 .card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
 .card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
-
-/* TABLE */
-.table-wrap{overflow-x:auto;margin-top:32px;}
-table{width:100%;border-collapse:collapse;}
-th{background:var(--bg3);padding:14px 20px;text-align:left;font-size:.85rem;color:var(--text2);border-bottom:1px solid var(--border);}
-td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:.9rem;}
-tr:last-child td{border-bottom:none;}
-.tag-green{color:var(--green);font-weight:600;}
-.tag-yellow{color:var(--yellow);font-weight:600;}
-
-/* FAQ */
-.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
-.faq-q{padding:20px 24px;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;align-items:center;background:var(--card);user-select:none;}
-.faq-q:hover{background:var(--bg3);}
-.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;color:var(--text2);font-size:.92rem;}
-.faq-item.open .faq-a{padding:16px 24px 20px;max-height:500px;}
-.faq-arrow{transition:transform .3s;color:var(--yellow);}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
 
 /* CTA BLOCK */
 .cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
@@ -138,7 +150,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <div class="nav-links">
     <a href="/">Главная</a>
     <a href="/kak-poluchit/">Как получить</a>
-    <a href="/keshbek/">Кешбэк</a>
+    <a href="/keshbek/">Кешбёк</a>
     <a href="/kupit-kriptu/">Купить крипту</a>
     <a href="/birzha/">Биржа Bybit</a>
     <a href="/bonusy/">Бонусный центр</a>
@@ -148,13 +160,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
       <button class="nav-more-btn">Ещё ▾</button>
       <div class="nav-dropdown">
         <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-      <a href="/o-birzhe/" class="active">🏦 О бирже</a>
-      <a href="/instrumenty/">🔧 Инструменты</a>
-      <a href="/konverter/">📊 Конвертер крипты</a>
-      <a href="/bezopasnost/">🔐 Безопасность</a>
-      <a href="/prilozhenie/">📱 Приложение Bybit</a>
-      <a href="/o-nas/">🌐 О нас</a>
-      
+        <a href="/o-birzhe/" class="active">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/">📱 Приложение Bybit</a>
+        <a href="/o-nas/">🌐 О нас</a>
       </div>
     </div>
   </div>
@@ -164,7 +175,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 <div class="mobile-menu">
   <a href="/">Главная</a>
   <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
+  <a href="/keshbek/">Кешбёк</a>
   <a href="/kupit-kriptu/">Купить крипту</a>
   <a href="/birzha/">Биржа Bybit</a>
   <a href="/bonusy/">Бонусный центр</a>
@@ -179,9 +190,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <a href="/prilozhenie/">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
 </div>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
   <div class="hero-badge">🏦 Обзор биржи</div>
@@ -194,16 +205,135 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 </div>
 </section>
 
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-value">2018</div>
+      <div class="stat-label">Год основания</div>
+    </div>
+    <div>
+      <div class="stat-value">70M+</div>
+      <div class="stat-label">Пользователей</div>
+    </div>
+    <div>
+      <div class="stat-value">160+</div>
+      <div class="stat-label">Стран мира</div>
+    </div>
+    <div>
+      <div class="stat-value">#2</div>
+      <div class="stat-label">В мире по объёму</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHESS BLOCKS -->
 <section class="section">
 <div class="container">
-  <h2 class="section-title">Факты о Bybit</h2>
-  <div class="cards">
-    <div class="card"><div class="card-icon">📅</div><h3>Основана в 2018 году</h3><p>Bybit была основана в Дубае. За 6 лет стала второй крупнейшей криптобиржей мира по объёму торгов.</p></div>
-    <div class="card"><div class="card-icon">👥</div><h3>70 миллионов пользователей</h3><p>Более 70 миллионов зарегистрированных пользователей в 160+ странах мира. Ежедневный объём торгов — миллиарды долларов.</p></div>
-    <div class="card"><div class="card-icon">🔐</div><h3>Безопасность</h3><p>95%+ средств хранятся в холодных кошельках. Двухфакторная аутентификация, антифишинг-код, мониторинг транзакций 24/7.</p></div>
-    <div class="card"><div class="card-icon">🌐</div><h3>160+ стран</h3><p>Bybit работает в большинстве стран мира. Поддержка 20+ языков, включая русский. Круглосуточная техподдержка.</p></div>
+
+  <!-- Block 1: Text left, Image right -->
+  <div class="chess-block">
+    <div class="chess-text">
+      <h2>История и <span class="accent">основатели</span></h2>
+      <p>Bybit была основана в 2018 году в Дубае Беном Чжоу — бывшим трейдером из Morgan Stanley. За 6 лет биржа выросла из стартапа во вторую крупнейшую криптобиржу мира.</p>
+      <p>Главный офис расположен в Дубайском международном финансовом центре (DIFC). Bybit имеет лицензии в Европе, Азии и на Ближнем Востоке.</p>
+      <ul>
+        <li>Основана в 2018 году в Дубае</li>
+        <li>Основатель — Бен Чжоу, ex-Morgan Stanley</li>
+        <li>Главный офис в DIFC, Дубай</li>
+        <li>Лицензии в ЕС, Азии и на Ближнем Востоке</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: офис Bybit в Дубае]</div>
+    </div>
   </div>
 
+  <!-- Block 2: Image left, Text right -->
+  <div class="chess-block reverse">
+    <div class="chess-text">
+      <h2>Продукты и <span class="accent">возможности</span></h2>
+      <p>Bybit предлагает полный спектр инструментов для работы с криптовалютой — от простой покупки до профессиональной маржинальной торговли.</p>
+      <p>Спотовая торговля, фьючерсы с плечом до 100x, копи-трейдинг, торговые боты, стейкинг и криптовалютная карта — всё в одном приложении.</p>
+      <ul>
+        <li>Спот и фьючерсы (плечо до 100x)</li>
+        <li>Копи-трейдинг топовых трейдеров</li>
+        <li>Торговые боты 24/7</li>
+        <li>Bybit Earn — до 10% годовых</li>
+        <li>Криптовалютная карта Mastercard</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: торговый интерфейс Bybit]</div>
+    </div>
+  </div>
+
+  <!-- Block 3: Text left, Image right -->
+  <div class="chess-block">
+    <div class="chess-text">
+      <h2>Безопасность и <span class="accent">надёжность</span></h2>
+      <p>95% пользовательских средств хранятся в холодных кошельках, изолированных от интернета. Двухфакторная аутентификация, антифишинг-код и мониторинг транзакций 24/7.</p>
+      <p>Bybit имеет страховой фонд для защиты пользователей от непредвиденных ситуаций. Система регулярно проходит аудиты безопасности ведущими компаниями.</p>
+      <ul>
+        <li>95%+ в холодных кошельках</li>
+        <li>2FA и антифишинг-защита</li>
+        <li>Мониторинг 24/7</li>
+        <li>Страховой фонд пользователей</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: система безопасности]</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- PRODUCTS CARDS -->
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h2 class="section-title">Продукты <span class="accent">Bybit</span></h2>
+    <p class="section-sub">Всё для работы с криптовалютой в одном месте</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Спот и фьючерсы</h3>
+      <p>Торгуйте 500+ криптовалютами. Фьючерсы с кредитным плечом до 100x для опытных трейдеров.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>Торговые боты</h3>
+      <p>Автоматизируйте стратегии спотовой и фьючерсной торговли. Работают круглосуточно без вашего участия.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">👥</div>
+      <h3>Копи-трейдинг</h3>
+      <p>Копируйте сделки успешных трейдеров в один клик. Настраивайте лимиты и следите за статистикой.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <h3>Bybit Earn</h3>
+      <p>Зарабатывайте до 10% годовых на стейкинге и сберегательных продуктах. Гибкие и фиксированные ставки.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💳</div>
+      <h3>Bybit Card</h3>
+      <p>Криптовалютная карта Mastercard. Платите криптой везде, где принимают карты. Кешбэк до 10%.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>P2P торговля</h3>
+      <p>Покупайте и продавайте криптовалюту напрямую у других пользователей. 100+ способов оплаты.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+<div class="container">
   <div class="cta-block">
     <h2>Присоединитесь к 70 миллионам</h2>
     <p>Откройте счёт на Bybit и получите карту для оплаты криптой в реальном мире.</p>
@@ -215,6 +345,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
@@ -223,7 +354,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
     </div>
     <div class="footer-links">
       <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
+      <a href="/keshbek/">Кешбёк</a>
       <a href="/birzha/">Биржа</a>
       <a href="/bonusy/">Бонусы</a>
       <a href="/faq/">FAQ</a>
@@ -243,11 +374,6 @@ document.addEventListener('DOMContentLoaded',function(){
       burger.textContent=mobile.classList.contains('open')?'✕':'☰';
     });
   }
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      this.closest('.faq-item').classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>
