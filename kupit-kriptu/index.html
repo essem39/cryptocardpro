@@ -79,13 +79,35 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .btn-secondary:hover{border-color:var(--yellow);}
 .btn-group{display:flex;gap:12px;flex-wrap:wrap;}
 
+/* CHESS BLOCKS */
+.chess-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px;}
+.chess-block:last-child{margin-bottom:0;}
+.chess-block.reverse .chess-text{order:2;}
+.chess-block.reverse .chess-image{order:1;}
+.chess-text h2{font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.chess-text p{color:var(--text2);margin-bottom:16px;font-size:1rem;line-height:1.7;}
+.chess-text ul{list-style:none;margin:20px 0;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--yellow);font-weight:700;}
+.chess-image{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+.chess-image img{width:100%;height:100%;object-fit:cover;}
+.chess-image-placeholder{color:var(--text2);font-size:.9rem;text-align:center;padding:40px;}
+.chess-image-placeholder::before{content:'🖼️';display:block;font-size:3rem;margin-bottom:12px;opacity:.5;}
+@media(max-width:900px){
+  .chess-block{grid-template-columns:1fr;gap:40px;margin-bottom:60px;}
+  .chess-block.reverse .chess-text{order:1;}
+  .chess-block.reverse .chess-image{order:2;}
+}
+
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
 .card:hover{border-color:rgba(247,166,0,.3);}
 .card-icon{font-size:2rem;margin-bottom:16px;}
 .card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
 .card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
 
 /* TABLE */
 .table-wrap{overflow-x:auto;margin-top:32px;}
@@ -95,15 +117,6 @@ td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:.9rem;}
 tr:last-child td{border-bottom:none;}
 .tag-green{color:var(--green);font-weight:600;}
 .tag-yellow{color:var(--yellow);font-weight:600;}
-
-/* FAQ */
-.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
-.faq-q{padding:20px 24px;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;align-items:center;background:var(--card);user-select:none;}
-.faq-q:hover{background:var(--bg3);}
-.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;color:var(--text2);font-size:.92rem;}
-.faq-item.open .faq-a{padding:16px 24px 20px;max-height:500px;}
-.faq-arrow{transition:transform .3s;color:var(--yellow);}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
 
 /* CTA BLOCK */
 .cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
@@ -138,7 +151,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <div class="nav-links">
     <a href="/">Главная</a>
     <a href="/kak-poluchit/">Как получить</a>
-    <a href="/keshbek/">Кешбэк</a>
+    <a href="/keshbek/">Кешбёк</a>
     <a href="/kupit-kriptu/" class="active">Купить крипту</a>
     <a href="/birzha/">Биржа Bybit</a>
     <a href="/bonusy/">Бонусный центр</a>
@@ -148,13 +161,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
       <button class="nav-more-btn">Ещё ▾</button>
       <div class="nav-dropdown">
         <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-      <a href="/o-birzhe/">🏦 О бирже</a>
-      <a href="/instrumenty/">🔧 Инструменты</a>
-      <a href="/konverter/">📊 Конвертер крипты</a>
-      <a href="/bezopasnost/">🔐 Безопасность</a>
-      <a href="/prilozhenie/">📱 Приложение Bybit</a>
-      <a href="/o-nas/">🌐 О нас</a>
-      
+        <a href="/o-birzhe/">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/">📱 Приложение Bybit</a>
+        <a href="/o-nas/">🌐 О нас</a>
       </div>
     </div>
   </div>
@@ -164,7 +176,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 <div class="mobile-menu">
   <a href="/">Главная</a>
   <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
+  <a href="/keshbek/">Кешбёк</a>
   <a href="/kupit-kriptu/" class="active">Купить крипту</a>
   <a href="/birzha/">Биржа Bybit</a>
   <a href="/bonusy/">Бонусный центр</a>
@@ -179,9 +191,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <a href="/prilozhenie/">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
 </div>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
   <div class="hero-badge">🛒 Покупка криптовалюты</div>
@@ -194,24 +206,174 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 </div>
 </section>
 
+<!-- CHESS BLOCKS -->
 <section class="section">
 <div class="container">
-  <h2 class="section-title">Способы покупки</h2>
-  <div class="cards">
-    <div class="card"><div class="card-icon">💳</div><h3>Банковская карта</h3><p>Купите криптовалюту прямо с банковской карты Visa или Mastercard. Мгновенное зачисление на счёт Bybit.</p></div>
-    <div class="card"><div class="card-icon">🤝</div><h3>P2P торговля</h3><p>Покупайте у других пользователей по выгодному курсу. Сотни объявлений, рублёвые переводы, без комиссии.</p></div>
-    <div class="card"><div class="card-icon">🏦</div><h3>Банковский перевод</h3><p>Пополните счёт банковским переводом. Подходит для крупных сумм, минимальная комиссия.</p></div>
-    <div class="card"><div class="card-icon">⚡</div><h3>One-Click Buy</h3><p>Покупка в один клик по рыночному курсу. Самый быстрый способ — идеально для новичков.</p></div>
+
+  <!-- Block 1: Text left, Image right -->
+  <div class="chess-block">
+    <div class="chess-text">
+      <h2>Покупка через <span class="accent">банковскую карту</span></h2>
+      <p>Самый простой способ купить криптовалюту — напрямую с банковской карты Visa или Mastercard. Деньги зачисляются мгновенно, а крипта сразу появляется на вашем счёту Bybit.</p>
+      <p>Поддерживаются карты российских и зарубежных банков. Комиссия от 1% до 3% в зависимости от способа оплаты.</p>
+      <ul>
+        <li>Visa и Mastercard</li>
+        <li>Мгновенное зачисление</li>
+        <li>Минимальная сумма от $10</li>
+        <li>Комиссия 1–3%</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: оплата картой]</div>
+    </div>
   </div>
 
-  <div class="cta-block">
-    <h2>Купите первую криптовалюту сегодня</h2>
-    <p>Зарегистрируйтесь на Bybit и получите бонусы до 30,000 USDT для новых пользователей.</p>
-    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Зарегистрироваться на Bybit →</a>
+  <!-- Block 2: Image left, Text right -->
+  <div class="chess-block reverse">
+    <div class="chess-text">
+      <h2>P2P торговля — <span class="accent">выгодный курс</span></h2>
+      <p>Покупайте криптовалюту напрямую у других пользователей по курсу, который вы сами выбираете. Сотни объявлений в рублях, долларах и евро.</p>
+      <p>Bybit выступает гарантом сделки — крипта блокируется на escrow-счёте до подтверждения оплаты. Безопасно и без комиссии.</p>
+      <ul>
+        <li>Без комиссии платформы</li>
+        <li>100+ способов оплаты</li>
+        <li>Escrow-защита сделок</li>
+        <li>Рублёвые переводы СБП</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: P2P торговля]</div>
+    </div>
+  </div>
+
+  <!-- Block 3: Text left, Image right -->
+  <div class="chess-block">
+    <div class="chess-text">
+      <h2>One-Click Buy — <span class="accent">в один клик</span></h2>
+      <p>Идеально для новичков. Выберите монету, сумму и способ оплаты — Bybit автоматически подберёт лучшее предложение по рыночному курсу.</p>
+      <p>Не нужно разбираться в ордерах и графиках. Покупка занимает меньше минуты, а крипта сразу доступна для вывода или оплаты картой.</p>
+      <ul>
+        <li>Покупка за 30 секунд</li>
+        <li>Лучший рыночный курс</li>
+        <li>Без сложных настроек</li>
+        <li>Идеально для начинающих</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: покупка в один клик]</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- METHODS CARDS -->
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h2 class="section-title">Все способы <span class="accent">покупки</span></h2>
+    <p class="section-sub">Выберите подходящий способ пополнения счёта</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">💳</div>
+      <h3>Банковская карта</h3>
+      <p>Visa/Mastercard. Мгновенное зачисление, комиссия 1–3%. Минимум от $10.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <h3>P2P торговля</h3>
+      <p>Покупка у пользователей. Без комиссии, 100+ способов оплаты, escrow-защита.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏦</div>
+      <h3>Банковский перевод</h3>
+      <p>SWIFT, SEPA для крупных сумм. Минимальная комиссия, зачисление 1–3 дня.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>One-Click Buy</h3>
+      <p>Покупка в один клик по рыночному курсу. Самый быстрый способ для новичков.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>Крипто-обмен</h3>
+      <p>Обмен одной криптовалюты на другую внутри Bybit. Мгновенно, низкая комиссия.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎁</div>
+      <h3>Бонусы за пополнение</h3>
+      <p>Получите бонусы до 30,000 USDT при первом пополнении счёта.</p>
+    </div>
   </div>
 </div>
 </section>
 
+<!-- COMPARISON TABLE -->
+<section class="section">
+<div class="container">
+  <h2 class="section-title" style="text-align:center;margin-bottom:48px;">Сравнение <span class="accent">способов</span></h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Способ</th>
+          <th>Скорость</th>
+          <th>Комиссия</th>
+          <th>Минимум</th>
+          <th>Лучше для</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Банковская карта</strong></td>
+          <td>Мгновенно</td>
+          <td class="tag-yellow">1–3%</td>
+          <td>$10</td>
+          <td>Новички, малые суммы</td>
+        </tr>
+        <tr>
+          <td><strong>P2P торговля</strong></td>
+          <td>5–30 мин</td>
+          <td class="tag-green">0%</td>
+          <td>$1</td>
+          <td>Выгодный курс, рубли</td>
+        </tr>
+        <tr>
+          <td><strong>Банковский перевод</strong></td>
+          <td>1–3 дня</td>
+          <td class="tag-green">0.1%</td>
+          <td>$100</td>
+          <td>Крупные суммы</td>
+        </tr>
+        <tr>
+          <td><strong>One-Click Buy</strong></td>
+          <td>30 секунд</td>
+          <td class="tag-yellow">1.5%</td>
+          <td>$5</td>
+          <td>Скорость и удобство</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div class="cta-block">
+    <h2>Купите первую криптовалюту сегодня</h2>
+    <p>Зарегистрируйтесь на Bybit и получите бонусы до 30,000 USDT для новых пользователей.</p>
+    <div class="btn-group" style="justify-content:center">
+      <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Зарегистрироваться на Bybit →</a>
+      <a href="https://www.bybit.com/ru-RU/p2p/buy/USDT/EUR?affiliate_id=158844&group_id=1850032&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">P2P торговля</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
@@ -220,7 +382,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
     </div>
     <div class="footer-links">
       <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
+      <a href="/keshbek/">Кешбёк</a>
       <a href="/birzha/">Биржа</a>
       <a href="/bonusy/">Бонусы</a>
       <a href="/faq/">FAQ</a>
@@ -240,11 +402,6 @@ document.addEventListener('DOMContentLoaded',function(){
       burger.textContent=mobile.classList.contains('open')?'✕':'☰';
     });
   }
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      this.closest('.faq-item').classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>
