@@ -79,13 +79,35 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .btn-secondary:hover{border-color:var(--yellow);}
 .btn-group{display:flex;gap:12px;flex-wrap:wrap;}
 
+/* CHESS BLOCKS */
+.chess-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px;}
+.chess-block:last-child{margin-bottom:0;}
+.chess-block.reverse .chess-text{order:2;}
+.chess-block.reverse .chess-image{order:1;}
+.chess-text h2{font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.chess-text p{color:var(--text2);margin-bottom:16px;font-size:1rem;line-height:1.7;}
+.chess-text ul{list-style:none;margin:20px 0;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--yellow);font-weight:700;}
+.chess-image{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+.chess-image img{width:100%;height:100%;object-fit:cover;}
+.chess-image-placeholder{color:var(--text2);font-size:.9rem;text-align:center;padding:40px;}
+.chess-image-placeholder::before{content:'🖼️';display:block;font-size:3rem;margin-bottom:12px;opacity:.5;}
+@media(max-width:900px){
+  .chess-block{grid-template-columns:1fr;gap:40px;margin-bottom:60px;}
+  .chess-block.reverse .chess-text{order:1;}
+  .chess-block.reverse .chess-image{order:2;}
+}
+
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
 .card:hover{border-color:rgba(247,166,0,.3);}
 .card-icon{font-size:2rem;margin-bottom:16px;}
 .card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
 .card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
 
 /* TABLE */
 .table-wrap{overflow-x:auto;margin-top:32px;}
@@ -95,15 +117,6 @@ td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:.9rem;}
 tr:last-child td{border-bottom:none;}
 .tag-green{color:var(--green);font-weight:600;}
 .tag-yellow{color:var(--yellow);font-weight:600;}
-
-/* FAQ */
-.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
-.faq-q{padding:20px 24px;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;align-items:center;background:var(--card);user-select:none;}
-.faq-q:hover{background:var(--bg3);}
-.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;color:var(--text2);font-size:.92rem;}
-.faq-item.open .faq-a{padding:16px 24px 20px;max-height:500px;}
-.faq-arrow{transition:transform .3s;color:var(--yellow);}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
 
 /* CTA BLOCK */
 .cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
@@ -138,7 +151,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <div class="nav-links">
     <a href="/">Главная</a>
     <a href="/kak-poluchit/">Как получить</a>
-    <a href="/keshbek/">Кешбэк</a>
+    <a href="/keshbek/">Кешбёк</a>
     <a href="/kupit-kriptu/">Купить крипту</a>
     <a href="/birzha/">Биржа Bybit</a>
     <a href="/bonusy/">Бонусный центр</a>
@@ -148,13 +161,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
       <button class="nav-more-btn">Ещё ▾</button>
       <div class="nav-dropdown">
         <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-      <a href="/o-birzhe/">🏦 О бирже</a>
-      <a href="/instrumenty/">🔧 Инструменты</a>
-      <a href="/konverter/" class="active">📊 Конвертер крипты</a>
-      <a href="/bezopasnost/">🔐 Безопасность</a>
-      <a href="/prilozhenie/">📱 Приложение Bybit</a>
-      <a href="/o-nas/">🌐 О нас</a>
-      
+        <a href="/o-birzhe/">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/" class="active">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/">📱 Приложение Bybit</a>
+        <a href="/o-nas/">🌐 О нас</a>
       </div>
     </div>
   </div>
@@ -164,7 +176,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 <div class="mobile-menu">
   <a href="/">Главная</a>
   <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
+  <a href="/keshbek/">Кешбёк</a>
   <a href="/kupit-kriptu/">Купить крипту</a>
   <a href="/birzha/">Биржа Bybit</a>
   <a href="/bonusy/">Бонусный центр</a>
@@ -179,64 +191,161 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <a href="/prilozhenie/">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
 </div>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
   <div class="hero-badge">📊 Конвертер крипты</div>
   <h1>Конвертер <span class="accent">криптовалюты</span></h1>
-  <p>Актуальный курс Bitcoin, USDT, Ethereum к рублю, доллару и евро.</p>
+  <p>Актуальный курс Bitcoin, USDT, Ethereum к рублю, доллару и евро. Мгновенный расчёт стоимости.</p>
 </div>
 </section>
 
+<!-- CHESS BLOCKS -->
 <section class="section">
 <div class="container">
-  <div class="card" style="max-width:500px;margin:0 auto 48px;padding:40px;">
-    <h3 style="margin-bottom:24px;font-size:1.2rem;">💱 Калькулятор</h3>
-    <div style="margin-bottom:16px;">
-      <label style="color:var(--text2);font-size:.85rem;display:block;margin-bottom:8px;">Сумма криптовалюты</label>
-      <input id="cryptoAmount" type="number" value="1" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-size:1rem;font-family:'Sora',sans-serif;outline:none;">
+
+  <!-- Block 1: Text left, Image right -->
+  <div class="chess-block">
+    <div class="chess-text">
+      <h2>Мгновенная <span class="accent">конвертация</span></h2>
+      <p>Обменивайте одну криптовалюту на другую прямо в приложении Bybit. Без вывода на внешние кошельки, без лишних комиссий и ожиданий.</p>
+      <p>Поддерживаются все основные монеты: BTC, ETH, USDT, USDC, BNB, XRP, SOL и более 500 криптовалют. Конвертация занимает менее секунды.</p>
+      <ul>
+        <li>500+ криптовалют для обмена</li>
+        <li>Мгновенное исполнение</li>
+        <li>Минимальные комиссии</li>
+        <li>Без вывода на внешние кошельки</li>
+      </ul>
     </div>
-    <div style="margin-bottom:16px;">
-      <label style="color:var(--text2);font-size:.85rem;display:block;margin-bottom:8px;">Валюта</label>
-      <select id="cryptoSelect" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-size:1rem;font-family:'Sora',sans-serif;outline:none;">
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: интерфейс конвертации]</div>
+    </div>
+  </div>
+
+  <!-- Block 2: Image left, Text right -->
+  <div class="chess-block reverse">
+    <div class="chess-text">
+      <h2>Курс Bybit — <span class="accent">лучший на рынке</span></h2>
+      <p>Конвертер использует актуальный курс Bybit — одной из крупнейших бирж мира. Вы получаете честный курс без скрытых наценок и завышенных спредов.</p>
+      <p>Сравните сами: курс конвертации Bybit часто выгоднее, чем в обменниках и на других платформах. Экономия до 2-3% на каждой операции.</p>
+      <ul>
+        <li>Актуальный рыночный курс</li>
+        <li>Без скрытых наценок</li>
+        <li>Выгоднее обменников</li>
+        <li>Экономия до 2-3%</li>
+      </ul>
+    </div>
+    <div class="chess-image">
+      <div class="chess-image-placeholder">[Картинка: сравнение курсов]</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h2 class="section-title">Калькулятор <span class="accent">криптовалюты</span></h2>
+    <p class="section-sub">Рассчитайте стоимость по актуальному курсу</p>
+  </div>
+  
+  <div class="card" style="max-width:600px;margin:0 auto;padding:40px;">
+    <div style="margin-bottom:20px;">
+      <label style="color:var(--text2);font-size:.85rem;display:block;margin-bottom:8px;">Сумма криптовалюты</label>
+      <input id="cryptoAmount" type="number" value="1" min="0" step="0.01" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:14px 16px;border-radius:10px;font-size:1.1rem;font-family:'Sora',sans-serif;outline:none;transition:border-color .2s;">
+    </div>
+    <div style="margin-bottom:20px;">
+      <label style="color:var(--text2);font-size:.85rem;display:block;margin-bottom:8px;">Выберите монету</label>
+      <select id="cryptoSelect" style="width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:14px 16px;border-radius:10px;font-size:1.1rem;font-family:'Sora',sans-serif;outline:none;cursor:pointer;">
         <option value="btc">Bitcoin (BTC)</option>
         <option value="usdt" selected>USDT (Tether)</option>
         <option value="eth">Ethereum (ETH)</option>
         <option value="bnb">BNB</option>
+        <option value="sol">Solana (SOL)</option>
+        <option value="xrp">Ripple (XRP)</option>
       </select>
     </div>
-    <div id="convertResult" style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;margin-top:16px;">
-      <div style="color:var(--text2);font-size:.85rem;margin-bottom:8px;">Приблизительный результат</div>
-      <div id="resultUSD" style="font-size:1.5rem;font-weight:700;color:var(--yellow);">≈ $1.00</div>
-      <div id="resultRUB" style="color:var(--text2);margin-top:4px;">≈ 90 ₽</div>
-      <div style="color:var(--text2);font-size:.75rem;margin-top:12px;">Курс обновляется на бирже Bybit</div>
+    <div id="convertResult" style="background:var(--bg);border:2px solid var(--yellow);border-radius:16px;padding:28px;text-align:center;margin-top:24px;">
+      <div style="color:var(--text2);font-size:.9rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em;">Приблизительная стоимость</div>
+      <div id="resultUSD" style="font-size:2rem;font-weight:800;color:var(--yellow);margin-bottom:8px;">≈ $1.00</div>
+      <div id="resultEUR" style="color:var(--text2);font-size:1.1rem;margin-bottom:4px;">≈ €0.92</div>
+      <div id="resultRUB" style="color:var(--text2);font-size:1.1rem;">≈ 90 ₽</div>
+      <div style="color:var(--text2);font-size:.75rem;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">Курс обновляется на бирже Bybit в реальном времени</div>
     </div>
-  </div>
-
-  <div class="cta-block">
-    <h2>Конвертируйте прямо на Bybit</h2>
-    <p>Мгновенная конвертация по лучшему курсу без лишних комиссий.</p>
-    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Открыть счёт на Bybit →</a>
   </div>
 </div>
 </section>
-<script>
-const rates = {btc:95000,usdt:1,eth:3200,bnb:600};
-function convert(){
-  const amount=parseFloat(document.getElementById('cryptoAmount').value)||0;
-  const coin=document.getElementById('cryptoSelect').value;
-  const usd=(amount*rates[coin]).toLocaleString('en',{maximumFractionDigits:2});
-  const rub=Math.round(amount*rates[coin]*90).toLocaleString('ru');
-  document.getElementById('resultUSD').textContent='≈ $'+usd;
-  document.getElementById('resultRUB').textContent='≈ '+rub+' ₽';
-}
-document.getElementById('cryptoAmount').addEventListener('input',convert);
-document.getElementById('cryptoSelect').addEventListener('change',convert);
-convert();
-</script>
 
+<!-- POPULAR PAIRS -->
+<section class="section">
+<div class="container">
+  <h2 class="section-title" style="text-align:center;margin-bottom:48px;">Популярные <span class="accent">пары</span></h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Пара</th>
+          <th>Курс</th>
+          <th>Изменение 24ч</th>
+          <th>Объём 24ч</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>BTC / USDT</strong></td>
+          <td>95,234.50</td>
+          <td class="tag-green">+2.34%</td>
+          <td>$34.2B</td>
+        </tr>
+        <tr>
+          <td><strong>ETH / USDT</strong></td>
+          <td>3,456.78</td>
+          <td class="tag-green">+1.87%</td>
+          <td>$18.7B</td>
+        </tr>
+        <tr>
+          <td><strong>SOL / USDT</strong></td>
+          <td>145.32</td>
+          <td class="tag-green">+5.21%</td>
+          <td>$4.1B</td>
+        </tr>
+        <tr>
+          <td><strong>BNB / USDT</strong></td>
+          <td>612.45</td>
+          <td class="tag-yellow">-0.45%</td>
+          <td>$2.8B</td>
+        </tr>
+        <tr>
+          <td><strong>XRP / USDT</strong></td>
+          <td>0.6234</td>
+          <td class="tag-green">+3.12%</td>
+          <td>$1.9B</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div class="cta-block">
+    <h2>Конвертируйте прямо на Bybit</h2>
+    <p>Мгновенная конвертация по лучшему курсу без лишних комиссий. 500+ криптовалютных пар.</p>
+    <div class="btn-group" style="justify-content:center">
+      <a href="https://www.bybit.com/ru-RU/user/assets/exchange/index?affiliate_id=158844&group_id=1850033&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Перейти к конвертации →</a>
+      <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">Зарегистрироваться</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
@@ -245,7 +354,7 @@ convert();
     </div>
     <div class="footer-links">
       <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
+      <a href="/keshbek/">Кешбёк</a>
       <a href="/birzha/">Биржа</a>
       <a href="/bonusy/">Бонусы</a>
       <a href="/faq/">FAQ</a>
@@ -255,6 +364,24 @@ convert();
     <p class="footer-copy">© 2025 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
   </div>
 </footer>
+
+<script>
+const rates = {btc:95234.50,usdt:1,eth:3456.78,bnb:612.45,sol:145.32,xrp:0.6234};
+function convert(){
+  const amount=parseFloat(document.getElementById('cryptoAmount').value)||0;
+  const coin=document.getElementById('cryptoSelect').value;
+  const usd=(amount*rates[coin]).toLocaleString('en',{maximumFractionDigits:2});
+  const eur=(amount*rates[coin]*0.92).toLocaleString('en',{maximumFractionDigits:2});
+  const rub=Math.round(amount*rates[coin]*90).toLocaleString('ru');
+  document.getElementById('resultUSD').textContent='≈ $'+usd;
+  document.getElementById('resultEUR').textContent='≈ €'+eur;
+  document.getElementById('resultRUB').textContent='≈ '+rub+' ₽';
+}
+document.getElementById('cryptoAmount').addEventListener('input',convert);
+document.getElementById('cryptoSelect').addEventListener('change',convert);
+convert();
+</script>
+
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   const burger=document.querySelector('.nav-burger');
@@ -265,11 +392,6 @@ document.addEventListener('DOMContentLoaded',function(){
       burger.textContent=mobile.classList.contains('open')?'✕':'☰';
     });
   }
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      this.closest('.faq-item').classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>
