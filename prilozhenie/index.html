@@ -70,7 +70,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .hero{padding:100px 0 80px;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(247,166,0,.08) 0%,transparent 70%);pointer-events:none;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);border-radius:100px;padding:6px 16px;font-size:.82rem;color:var(--yellow);margin-bottom:24px;}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.1;margin-bottom:20px;}
+.hero h1 .line1{display:block;}
+.hero h1 .line2{display:block;color:var(--yellow);}
 .hero p{font-size:1.1rem;color:var(--text2);margin-bottom:36px;max-width:560px;}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .2s;border:none;font-family:'Sora',sans-serif;text-decoration:none;}
 .btn-primary{background:var(--yellow);color:#0C0E12;}
@@ -79,31 +81,56 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .btn-secondary:hover{border-color:var(--yellow);}
 .btn-group{display:flex;gap:12px;flex-wrap:wrap;}
 
-/* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+/* PHONE MOCKUP */
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:40px;}
+.phone-mockup{width:280px;height:560px;background:linear-gradient(145deg,#1a1f26 0%,#0d1117 100%);border-radius:40px;border:8px solid #2a3038;position:relative;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.05);margin:0 auto;}
+.phone-screen{width:100%;height:100%;background:var(--bg);border-radius:32px;padding:16px;display:flex;flex-direction:column;}
+.phone-notch{width:100px;height:22px;background:#000;border-radius:0 0 16px 16px;margin:0 auto 16px;}
+.app-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.app-logo{font-weight:800;color:var(--yellow);font-size:16px;}
+.balance-card{background:linear-gradient(135deg,var(--yellow) 0%,#E09500 100%);border-radius:14px;padding:16px;margin-bottom:16px;color:#0C0E12;}
+.balance-label{font-size:11px;opacity:0.8;margin-bottom:4px;}
+.balance-amount{font-size:24px;font-weight:800;}
+.chart-placeholder{height:120px;background:rgba(255,255,255,0.03);border-radius:10px;margin-bottom:12px;position:relative;overflow:hidden;}
+.chart-line{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,rgba(247,166,0,0.3),transparent);clip-path:polygon(0% 80%,20% 60%,40% 70%,60% 40%,80% 50%,100% 20%,100% 100%,0% 100%);}
+.crypto-list{display:flex;flex-direction:column;gap:8px;}
+.crypto-item{display:flex;justify-content:space-between;align-items:center;padding:10px;background:rgba(255,255,255,0.03);border-radius:10px;}
+.crypto-name{font-weight:600;font-size:13px;}
+.crypto-price{text-align:right;}
+.crypto-price-value{font-weight:600;font-size:13px;}
+.crypto-change{font-size:11px;color:var(--green);}
+
+.floating-elements{position:absolute;width:100%;height:100%;pointer-events:none;top:0;left:0;}
+.float-card{position:absolute;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 14px;box-shadow:0 10px 30px rgba(0,0,0,0.3);animation:float 6s ease-in-out infinite;}
+.float-card:nth-child(1){top:15%;right:-40px;animation-delay:0s;}
+.float-card:nth-child(2){bottom:25%;left:-50px;animation-delay:2s;}
+@keyframes float{0%,100%{transform:translateY(0px);}50%{transform:translateY(-15px);}}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center;}
+  .hero-grid p{margin-left:auto;margin-right:auto;}
+  .phone-mockup{margin:40px auto 0;}
+  .float-card:nth-child(1){right:10px;}
+  .float-card:nth-child(2){left:10px;}
+}
+
+/* STATS */
+.stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 24px;}
+.stats-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center;}
+.stat-value{font-size:2.2rem;font-weight:800;color:var(--yellow);margin-bottom:8px;}
+.stat-label{color:var(--text2);font-size:.9rem;}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px;}}
+@media(max-width:480px){.stats-grid{grid-template-columns:1fr;}}
+
+/* CARDS - 3 колонки */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
 .card:hover{border-color:rgba(247,166,0,.3);}
 .card-icon{font-size:2rem;margin-bottom:16px;}
 .card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
 .card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
-
-/* TABLE */
-.table-wrap{overflow-x:auto;margin-top:32px;}
-table{width:100%;border-collapse:collapse;}
-th{background:var(--bg3);padding:14px 20px;text-align:left;font-size:.85rem;color:var(--text2);border-bottom:1px solid var(--border);}
-td{padding:14px 20px;border-bottom:1px solid var(--border);font-size:.9rem;}
-tr:last-child td{border-bottom:none;}
-.tag-green{color:var(--green);font-weight:600;}
-.tag-yellow{color:var(--yellow);font-weight:600;}
-
-/* FAQ */
-.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
-.faq-q{padding:20px 24px;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;align-items:center;background:var(--card);user-select:none;}
-.faq-q:hover{background:var(--bg3);}
-.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .3s;color:var(--text2);font-size:.92rem;}
-.faq-item.open .faq-a{padding:16px 24px 20px;max-height:500px;}
-.faq-arrow{transition:transform .3s;color:var(--yellow);}
-.faq-item.open .faq-arrow{transform:rotate(180deg);}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
 
 /* CTA BLOCK */
 .cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
@@ -130,6 +157,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav>
   <a class="nav-logo" href="/">
     <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
@@ -148,19 +177,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
       <button class="nav-more-btn">Ещё ▾</button>
       <div class="nav-dropdown">
         <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-      <a href="/o-birzhe/">🏦 О бирже</a>
-      <a href="/instrumenty/">🔧 Инструменты</a>
-      <a href="/konverter/">📊 Конвертер крипты</a>
-      <a href="/bezopasnost/">🔐 Безопасность</a>
-      <a href="/prilozhenie/" class="active">📱 Приложение Bybit</a>
-      <a href="/o-nas/">🌐 О нас</a>
-      
+        <a href="/o-birzhe/">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/" class="active">📱 Приложение Bybit</a>
+        <a href="/o-nas/">🌐 О нас</a>
       </div>
     </div>
   </div>
-  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta">Получить карту →</a>
+  <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta">Скачать приложение →</a>
   <button class="nav-burger">☰</button>
 </nav>
+
+<!-- MOBILE MENU -->
 <div class="mobile-menu">
   <a href="/">Главная</a>
   <a href="/kak-poluchit/">Как получить</a>
@@ -178,39 +208,151 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <a href="/bezopasnost/">🔐 Безопасность</a>
   <a href="/prilozhenie/" class="active">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
+  <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">📲 Скачать приложение →</a>
 </div>
 
+<!-- HERO -->
 <section class="hero">
 <div class="container">
-  <div class="hero-badge">📱 Мобильное приложение</div>
-  <h1>Приложение <span class="accent">Bybit</span></h1>
-  <p>Управляйте криптовалютой и картой прямо со смартфона. iOS и Android.</p>
-  <div class="btn-group">
-    <a href="https://www.bybit.com/en/landing/app-download" target="_blank" rel="noopener" class="btn btn-primary">Скачать приложение →</a>
-    <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">Получить карту</a>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">🔥 Бонус до 5,100 USDT для новых пользователей</div>
+      <h1>
+        <span class="line1">Приложение <span class="accent">Bybit</span></span>
+        <span class="line2">торгуй криптовалютой везде</span>
+      </h1>
+      <p>Скачайте приложение и получите доступ к спотовой и маржинальной торговле, фьючерсам, Earn-продуктам и копи-трейдингу прямо с телефона.</p>
+      <div class="btn-group">
+        <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Скачать приложение →</a>
+        <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">Получить карту</a>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="app-header">
+            <span class="app-logo">Bybit</span>
+            <span style="font-size:18px;">👤</span>
+          </div>
+          <div class="balance-card">
+            <div class="balance-label">Общий баланс</div>
+            <div class="balance-amount">$12,458.32</div>
+          </div>
+          <div class="chart-placeholder">
+            <div class="chart-line"></div>
+          </div>
+          <div class="crypto-list">
+            <div class="crypto-item">
+              <span class="crypto-name">BTC</span>
+              <div class="crypto-price">
+                <div class="crypto-price-value">$67,234</div>
+                <div class="crypto-change">+2.34%</div>
+              </div>
+            </div>
+            <div class="crypto-item">
+              <span class="crypto-name">ETH</span>
+              <div class="crypto-price">
+                <div class="crypto-price-value">$3,456</div>
+                <div class="crypto-change">+1.87%</div>
+              </div>
+            </div>
+            <div class="crypto-item">
+              <span class="crypto-name">SOL</span>
+              <div class="crypto-price">
+                <div class="crypto-price-value">$145.32</div>
+                <div class="crypto-change">+5.21%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="float-card">
+          <div style="color:var(--green);font-weight:700;">+15.3%</div>
+          <div style="font-size:12px;color:var(--text2);">BTC за 24ч</div>
+        </div>
+        <div class="float-card">
+          <div style="color:var(--yellow);font-weight:700;">$2.4M</div>
+          <div style="font-size:12px;color:var(--text2);">Объём торгов</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
 
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-value">20M+</div>
+      <div class="stat-label">Пользователей по всему миру</div>
+    </div>
+    <div>
+      <div class="stat-value">$7B+</div>
+      <div class="stat-label">Суточный объём торгов</div>
+    </div>
+    <div>
+      <div class="stat-value">500+</div>
+      <div class="stat-label">Криптовалют</div>
+    </div>
+    <div>
+      <div class="stat-value">0.1%</div>
+      <div class="stat-label">Минимальная комиссия</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
 <section class="section">
 <div class="container">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h2 class="section-title">Всё для торговли в одном приложении</h2>
+    <p class="section-sub">Профессиональные инструменты, доступные каждому. Торгуйте, инвестируйте и зарабатывайте на крипте.</p>
+  </div>
   <div class="cards">
-    <div class="card"><div class="card-icon">💳</div><h3>Управление картой</h3><p>Проверяйте баланс, историю транзакций, управляйте лимитами и мгновенно блокируйте карту при необходимости.</p></div>
-    <div class="card"><div class="card-icon">📊</div><h3>Торговля</h3><p>Полнофункциональный торговый терминал в кармане. Графики, ордера, история — всё доступно с телефона.</p></div>
-    <div class="card"><div class="card-icon">💸</div><h3>Переводы</h3><p>Отправляйте и получайте криптовалюту мгновенно. Внутренние переводы между пользователями Bybit — бесплатно.</p></div>
-    <div class="card"><div class="card-icon">🔔</div><h3>Push-уведомления</h3><p>Мгновенные уведомления о транзакциях, движении цены и важных событиях на рынке.</p></div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Спот и Фьючерсы</h3>
+      <p>Торгуйте более чем 500 криптовалютами с кредитным плечом до 100x. Мгновенное исполнение ордеров и глубокая ликвидность.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>Торговые боты</h3>
+      <p>Автоматизируйте торговлю с помощью готовых стратегий. Спотовые и фьючерсные боты работают 24/7.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <h3>Bybit Earn</h3>
+      <p>Пассивный доход с гибкими и фиксированными ставками. Доходность до 10% годовых на стейкинг.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">👥</div>
+      <h3>Копи-трейдинг</h3>
+      <p>Копируйте сделки топовых трейдеров в один клик. Следите за их стратегиями и дублируйте успех.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💳</div>
+      <h3>Криптовалютная карта</h3>
+      <p>Оплачивайте покупки криптой повсюду. Кешбэк до 10% и мгновенные конвертации.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Максимальная безопасность</h3>
+      <p>Холодное хранение активов, 2FA, страховой фонд и лицензии в Европе и Азии.</p>
+    </div>
   </div>
 
   <div class="cta-block">
-    <h2>Скачайте приложение Bybit</h2>
+    <h2>Скачайте приложение Bybit прямо сейчас</h2>
     <p>Доступно для iPhone и Android. Более 50 миллионов загрузок.</p>
-    <a href="https://www.bybit.com/en/landing/app-download" target="_blank" rel="noopener" class="btn btn-primary">Скачать бесплатно →</a>
+    <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Скачать бесплатно →</a>
   </div>
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
@@ -229,6 +371,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
     <p class="footer-copy">© 2025 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
   </div>
 </footer>
+
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   const burger=document.querySelector('.nav-burger');
@@ -239,11 +382,6 @@ document.addEventListener('DOMContentLoaded',function(){
       burger.textContent=mobile.classList.contains('open')?'✕':'☰';
     });
   }
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      this.closest('.faq-item').classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>
