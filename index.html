@@ -430,6 +430,28 @@ footer {
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
 .mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
 .mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
+/* NAV OVERRIDE */
+nav{position:sticky!important;top:0!important;z-index:100!important;background:rgba(12,14,18,0.97)!important;backdrop-filter:blur(12px)!important;border-bottom:1px solid var(--border)!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:64px!important;gap:8px!important;flex-wrap:nowrap!important;}
+.nav-logo{display:flex!important;align-items:center!important;gap:10px!important;font-weight:700!important;font-size:1.1rem!important;flex-shrink:0!important;text-decoration:none!important;color:var(--text)!important;}
+.nav-logo span{color:var(--yellow)!important;}
+.nav-logo svg{width:32px!important;height:32px!important;flex-shrink:0!important;}
+.nav-links{display:flex!important;align-items:center!important;gap:2px!important;flex:1!important;justify-content:flex-start!important;margin:0 12px!important;overflow:visible!important;}
+.nav-links a{padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;text-decoration:none!important;}
+.nav-links a:hover,.nav-links a.active{color:var(--text)!important;background:var(--bg3)!important;}
+.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;border-radius:8px!important;padding:8px 14px!important;font-size:.8rem!important;white-space:nowrap!important;flex-shrink:0!important;text-decoration:none!important;display:inline-block!important;}
+.nav-more{position:relative!important;flex-shrink:0!important;}
+.nav-more-btn{background:none!important;border:none!important;cursor:pointer!important;padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;}
+.nav-dropdown{display:none;position:absolute!important;top:calc(100% + 8px)!important;right:0!important;background:var(--bg2)!important;border:1px solid var(--border)!important;border-radius:12px!important;padding:8px!important;min-width:220px!important;box-shadow:0 16px 40px rgba(0,0,0,.5)!important;z-index:200!important;}
+.nav-dropdown a{padding:10px 14px!important;border-radius:8px!important;font-size:.85rem!important;color:var(--text2)!important;display:block!important;white-space:nowrap!important;text-decoration:none!important;}
+.nav-dropdown a:hover{color:var(--text)!important;background:var(--bg3)!important;}
+.nav-burger{display:none;background:none!important;border:1px solid var(--border)!important;color:var(--text)!important;width:36px!important;height:36px!important;border-radius:8px!important;font-size:1.1rem!important;cursor:pointer!important;flex-shrink:0!important;align-items:center!important;justify-content:center!important;}
+.mobile-menu{display:none;position:fixed!important;top:64px!important;left:0!important;right:0!important;bottom:0!important;background:var(--bg)!important;z-index:99!important;overflow-y:auto!important;padding:16px!important;flex-direction:column!important;gap:4px!important;}
+.mobile-menu.open{display:flex!important;}
+.mobile-menu a{padding:14px 16px!important;border-radius:10px!important;font-size:1rem!important;color:var(--text2)!important;border:1px solid var(--border)!important;text-decoration:none!important;display:block!important;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--text)!important;background:var(--bg3)!important;border-color:var(--yellow)!important;}
+.mobile-menu .mobile-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;text-align:center!important;margin-top:8px!important;}
+.mobile-menu .mobile-section{font-size:.75rem!important;color:var(--text2)!important;padding:16px 4px 4px!important;text-transform:uppercase!important;letter-spacing:.1em!important;}
+@media(max-width:900px){nav .nav-links{display:none!important;}nav .nav-more{display:none!important;}.nav-burger{display:flex!important;}}
 </style>
 </head>
 <body>
