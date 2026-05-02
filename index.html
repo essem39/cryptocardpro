@@ -410,7 +410,8 @@ footer {
 
 @media(max-width:900px){
   .hero-inner { grid-template-columns:1fr; }
-  .hero-card-wrap { display:none; }
+  .hero-card-wrap { display:block; text-align:center; margin-top:32px; }
+  .hero-card-wrap img { margin-left:0!important; max-width:100%!important; width:100%!important; }
   .features-grid { grid-template-columns:1fr; }
   .cashback-grid { grid-template-columns:1fr; }
   .footer-inner { grid-template-columns:1fr 1fr; }
@@ -492,27 +493,6 @@ footer {
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
   
 </div>
-<div class="mobile-menu">
-  <a href="/" class="active">Главная</a>
-  <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
-  <a href="/kupit-kriptu/">Купить крипту</a>
-  <a href="/birzha/">Биржа Bybit</a>
-  <a href="/bonusy/">Бонусный центр</a>
-  <a href="/faq/">FAQ</a>
-  <a href="/blog/">Блог</a>
-  <span class="mobile-section">Ещё</span>
-  <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-  <a href="/o-birzhe/">🏦 О бирже</a>
-  <a href="/instrumenty/">🔧 Инструменты</a>
-  <a href="/konverter/">📊 Конвертер крипты</a>
-  <a href="/bezopasnost/">🔐 Безопасность</a>
-  <a href="/prilozhenie/">📱 Приложение Bybit</a>
-  <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
-</div>
-
 <!-- TICKER -->
 <div class="ticker-wrap" style="margin-top:64px;">
   <div class="ticker-inner" id="ticker"></div>
@@ -802,32 +782,28 @@ async function fetchTicker() {
 fetchTicker();
 setInterval(fetchTicker, 30000);
 
-// FAQ
-document.querySelectorAll('.faq-q').forEach(q=>{
-  q.addEventListener('click',()=>{
-    const item = q.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item = q.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
     if(!isOpen) item.classList.add('open');
   });
 });
 </script>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  const burger=document.querySelector('.nav-burger');
-  const mobile=document.querySelector('.mobile-menu');
+  var burger=document.querySelector('.nav-burger');
+  var mobile=document.querySelector('.mobile-menu');
   if(burger&&mobile){
     burger.addEventListener('click',function(){
       mobile.classList.toggle('open');
       burger.textContent=mobile.classList.contains('open')?'✕':'☰';
     });
   }
-  document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){
-      this.closest('.faq-item').classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>
 </html>
+
