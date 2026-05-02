@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты и поддержка — CryptoCardPro</title>
+<meta name="description" content="Связаться с командой CryptoCardPro. Вопросы о карте Bybit, партнёрстве, сотрудничестве. Техническая поддержка и обратная связь.">
+<link rel="canonical" href="https://cryptocardpro.com/kontakty/">
+<meta property="og:title" content="Контакты и поддержка — CryptoCardPro">
+<meta property="og:description" content="Связаться с командой CryptoCardPro. Вопросы о карте Bybit, партнёрстве, сотрудничестве. Техническая поддержка и обратная связь.">
+<meta property="og:url" content="https://cryptocardpro.com/kontakty/">
+<meta property="og:image" content="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
+  --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
+  --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
+  --card:#161B26;--green:#0ECB81;--red:#F6465D;
+  --radius:12px;--max:1200px;
+}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+.accent{color:var(--yellow);}
+
+/* NAV DESKTOP */
+nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
+.nav-logo span{color:var(--yellow);}
+.nav-logo svg{width:32px;height:32px;}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
+.nav-links a{padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3);}
+.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700;border-radius:8px;padding:8px 16px;font-size:.82rem;white-space:nowrap;flex-shrink:0;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+
+/* DROPDOWN */
+.nav-more{position:relative;}
+.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
+.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);z-index:200;}
+.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
+.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
+
+/* BURGER */
+.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
+
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
+.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
+.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
+
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .nav-burger{display:flex;align-items:center;justify-content:center;}
+}
+
+/* SECTIONS */
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;}
+.section-sm{padding:48px 0;}
+.section-title{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.section-sub{color:var(--text2);font-size:1.05rem;margin-bottom:48px;max-width:600px;}
+
+/* HERO */
+.hero{padding:100px 0 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(247,166,0,.08) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);border-radius:100px;padding:6px 16px;font-size:.82rem;color:var(--yellow);margin-bottom:24px;}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+.hero p{font-size:1.1rem;color:var(--text2);margin-bottom:36px;max-width:560px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .2s;border:none;font-family:'Sora',sans-serif;text-decoration:none;}
+.btn-primary{background:var(--yellow);color:#0C0E12;}
+.btn-primary:hover{background:var(--yellow2);transform:translateY(-1px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{border-color:var(--yellow);}
+.btn-group{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* CHESS BLOCKS */
+.chess-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px;}
+.chess-block:last-child{margin-bottom:0;}
+.chess-block.reverse .chess-text{order:2;}
+.chess-block.reverse .chess-image{order:1;}
+.chess-text h2{font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.chess-text p{color:var(--text2);margin-bottom:16px;font-size:1rem;line-height:1.7;}
+.chess-text ul{list-style:none;margin:20px 0;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--yellow);font-weight:700;}
+.chess-image{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+.chess-image img{width:100%;height:100%;object-fit:cover;}
+.chess-image-placeholder{color:var(--text2);font-size:.9rem;text-align:center;padding:40px;}
+.chess-image-placeholder::before{content:'🖼️';display:block;font-size:3rem;margin-bottom:12px;opacity:.5;}
+@media(max-width:900px){
+  .chess-block{grid-template-columns:1fr;gap:40px;margin-bottom:60px;}
+  .chess-block.reverse .chess-text{order:1;}
+  .chess-block.reverse .chess-image{order:2;}
+}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center;transition:border-color .2s;position:relative;}
+.step:hover{border-color:rgba(247,166,0,.3);}
+.step-num{width:56px;height:56px;background:var(--yellow);color:#0C0E12;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;margin:0 auto 20px;}
+.step h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;}
+.step p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+.step-arrow{position:absolute;top:50%;right:-36px;transform:translateY(-50%);color:var(--yellow);font-size:1.5rem;display:none;}
+@media(min-width:900px){
+  .step:not(:last-child) .step-arrow{display:block;}
+}
+@media(max-width:900px){.steps{grid-template-columns:1fr;}}
+@media(max-width:900px){.step-arrow{display:none !important;}}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
+.card:hover{border-color:rgba(247,166,0,.3);}
+.card-icon{font-size:2rem;margin-bottom:16px;}
+.card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
+.card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
+
+/* CTA BLOCK */
+.cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
+.cta-block h2{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.cta-block p{color:var(--text2);margin-bottom:32px;font-size:1.05rem;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 32px;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;}
+.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;}
+.footer-logo span{color:var(--yellow);}
+.footer-logo svg{width:28px;height:28px;}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;}
+.footer-links a{color:var(--text2);font-size:.88rem;transition:color .2s;}
+.footer-links a:hover{color:var(--yellow);}
+.footer-copy{color:var(--text2);font-size:.8rem;line-height:1.6;max-width:600px;}
+
+@media(max-width:600px){
+  .hero{padding:60px 0 48px;}
+  .section{padding:48px 0;}
+  .cta-block{padding:40px 24px;}
+  .btn{padding:12px 20px;font-size:.9rem;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+    Crypto<span>Card</span>Pro
+  </a>
+  <div class="nav-links">
+    <a href="/">Главная</a>
+    <a href="/kak-poluchit/">Как получить</a>
+    <a href="/keshbek/">Кешбэк</a>
+    <a href="/kupit-kriptu/">Купить крипту</a>
+    <a href="/birzha/">Биржа Bybit</a>
+    <a href="/bonusy/">Бонусный центр</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/blog/">Блог</a>
+    <div class="nav-more" id="navMore">
+      <button class="nav-more-btn" id="navMoreBtn">Ещё ▾</button>
+      <div class="nav-dropdown" id="navDropdown">
+        <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
+        <a href="/o-birzhe/">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/">📱 Приложение Bybit</a>
+        <a href="/o-nas/" class="active">🌐 О нас</a>
+      </div>
+    </div>
+  </div>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;flex-shrink:0;">Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
+  <button class="nav-burger" id="navBurger">☰</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Главная</a>
+  <a href="/kak-poluchit/">Как получить</a>
+  <a href="/keshbek/">Кешбэк</a>
+  <a href="/kupit-kriptu/">Купить крипту</a>
+  <a href="/birzha/">Биржа Bybit</a>
+  <a href="/bonusy/">Бонусный центр</a>
+  <a href="/faq/">FAQ</a>
+  <a href="/blog/">Блог</a>
+  <span class="mobile-section">Ещё</span>
+  <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
+  <a href="/o-birzhe/">🏦 О бирже</a>
+  <a href="/instrumenty/">🔧 Инструменты</a>
+  <a href="/konverter/">📊 Конвертер крипты</a>
+  <a href="/bezopasnost/">🔐 Безопасность</a>
+  <a href="/prilozhenie/">📱 Приложение Bybit</a>
+  <a href="/o-nas/" class="active">🌐 О нас</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
+  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
+</div>
+
+<section class="hero">
+<div class="container">
+  <div class="hero-badge">📬 Связаться с нами</div>
+  <h1>Контакты <span class="accent">CryptoCardPro</span></h1>
+  <p>Вопросы о карте Bybit, сотрудничестве или работе сайта — напишите нам.</p>
+</div>
+</section>
+
+<section class="section" style="background:var(--bg2);">
+<div class="container">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h2 class="section-title">Как с нами <span class="accent">связаться</span></h2>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="card-icon">💬</div><h3>Чат на сайте</h3><p>Используйте кнопку «Пилот» в правом нижнем углу — AI-помощник ответит на вопросы о карте Bybit мгновенно.</p></div>
+    <div class="card"><div class="card-icon">🌐</div><h3>О сайте</h3><p>CryptoCardPro — независимый партнёрский сайт о криптовалютной карте Bybit. Партнёрский ID: 158844.</p></div>
+    <div class="card"><div class="card-icon">🏦</div><h3>Поддержка Bybit</h3><p>По вопросам карты, верификации, транзакций — официальная поддержка Bybit 24/7 через приложение.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="cta-block">
+    <h2>Остались вопросы?</h2>
+    <p>Наш AI-помощник «Пилот» ответит на любой вопрос о карте Bybit.</p>
+    <div class="btn-group" style="justify-content:center">
+      <a href="/faq/" class="btn btn-primary">Перейти в FAQ →</a>
+      <a href="/podderzhka/" class="btn btn-secondary">Поддержка</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Crypto<span>Card</span>Pro
+    </div>
+    <div class="footer-links">
+      <a href="/kak-poluchit/">Как получить</a>
+      <a href="/keshbek/">Кешбёк</a>
+      <a href="/birzha/">Биржа</a>
+      <a href="/bonusy/">Бонусы</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/blog/">Блог</a>
+      <a href="/o-nas/">О нас</a>
+    </div>
+    <p class="footer-copy">© 2025 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var more=document.getElementById('navMore');
+  var drop=document.getElementById('navDropdown');
+  if(more&&drop){
+    var t;
+    more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
+    more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+    drop.addEventListener('mouseenter',function(){clearTimeout(t);});
+    drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+  }
+  var b=document.getElementById('navBurger');
+  var m=document.getElementById('mobileMenu');
+  if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
+})();
+</script>
+</body>
+</html>

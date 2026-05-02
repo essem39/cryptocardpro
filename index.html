@@ -2,456 +2,28 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Криптовалютная карта Bybit — оплата криптой по всему миру</title>
-<meta name="description" content="Криптовалютная карта CryptoCardPro: оплата BTC, ETH, USDT по всему миру. Кешбэк до 100%, 8% APR, бесплатное снятие $150. Mastercard. Read more.">
-<meta name="keywords" content="криптовалютная карта, крипто карта, bybit card, карта для криптовалюты, оплата криптой, bitcoin карта, USDT карта, crypto card, карта bybit, криптокарта">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Crypto Card Pro">
+<meta name="description" content="Криптовалютная карта Bybit: платите BTC, ETH, USDT везде где принимают Mastercard. Кешбэк до 10%, работает в 160+ странах. Получите карту бесплатно.">
 <link rel="canonical" href="https://cryptocardpro.com/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
+<meta property="og:title" content="Криптовалютная карта Bybit — оплата криптой по всему миру">
+<meta property="og:description" content="Криптовалютная карта Bybit: платите BTC, ETH, USDT везде где принимают Mastercard. Кешбэк до 10%, работает в 160+ странах. Получите карту бесплатно.">
 <meta property="og:url" content="https://cryptocardpro.com/">
-<meta property="og:title" content="Криптовалютная карта Bybit — Плати криптой везде и сразу">
-<meta property="og:description" content="Криптовалютная карта Bybit. Платите BTC, ETH, USDT везде где принимают Mastercard. Кешбэк до 100%, 8% APR на баланс.">
 <meta property="og:image" content="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp">
-<meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Crypto Card Pro">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Криптовалютная карта Bybit — Плати криптой везде и сразу">
-<meta name="twitter:description" content="Криптовалютная карта Bybit. Платите BTC, ETH, USDT везде где принимают Mastercard.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp">
-
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FinancialProduct",
-  "name": "Crypto Card Pro — Bybit Card",
-  "description": "Криптовалютная карта для оплаты везде где принимают Mastercard. Поддержка BTC, ETH, USDT, XRP и других криптовалют.",
-  "url": "https://cryptocardpro.com/",
-  "provider": {
-    "@type": "Organization",
-    "name": "Bybit",
-    "url": "https://www.bybit.com"
-  },
-  "feesAndCommissionsSpecification": "Бесплатный выпуск. Первые $150 снятия в месяц бесплатно.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Бесплатный выпуск криптовалютной карты"
-  }
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0C0E12;
-  --bg2: #12151C;
-  --bg3: #1A1E28;
-  --yellow: #F7A600;
-  --yellow2: #FFB800;
-  --yellow-glow: rgba(247,166,0,0.15);
-  --text: #EAECEF;
-  --text2: #848E9C;
-  --border: rgba(255,255,255,0.07);
-  --card: #161B26;
-  --green: #0ECB81;
-  --red: #F6465D;
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
+  --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
+  --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
+  --card:#161B26;--green:#0ECB81;--red:#F6465D;
+  --radius:12px;--max:1200px;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Sora', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+.accent{color:var(--yellow);}
 
-/* ─── NAVBAR ─── */
-nav {
-  position: fixed; top:0; left:0; right:0; z-index:100;
-  display: flex; align-items:center; justify-content:flex-start;
-  padding: 0 40px; height: 64px;
-  background: rgba(12,14,18,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo {
-  display:flex; align-items:center; gap:10px;
-  font-size:20px; font-weight:700; color:var(--text);
-  text-decoration:none;
-}
-.nav-logo span { color: var(--yellow); }
-.nav-logo svg { width:32px; height:32px; }
-.nav-links { display:flex; gap:4px; }
-.nav-links a {
-  padding: 8px 14px; border-radius:8px;
-  font-size:14px; font-weight:500;
-  color: var(--text2); text-decoration:none;
-  transition: all 0.2s;
-}
-.nav-links a:hover { color:var(--text); background:var(--bg3); }
-.nav-links a.active { color:var(--yellow); }
-.nav-cta {
-  background: var(--yellow);
-  color: #0C0E12 !important;
-  padding: 9px 20px !important;
-  border-radius: 8px !important;
-  font-weight: 600 !important;
-  transition: all 0.2s !important;
-}
-.nav-cta:hover { background: var(--yellow2) !important; transform:translateY(-1px); }
-
-/* ─── HERO ─── */
-.hero {
-  min-height: 100vh;
-  display: flex; align-items:center;
-  padding: 100px 40px 60px;
-  position: relative;
-  overflow: hidden;
-  background-image: url('https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B5.webp');
-  background-size: cover;
-  background-position: center;
-}
-.hero::before {
-  content:'';
-  position:absolute; top:-100px; right:-200px;
-  width:700px; height:700px; border-radius:50%;
-  background: radial-gradient(circle, rgba(247,166,0,0.12) 0%, transparent 70%);
-  pointer-events:none;
-}
-.hero::after {
-  content:'';
-  position:absolute; inset:0;
-  background: rgba(12,14,18,0.80);
-  pointer-events:none; z-index:0;
-}
-.hero-inner {
-  max-width: 1200px; margin:0 auto; width:100%;
-  display: grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
-}
-.hero-badge {
-  display:inline-flex; align-items:center; gap:8px;
-  background: rgba(247,166,0,0.1); border: 1px solid rgba(247,166,0,0.25);
-  color:var(--yellow); padding:6px 14px; border-radius:100px;
-  font-size:13px; font-weight:600; margin-bottom:24px;
-}
-.hero-badge::before { content:'●'; font-size:8px; animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-.hero h1 {
-  font-size: clamp(36px, 4.5vw, 58px);
-  font-weight: 800; line-height: 1.1;
-  margin-bottom: 20px;
-}
-.hero h1 .accent { color: var(--yellow); }
-.hero p {
-  font-size:17px; color:var(--text2); line-height:1.7;
-  margin-bottom:36px; max-width:480px;
-}
-.hero-btns { display:flex; gap:14px; flex-wrap:wrap; }
-.btn-primary {
-  background: var(--yellow);
-  color: #0C0E12; font-weight:700;
-  padding: 14px 28px; border-radius:10px;
-  text-decoration:none; font-size:15px;
-  transition: all 0.2s;
-  display:inline-flex; align-items:center; gap:8px;
-}
-.btn-primary:hover { background:var(--yellow2); transform:translateY(-2px); box-shadow:0 8px 30px rgba(247,166,0,0.3); }
-.btn-secondary {
-  background: var(--bg3); color:var(--text); font-weight:600;
-  padding:14px 28px; border-radius:10px; border:1px solid var(--border);
-  text-decoration:none; font-size:15px;
-  transition:all 0.2s;
-}
-.btn-secondary:hover { border-color:var(--yellow); color:var(--yellow); }
-
-.hero-stats {
-  display:flex; gap:32px; margin-top:44px; padding-top:32px;
-  border-top:1px solid var(--border);
-}
-.stat-item .num { font-size:26px; font-weight:700; color:var(--yellow); }
-.stat-item .label { font-size:13px; color:var(--text2); margin-top:2px; }
-
-/* ─── CARD VISUAL ─── */
-.hero-card-wrap {
-  display:flex; justify-content:center; align-items:center;
-  position:relative;
-}
-.card-3d {
-  width:340px; height:210px; border-radius:20px;
-  background: linear-gradient(135deg, #1A1E28 0%, #0F1117 100%);
-  border:1px solid rgba(247,166,0,0.3);
-  padding: 28px;
-  position:relative; overflow:hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(247,166,0,0.1);
-  transform: perspective(800px) rotateY(-8deg) rotateX(4deg);
-  transition: transform 0.3s;
-  animation: float 4s ease-in-out infinite;
-}
-@keyframes float {
-  0%,100% { transform: perspective(800px) rotateY(-8deg) rotateX(4deg) translateY(0); }
-  50% { transform: perspective(800px) rotateY(-8deg) rotateX(4deg) translateY(-10px); }
-}
-.card-3d::before {
-  content:'';
-  position:absolute; top:-60px; right:-60px;
-  width:180px; height:180px; border-radius:50%;
-  background: radial-gradient(circle, rgba(247,166,0,0.2), transparent);
-}
-.card-chip {
-  width:40px; height:30px; border-radius:6px;
-  background: linear-gradient(135deg, #D4A843, #C8941A);
-  margin-bottom:24px;
-}
-.card-number { font-size:15px; letter-spacing:3px; color:rgba(255,255,255,0.5); margin-bottom:16px; }
-.card-name { font-size:13px; color:var(--text2); margin-bottom:4px; }
-.card-holder { font-size:15px; font-weight:600; }
-.card-logo {
-  position:absolute; bottom:24px; right:24px;
-  display:flex; align-items:center; gap:4px;
-}
-.card-logo-text { font-size:11px; font-weight:700; color:rgba(255,255,255,0.5); }
-.visa-icon { 
-  font-size:24px; font-weight:800; font-style:italic;
-  color: white; opacity:0.8; letter-spacing:-1px;
-}
-.card-glow {
-  position:absolute; inset:0; border-radius:20px;
-  background: linear-gradient(135deg, transparent, rgba(247,166,0,0.04));
-}
-
-/* ─── FEATURES ─── */
-section { padding: 80px 40px; }
-.section-inner { max-width:1200px; margin:0 auto; }
-.section-tag { 
-  font-size:12px; font-weight:700; letter-spacing:2px; 
-  color:var(--yellow); text-transform:uppercase; margin-bottom:12px;
-}
-.section-title { font-size:clamp(28px,3vw,42px); font-weight:800; margin-bottom:16px; }
-.section-sub { font-size:16px; color:var(--text2); max-width:500px; line-height:1.7; }
-
-.features-grid {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px;
-}
-.feat-card {
-  background: var(--card); border:1px solid var(--border);
-  border-radius:16px; padding:28px;
-  transition: all 0.3s;
-  position:relative; overflow:hidden;
-}
-.feat-card::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:2px;
-  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
-  opacity:0; transition:0.3s;
-}
-.feat-card:hover { border-color:rgba(247,166,0,0.3); transform:translateY(-4px); }
-.feat-card:hover::before { opacity:1; }
-.feat-icon {
-  width:48px; height:48px; border-radius:12px;
-  background: var(--yellow-glow); border:1px solid rgba(247,166,0,0.2);
-  display:flex; align-items:center; justify-content:center;
-  font-size:22px; margin-bottom:20px;
-}
-.feat-card h3 { font-size:17px; font-weight:700; margin-bottom:8px; }
-.feat-card p { font-size:14px; color:var(--text2); line-height:1.6; }
-
-/* ─── HOW TO GET ─── */
-.how-section { background: var(--bg2); }
-.steps { display:flex; flex-direction:column; gap:0; margin-top:48px; max-width:700px; }
-.step {
-  display:flex; gap:24px; position:relative; padding-bottom:36px;
-}
-.step:last-child { padding-bottom:0; }
-.step-left { display:flex; flex-direction:column; align-items:center; }
-.step-num {
-  width:44px; height:44px; border-radius:50%;
-  background: var(--yellow); color:#0C0E12;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:800; font-size:16px; flex-shrink:0;
-}
-.step-line {
-  width:2px; flex:1; background:linear-gradient(var(--yellow),transparent);
-  margin-top:8px; min-height:40px;
-}
-.step:last-child .step-line { display:none; }
-.step-content { padding-top:8px; }
-.step-content h3 { font-size:18px; font-weight:700; margin-bottom:8px; }
-.step-content p { font-size:14px; color:var(--text2); line-height:1.6; }
-.step-link {
-  display:inline-flex; align-items:center; gap:6px;
-  color:var(--yellow); font-size:14px; font-weight:600;
-  text-decoration:none; margin-top:10px;
-  transition:gap 0.2s;
-}
-.step-link:hover { gap:10px; }
-
-/* ─── CASHBACK ─── */
-.cashback-grid {
-  display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center; margin-top:48px;
-}
-.cb-tiers { display:flex; flex-direction:column; gap:12px; }
-.cb-tier {
-  background:var(--card); border:1px solid var(--border);
-  border-radius:12px; padding:16px 20px;
-  display:flex; align-items:center; justify-content:space-between;
-  transition:all 0.2s;
-}
-.cb-tier.featured { border-color:var(--yellow); background:rgba(247,166,0,0.05); }
-.cb-tier-name { font-size:14px; font-weight:600; }
-.cb-tier-req { font-size:12px; color:var(--text2); margin-top:2px; }
-.cb-tier-rate { font-size:22px; font-weight:800; color:var(--yellow); }
-.cb-info h3 { font-size:28px; font-weight:800; margin-bottom:16px; }
-.cb-info p { font-size:15px; color:var(--text2); line-height:1.7; margin-bottom:20px; }
-.cb-perks { display:flex; flex-direction:column; gap:10px; }
-.perk { display:flex; align-items:center; gap:10px; font-size:14px; }
-.perk::before { content:'✓'; color:var(--green); font-weight:700; }
-
-/* ─── FAQ ─── */
-.faq-section { background:var(--bg2); }
-.faq-list { margin-top:48px; max-width:800px; display:flex; flex-direction:column; gap:12px; }
-.faq-item {
-  background:var(--card); border:1px solid var(--border);
-  border-radius:12px; overflow:hidden;
-}
-.faq-q {
-  padding:18px 24px;
-  font-weight:600; font-size:15px;
-  cursor:pointer; display:flex; justify-content:space-between; align-items:center;
-  transition:color 0.2s;
-}
-.faq-q:hover { color:var(--yellow); }
-.faq-q .arrow { transition:transform 0.3s; font-size:12px; color:var(--text2); }
-.faq-item.open .faq-q .arrow { transform:rotate(180deg); }
-.faq-a {
-  padding:0 24px; max-height:0; overflow:hidden;
-  font-size:14px; color:var(--text2); line-height:1.7;
-  transition:all 0.3s;
-}
-.faq-item.open .faq-a { padding:0 24px 18px; max-height:300px; }
-
-/* ─── CTA BANNER ─── */
-.cta-banner {
-  margin: 0 40px 80px;
-  border-radius:24px;
-  background: linear-gradient(135deg, #1A1E28 0%, #12151C 100%);
-  border: 1px solid rgba(247,166,0,0.2);
-  padding: 60px;
-  text-align:center;
-  position:relative; overflow:hidden;
-}
-.cta-banner::before {
-  content:''; position:absolute; top:-80px; left:50%; transform:translateX(-50%);
-  width:400px; height:200px;
-  background: radial-gradient(ellipse, rgba(247,166,0,0.15), transparent);
-}
-.cta-banner h2 { font-size:clamp(26px,3vw,40px); font-weight:800; margin-bottom:12px; }
-.cta-banner p { color:var(--text2); font-size:16px; margin-bottom:32px; }
-.cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-
-/* ─── FOOTER ─── */
-footer {
-  border-top:1px solid var(--border);
-  padding: 48px 40px 32px;
-}
-.footer-inner {
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px;
-}
-.footer-brand { }
-.footer-logo { font-size:18px; font-weight:700; color:var(--text); margin-bottom:12px; }
-.footer-logo span { color:var(--yellow); }
-.footer-desc { font-size:13px; color:var(--text2); line-height:1.6; max-width:260px; }
-.footer-col h4 { font-size:13px; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; }
-.footer-col a {
-  display:block; font-size:14px; color:var(--text2);
-  text-decoration:none; margin-bottom:10px;
-  transition:color 0.2s;
-}
-.footer-col a:hover { color:var(--yellow); }
-.footer-bottom {
-  max-width:1200px; margin:32px auto 0;
-  padding-top:24px; border-top:1px solid var(--border);
-  display:flex; justify-content:space-between; align-items:center;
-  font-size:12px; color:var(--text2);
-}
-.disclaimer {
-  font-size:11px; color:rgba(132,142,156,0.6);
-  line-height:1.5; margin-top:8px; max-width:700px;
-}
-
-/* ─── TICKER ─── */
-.ticker-wrap {
-  background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-  overflow:hidden; padding:10px 0;
-}
-.ticker-inner {
-  display:flex; gap:0; width:max-content;
-  animation: ticker 30s linear infinite;
-}
-@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-.tick-item {
-  display:flex; align-items:center; gap:8px;
-  padding:0 28px; font-size:13px; font-weight:500;
-  border-right:1px solid var(--border);
-  white-space:nowrap;
-}
-.tick-item .name { color:var(--text2); }
-.tick-item .price { color:var(--text); }
-.tick-item .change.up { color:var(--green); }
-.tick-item .change.down { color:var(--red); }
-
-@media(max-width:900px){
-  .hero-inner { grid-template-columns:1fr; }
-  .hero-card-wrap { display:block; text-align:center; margin-top:32px; }
-  .hero-card-wrap img { margin-left:0!important; max-width:100%!important; width:100%!important; }
-  .features-grid { grid-template-columns:1fr; }
-  .cashback-grid { grid-template-columns:1fr; }
-  .footer-inner { grid-template-columns:1fr 1fr; }
-  nav { padding:0 20px; }
-  .nav-links { display:none; }
-  .hero { padding:80px 20px 40px; }
-  section { padding:60px 20px; }
-  .cta-banner { margin:0 20px 60px; padding:40px 24px; }
-  .faq-grid-inner { grid-template-columns:1fr !important; }
-}
-
-/* MOBILE MENU - injected */
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
-.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
-.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
-/* NAV OVERRIDE */
-nav{position:sticky!important;top:0!important;z-index:100!important;background:rgba(12,14,18,0.97)!important;backdrop-filter:blur(12px)!important;border-bottom:1px solid var(--border)!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:64px!important;gap:8px!important;flex-wrap:nowrap!important;}
-.nav-logo{display:flex!important;align-items:center!important;gap:10px!important;font-weight:700!important;font-size:1.1rem!important;flex-shrink:0!important;text-decoration:none!important;color:var(--text)!important;}
-.nav-logo span{color:var(--yellow)!important;}
-.nav-logo svg{width:32px!important;height:32px!important;flex-shrink:0!important;}
-.nav-links{display:flex!important;align-items:center!important;gap:2px!important;flex:1!important;justify-content:flex-start!important;margin:0 12px!important;overflow:visible!important;}
-.nav-links a{padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;text-decoration:none!important;}
-.nav-links a:hover,.nav-links a.active{color:var(--text)!important;background:var(--bg3)!important;}
-.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;border-radius:8px!important;padding:8px 14px!important;font-size:.8rem!important;white-space:nowrap!important;flex-shrink:0!important;text-decoration:none!important;display:inline-block!important;}
-.nav-more{position:relative!important;flex-shrink:0!important;}
-.nav-more-btn{background:none!important;border:none!important;cursor:pointer!important;padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;}
-.nav-dropdown{display:none;position:absolute!important;top:calc(100% + 8px)!important;right:0!important;background:var(--bg2)!important;border:1px solid var(--border)!important;border-radius:12px!important;padding:8px!important;min-width:220px!important;box-shadow:0 16px 40px rgba(0,0,0,.5)!important;z-index:200!important;}
-.nav-dropdown a{padding:10px 14px!important;border-radius:8px!important;font-size:.85rem!important;color:var(--text2)!important;display:block!important;white-space:nowrap!important;text-decoration:none!important;}
-.nav-dropdown a:hover{color:var(--text)!important;background:var(--bg3)!important;}
-.nav-burger{display:none;background:none!important;border:1px solid var(--border)!important;color:var(--text)!important;width:36px!important;height:36px!important;border-radius:8px!important;font-size:1.1rem!important;cursor:pointer!important;flex-shrink:0!important;align-items:center!important;justify-content:center!important;}
-.mobile-menu{display:none;position:fixed!important;top:64px!important;left:0!important;right:0!important;bottom:0!important;background:var(--bg)!important;z-index:99!important;overflow-y:auto!important;padding:16px!important;flex-direction:column!important;gap:4px!important;}
-.mobile-menu.open{display:flex!important;}
-.mobile-menu a{padding:14px 16px!important;border-radius:10px!important;font-size:1rem!important;color:var(--text2)!important;border:1px solid var(--border)!important;text-decoration:none!important;display:block!important;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text)!important;background:var(--bg3)!important;border-color:var(--yellow)!important;}
-.mobile-menu .mobile-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;text-align:center!important;margin-top:8px!important;}
-.mobile-menu .mobile-section{font-size:.75rem!important;color:var(--text2)!important;padding:16px 4px 4px!important;text-transform:uppercase!important;letter-spacing:.1em!important;}
-@media(max-width:900px){nav .nav-links{display:none!important;}nav .nav-more{display:none!important;}.nav-burger{display:flex!important;}}
 /* NAV DESKTOP */
 nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
@@ -486,13 +58,98 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
   .nav-links{display:none;}
   .nav-burger{display:flex;align-items:center;justify-content:center;}
 }
+
+/* SECTIONS */
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;}
+.section-sm{padding:48px 0;}
+.section-title{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.section-sub{color:var(--text2);font-size:1.05rem;margin-bottom:48px;max-width:600px;}
+
+/* HERO */
+.hero{padding:100px 0 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(247,166,0,.08) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);border-radius:100px;padding:6px 16px;font-size:.82rem;color:var(--yellow);margin-bottom:24px;}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+.hero p{font-size:1.1rem;color:var(--text2);margin-bottom:36px;max-width:560px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .2s;border:none;font-family:'Sora',sans-serif;text-decoration:none;}
+.btn-primary{background:var(--yellow);color:#0C0E12;}
+.btn-primary:hover{background:var(--yellow2);transform:translateY(-1px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{border-color:var(--yellow);}
+.btn-group{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* CHESS BLOCKS */
+.chess-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px;}
+.chess-block:last-child{margin-bottom:0;}
+.chess-block.reverse .chess-text{order:2;}
+.chess-block.reverse .chess-image{order:1;}
+.chess-text h2{font-size:2rem;font-weight:700;margin-bottom:16px;line-height:1.2;}
+.chess-text p{color:var(--text2);margin-bottom:16px;font-size:1rem;line-height:1.7;}
+.chess-text ul{list-style:none;margin:20px 0;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--yellow);font-weight:700;}
+.chess-image{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+.chess-image img{width:100%;height:100%;object-fit:cover;}
+.chess-image-placeholder{color:var(--text2);font-size:.9rem;text-align:center;padding:40px;}
+.chess-image-placeholder::before{content:'🖼️';display:block;font-size:3rem;margin-bottom:12px;opacity:.5;}
+@media(max-width:900px){
+  .chess-block{grid-template-columns:1fr;gap:40px;margin-bottom:60px;}
+  .chess-block.reverse .chess-text{order:1;}
+  .chess-block.reverse .chess-image{order:2;}
+}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center;transition:border-color .2s;position:relative;}
+.step:hover{border-color:rgba(247,166,0,.3);}
+.step-num{width:56px;height:56px;background:var(--yellow);color:#0C0E12;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;margin:0 auto 20px;}
+.step h3{font-size:1.1rem;font-weight:600;margin-bottom:12px;}
+.step p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+.step-arrow{position:absolute;top:50%;right:-36px;transform:translateY(-50%);color:var(--yellow);font-size:1.5rem;display:none;}
+@media(min-width:900px){
+  .step:not(:last-child) .step-arrow{display:block;}
+}
+@media(max-width:900px){.steps{grid-template-columns:1fr;}}
+@media(max-width:900px){.step-arrow{display:none !important;}}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s;}
+.card:hover{border-color:rgba(247,166,0,.3);}
+.card-icon{font-size:2rem;margin-bottom:16px;}
+.card h3{font-size:1.1rem;font-weight:600;margin-bottom:10px;}
+.card p{color:var(--text2);font-size:.9rem;line-height:1.6;}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.cards{grid-template-columns:1fr;}}
+
+/* CTA BLOCK */
+.cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:80px;}
+.cta-block h2{font-size:2rem;font-weight:700;margin-bottom:16px;}
+.cta-block p{color:var(--text2);margin-bottom:32px;font-size:1.05rem;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 32px;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;}
+.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;}
+.footer-logo span{color:var(--yellow);}
+.footer-logo svg{width:28px;height:28px;}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;}
+.footer-links a{color:var(--text2);font-size:.88rem;transition:color .2s;}
+.footer-links a:hover{color:var(--yellow);}
+.footer-copy{color:var(--text2);font-size:.8rem;line-height:1.6;max-width:600px;}
+
+@media(max-width:600px){
+  .hero{padding:60px 0 48px;}
+  .section{padding:48px 0;}
+  .cta-block{padding:40px 24px;}
+  .btn{padding:12px 20px;font-size:.9rem;}
+}
 </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
 <nav>
-  <a class="nav-logo" href="/">
+  <a class="nav-logo" href="/" class="active">
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
     Crypto<span>Card</span>Pro
   </a>
@@ -544,12 +201,20 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
 </div>
 
-<!-- TICKER -->
-<div class="ticker-wrap" style="margin-top:64px;">
-  <div class="ticker-inner" id="ticker"></div>
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;padding:10px 0;">
+  <div class="ticker-inner" id="ticker" style="display:flex;gap:32px;animation:ticker 30s linear infinite;white-space:nowrap;font-size:.82rem;color:var(--text2);">
+    <span>BTC ₿ <span style="color:var(--green)">▲</span></span>
+    <span>ETH ◎ <span style="color:var(--green)">▲</span></span>
+    <span>USDT ₮ <span style="color:var(--text2)">~</span></span>
+    <span>BNB ⬡ <span style="color:var(--green)">▲</span></span>
+    <span>SOL ◎ <span style="color:var(--red)">▼</span></span>
+    <span>Кешбэк до 10% 💳</span>
+    <span>160+ стран 🌍</span>
+    <span>Mastercard ✓</span>
+  </div>
 </div>
+<style>@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner" style="position:relative;z-index:1;">
     <div>
@@ -835,54 +500,23 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 </div>
 
 <!-- FOOTER -->
+
 <footer>
   <div class="footer-inner">
-
-    <div class="footer-brand">
-      <div class="footer-logo">Crypto<span>Card</span>Pro</div>
-      <p class="footer-desc">Независимый информационный сайт о криптовалютной карте Bybit. Не является официальным ресурсом Bybit.</p>
-      <p class="disclaimer" style="margin-top:12px;">⚠️ Партнёрский сайт. Ссылки содержат реферальные коды. Криптовалюта — рисковый актив.</p>
+    <div class="footer-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+      Crypto<span>Card</span>Pro
     </div>
-
-    <div class="footer-col">
-      <h4>Карта Bybit</h4>
+    <div class="footer-links">
       <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
-      <a href="/gde-prinimaetsya/">Где принимают</a>
-      <a href="/bonusy/">Бонусный центр</a>
-      <a href="/bezopasnost/">Безопасность</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>О сайте</h4>
-      <a href="/">Главная</a>
-      <a href="/blog/">Блог</a>
+      <a href="/keshbek/">Кешбёк</a>
+      <a href="/birzha/">Биржа</a>
+      <a href="/bonusy/">Бонусы</a>
       <a href="/faq/">FAQ</a>
+      <a href="/blog/">Блог</a>
       <a href="/o-nas/">О нас</a>
-      <a href="/prilozhenie/">Приложение</a>
     </div>
-
-    <div class="footer-col">
-      <h4>Bybit</h4>
-      <a href="/birzha/">Биржа Bybit</a>
-      <a href="/o-birzhe/">О бирже</a>
-      <a href="/konverter/">Конвертер крипты</a>
-      <a href="/instrumenty/">Инструменты</a>
-      <a href="/kupit-kriptu/">Купить крипту</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Помощь</h4>
-      <a href="https://www.bybit.com/ru-RU/help-center/?affiliate_id=158844&group_id=1850232&group_type=1" target="_blank" rel="noopener sponsored">📖 Руководство</a>
-      <a href="https://www.bybit.com/ru-RU/help-center/case-list?affiliate_id=158844&group_id=1850233&group_type=1" target="_blank" rel="noopener sponsored">🎧 Центр поддержки</a>
-      <a href="https://www.bybit.com/ru-RU/user-feedback?affiliate_id=158844&group_id=1850231&group_type=1" target="_blank" rel="noopener sponsored">💬 Обратная связь</a>
-      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored">💳 Получить карту</a>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 CryptoCardPro — Информационный ресурс</span>
-    <span>Не является финансовой консультацией</span>
+    <p class="footer-copy">© 2025 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
   </div>
 </footer>
 
@@ -904,4 +538,3 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 </script>
 </body>
 </html>
-
