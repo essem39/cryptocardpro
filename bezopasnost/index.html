@@ -69,6 +69,12 @@ nav {
 .nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
 @media(max-width:900px){.nav-links{display:none!important;}.nav-burger{display:flex!important;align-items:center;justify-content:center;}}
 /* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
+.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
+.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
 </style>
 </head>
 <body>
