@@ -123,15 +123,38 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .cta-block p{color:var(--text2);margin-bottom:32px;font-size:1.05rem;}
 
 /* FOOTER */
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 32px;}
-.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;}
-.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;}
-.footer-logo span{color:var(--yellow);}
-.footer-logo svg{width:28px;height:28px;}
-.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;}
-.footer-links a{color:var(--text2);font-size:.88rem;transition:color .2s;}
-.footer-links a:hover{color:var(--yellow);}
-.footer-copy{color:var(--text2);font-size:.8rem;line-height:1.6;max-width:600px;}
+footer {
+  border-top:1px solid var(--border);
+  padding: 48px 40px 32px;
+}
+.footer-inner {
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr 1fr; gap:40px;
+}
+.footer-brand { }
+.footer-logo { font-size:18px; font-weight:700; color:var(--text); margin-bottom:12px; }
+.footer-logo span { color:var(--yellow); }
+.footer-desc { font-size:13px; color:var(--text2); line-height:1.6; max-width:260px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; }
+.footer-col a {
+  display:block; font-size:14px; color:var(--text2);
+  text-decoration:none; margin-bottom:10px;
+  transition:color 0.2s;
+}
+.footer-col a:hover { color:var(--yellow); }
+.footer-bottom {
+  max-width:1200px; margin:32px auto 0;
+  padding-top:24px; border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:12px; color:var(--text2);
+}
+@media(max-width:768px){
+  .footer-inner { grid-template-columns:1fr 1fr; gap:24px; }
+  .footer-bottom { flex-direction:column; gap:8px; text-align:center; }
+}
+@media(max-width:480px){
+  .footer-inner { grid-template-columns:1fr; }
+}
 
 @media(max-width:600px){
   .hero{padding:60px 0 48px;}
