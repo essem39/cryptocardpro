@@ -80,7 +80,7 @@ nav {
 <body>
 <nav>
   <a class="nav-logo" href="/">
-    <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
     Crypto<span>Card</span>Pro
   </a>
   <div class="nav-links">
@@ -105,19 +105,19 @@ nav {
       </div>
     </div>
   </div>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;text-decoration:none;transition:all .2s;font-family:'Sora',sans-serif;">Войти</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.8rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;text-decoration:none;flex-shrink:0;">Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:6px;">Регистрация →</a>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/" class="">Главная</a>
-  <a href="/kak-poluchit/" class="">Как получить</a>
-  <a href="/keshbek/" class="">Кешбэк</a>
-  <a href="/kupit-kriptu/" class="">Купить крипту</a>
+  <a href="/">Главная</a>
+  <a href="/kak-poluchit/">Как получить</a>
+  <a href="/keshbek/">Кешбэк</a>
+  <a href="/kupit-kriptu/">Купить крипту</a>
   <a href="/birzha/" class="active">Биржа Bybit</a>
-  <a href="/bonusy/" class="">Бонусный центр</a>
-  <a href="/faq/" class="">FAQ</a>
-  <a href="/blog/" class="">Блог</a>
+  <a href="/bonusy/">Бонусный центр</a>
+  <a href="/faq/">FAQ</a>
+  <a href="/blog/">Блог</a>
   <span class="mobile-section">Ещё</span>
   <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
   <a href="/o-birzhe/">🏦 О бирже</a>
@@ -126,10 +126,11 @@ nav {
   <a href="/bezopasnost/">🔐 Безопасность</a>
   <a href="/prilozhenie/">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти в Bybit</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти</a>
   <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
 </div>
+
 <section class="hero">
 <div class="container">
   <div class="hero-badge">📈 Торговля криптовалютой</div>
@@ -211,21 +212,11 @@ nav {
   </div>
 </footer>
 <script>
-// Dropdown
 (function(){
   var more=document.getElementById('navMore');
   var drop=document.getElementById('navDropdown');
-  if(!more||!drop)return;
-  var t;
-  more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
-  more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
-  drop.addEventListener('mouseenter',function(){clearTimeout(t);});
-  drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
-})();
-// Burger
-(function(){
-  var b=document.getElementById('navBurger');
-  var m=document.getElementById('mobileMenu');
+  if(more&&drop){var t;more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});drop.addEventListener('mouseenter',function(){clearTimeout(t);});drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});}
+  var b=document.getElementById('navBurger');var m=document.getElementById('mobileMenu');
   if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
 })();
 </script>
