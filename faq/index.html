@@ -16,13 +16,14 @@
   --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
   --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
   --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
-  --card:#161B26;--max:1200px;
+  --card:#161B26;--green:#0ECB81;--max:1200px;
 }
+html,body{width:100%;overflow-x:hidden;}
 body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
 a{color:inherit;text-decoration:none;}
 .accent{color:var(--yellow);}
 
-/* NAV */
+/* ── NAV ── */
 nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
 .nav-logo span{color:var(--yellow);}
@@ -46,88 +47,152 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
 .mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
 .mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
-@media(max-width:900px){
-  .nav-links{display:none;}
+@media(max-width:960px){
+  .nav-links,.nav-cta{display:none;}
   .nav-burger{display:flex;}
 }
 
-/* HERO */
-.hero{padding:80px 0 60px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(247,166,0,.08) 0%,transparent 70%);pointer-events:none;}
-.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
-.hero-inner{display:flex;align-items:center;gap:60px;position:relative;z-index:1;}
-.hero-text{flex:1;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);border-radius:100px;padding:6px 16px;font-size:.82rem;color:var(--yellow);margin-bottom:24px;}
-.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
-.hero p{font-size:1.05rem;color:var(--text2);}
-.hero-img-wrap{flex-shrink:0;width:320px;}
-.hero-img{width:100%;border-radius:20px;display:block;box-shadow:0 24px 60px rgba(0,0,0,.5);}
-@media(max-width:768px){
-  .hero{padding:48px 0 36px;}
-  .hero-inner{flex-direction:column;gap:28px;}
-  .hero-img-wrap{width:100%;}
-  .hero-img{max-width:100%;border-radius:16px;}
+/* ── HERO (только текст, полная ширина) ── */
+.hero{
+  width:100%;
+  padding:72px 24px 56px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-200px;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;
+  background:radial-gradient(circle,rgba(247,166,0,.09) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--yellow-glow);border:1px solid rgba(247,166,0,.3);
+  border-radius:100px;padding:6px 18px;font-size:.82rem;color:var(--yellow);
+  margin-bottom:20px;
+}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;line-height:1.15;margin-bottom:14px;}
+.hero p{font-size:1rem;color:var(--text2);max-width:520px;margin:0 auto;}
+
+/* ── MAIN CONTENT ── */
+.page-wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:48px 24px 80px;
+  display:grid;
+  grid-template-columns:1fr 340px;
+  gap:40px;
+  align-items:start;
 }
 
-/* FAQ — нативный details/summary */
-.faq-section{padding:64px 0;}
-.faq-title{font-size:1.8rem;font-weight:700;margin-bottom:8px;}
-.faq-sub{color:var(--text2);margin-bottom:40px;}
+/* ── FAQ (details/summary) ── */
+.faq-col{}
+.faq-heading{font-size:1.2rem;font-weight:700;color:var(--text2);margin-bottom:20px;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;}
 
 details{
+  width:100%;
   background:var(--card);
   border:1px solid var(--border);
   border-radius:12px;
   margin-bottom:10px;
-  overflow:hidden;
 }
-details[open]{
-  border-color:rgba(247,166,0,0.3);
-}
+details[open]{border-color:rgba(247,166,0,0.35);}
 summary{
-  padding:20px 24px;
+  width:100%;
+  padding:18px 20px;
   font-weight:500;
-  font-size:1rem;
+  font-size:.97rem;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:12px;
   list-style:none;
-  user-select:none;
   -webkit-tap-highlight-color:transparent;
   outline:none;
+  transition:background .15s;
 }
 summary::-webkit-details-marker{display:none;}
-summary::after{
-  content:'▼';
+summary:hover{background:var(--bg3);border-radius:12px;}
+details[open] summary{background:var(--bg3);border-radius:12px 12px 0 0;}
+.faq-arrow{
+  font-size:.8rem;
   color:var(--yellow);
-  font-size:.85rem;
   flex-shrink:0;
-  margin-left:16px;
   transition:transform .25s;
 }
-details[open] summary::after{
-  transform:rotate(180deg);
-}
-summary:hover{background:var(--bg3);}
-.faq-answer{
-  padding:0 24px 20px;
+details[open] .faq-arrow{transform:rotate(180deg);}
+.faq-body{
+  padding:14px 20px 18px;
   color:var(--text2);
-  font-size:.92rem;
+  font-size:.91rem;
   line-height:1.75;
   border-top:1px solid var(--border);
-  padding-top:16px;
 }
 
-/* CTA */
-.cta-block{background:linear-gradient(135deg,var(--bg3) 0%,#1a1e28 100%);border:1px solid rgba(247,166,0,.2);border-radius:20px;padding:60px 40px;text-align:center;margin-top:60px;}
-.cta-block h2{font-size:1.8rem;font-weight:700;margin-bottom:16px;}
-.cta-block p{color:var(--text2);margin-bottom:32px;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-weight:600;font-size:1rem;transition:all .2s;text-decoration:none;font-family:'Sora',sans-serif;}
+/* ── SIDEBAR ── */
+.sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.sidebar-img{
+  width:100%;
+  border-radius:16px;
+  display:block;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+.sidebar-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px;
+}
+.sidebar-card h3{font-size:1rem;font-weight:700;margin-bottom:16px;}
+.stat-row{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--border);}
+.stat-row:last-child{border-bottom:none;padding-bottom:0;}
+.stat-icon{font-size:1.4rem;flex-shrink:0;}
+.stat-val{font-size:1.1rem;font-weight:700;color:var(--yellow);}
+.stat-lbl{font-size:.78rem;color:var(--text2);}
+.sidebar-cta{
+  background:linear-gradient(135deg,rgba(247,166,0,.15),rgba(247,166,0,.05));
+  border:1px solid rgba(247,166,0,.3);
+  border-radius:16px;
+  padding:28px 24px;
+  text-align:center;
+}
+.sidebar-cta h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+.sidebar-cta p{font-size:.85rem;color:var(--text2);margin-bottom:20px;line-height:1.5;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:13px 20px;border-radius:10px;
+  font-weight:700;font-size:.95rem;transition:all .2s;
+  text-decoration:none;font-family:'Sora',sans-serif;
+}
 .btn-primary{background:var(--yellow);color:#0C0E12;}
 .btn-primary:hover{background:var(--yellow2);transform:translateY(-1px);}
+.badge-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.badge{background:var(--bg3);border:1px solid var(--border);border-radius:100px;padding:4px 12px;font-size:.75rem;color:var(--text2);}
 
-/* FOOTER */
+/* ── MOBILE ── */
+@media(max-width:780px){
+  .hero{padding:48px 20px 36px;}
+  .page-wrap{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:32px 16px 60px;
+  }
+  /* сайдбар на мобиле идёт ПОСЛЕ FAQ */
+  .sidebar{order:2;}
+  .faq-col{order:1;}
+  summary{padding:16px 16px;font-size:.93rem;}
+  .faq-body{padding:12px 16px 16px;}
+}
+
+/* ── FOOTER ── */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24px 32px;}
 .footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center;}
 .footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;}
@@ -136,13 +201,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 .footer-links a{color:var(--text2);font-size:.88rem;transition:color .2s;}
 .footer-links a:hover{color:var(--yellow);}
 .footer-copy{color:var(--text2);font-size:.8rem;line-height:1.6;max-width:600px;}
-
-@media(max-width:600px){
-  .faq-section{padding:40px 0;}
-  .cta-block{padding:36px 20px;}
-  summary{padding:16px 18px;font-size:.93rem;}
-  .faq-answer{padding:12px 18px 16px;}
-}
 </style>
 </head>
 <body>
@@ -198,84 +256,128 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
 </div>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <div class="hero-badge">❓ Ответы на вопросы</div>
-        <h1>Часто задаваемые <span class="accent">вопросы</span></h1>
-        <p>Всё что вы хотели знать о криптовалютной карте Bybit.</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">❓ Ответы на вопросы</div>
+  <h1>Часто задаваемые <span class="accent">вопросы</span></h1>
+  <p>Всё что вы хотели знать о криптовалютной карте Bybit — собрано в одном месте.</p>
+</div>
+
+<!-- CONTENT: FAQ + SIDEBAR -->
+<div class="page-wrap">
+
+  <!-- FAQ -->
+  <div class="faq-col">
+    <p class="faq-heading">10 вопросов о карте Bybit</p>
+
+    <details>
+      <summary>Что такое криптовалютная карта Bybit? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Криптовалютная карта Bybit — это дебетовая карта Mastercard, которая позволяет тратить Bitcoin, USDT и другую криптовалюту в любых магазинах, кафе и онлайн-сервисах. Карта автоматически конвертирует крипту в фиатную валюту при оплате.</div>
+    </details>
+
+    <details>
+      <summary>В каких странах работает Bybit Card? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Карта доступна в 160+ странах мира. Принимается везде, где есть терминалы Mastercard — более 100 миллионов точек: рестораны, магазины, АЗС, онлайн-покупки, банкоматы.</div>
+    </details>
+
+    <details>
+      <summary>Какие монеты можно тратить? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Карта поддерживает Bitcoin (BTC), Ethereum (ETH), USDT, USDC, XRP и другие основные криптовалюты. При оплате нужная сумма автоматически конвертируется по рыночному курсу.</div>
+    </details>
+
+    <details>
+      <summary>Какой кешбэк у карты Bybit? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Кешбэк до 10% от суммы покупки — начисляется криптовалютой. Размер кешбэка зависит от вашего уровня аккаунта на Bybit и текущих акций платформы.</div>
+    </details>
+
+    <details>
+      <summary>Как долго ждать физическую карту? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Виртуальная карта активируется мгновенно — сразу для онлайн-покупок. Физическая карта доставляется бесплатно через DHL в течение 7–14 рабочих дней.</div>
+    </details>
+
+    <details>
+      <summary>Нужна ли верификация KYC? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Да. Потребуется паспорт или водительские права + селфи. Процесс занимает 5–10 минут. Это стандартное требование для любого финансового продукта.</div>
+    </details>
+
+    <details>
+      <summary>Есть ли комиссия за снятие наличных? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Первые $150 в месяц — бесплатно. Далее минимальная комиссия. Оплата покупок в магазинах — без комиссии. Конвертация по рыночному курсу.</div>
+    </details>
+
+    <details>
+      <summary>Безопасна ли карта? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Да. Bybit — одна из крупнейших бирж с 40+ млн пользователями. Карта защищена стандартами Mastercard, поддерживает 2FA и мгновенную блокировку прямо из приложения.</div>
+    </details>
+
+    <details>
+      <summary>Какой лимит на покупки и снятие? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">Суточный лимит снятия наличных — до 500 USDT. Лимит покупок — до 10 000 USDT в день. Лимиты могут быть увеличены при повышении уровня верификации.</div>
+    </details>
+
+    <details>
+      <summary>Сколько зарабатывают с реферальной программы? <span class="faq-arrow">▼</span></summary>
+      <div class="faq-body">За каждого реферала, потратившего 100 USDT — вы получаете 20 USDT. Плюс до 30% от торговых комиссий рефералов в течение 365 дней. Количество рефералов не ограничено.</div>
+    </details>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <img src="/images/faq.webp" alt="FAQ о карте Bybit" class="sidebar-img" loading="lazy">
+
+    <div class="sidebar-card">
+      <h3>📊 Карта в цифрах</h3>
+      <div class="stat-row">
+        <span class="stat-icon">💳</span>
+        <div>
+          <div class="stat-val">Бесплатно</div>
+          <div class="stat-lbl">Выпуск и доставка карты</div>
+        </div>
       </div>
-      <div class="hero-img-wrap">
-        <img src="/images/faq.webp" alt="FAQ о карте Bybit" class="hero-img" width="320" height="260" loading="eager">
+      <div class="stat-row">
+        <span class="stat-icon">🎁</span>
+        <div>
+          <div class="stat-val">До 10%</div>
+          <div class="stat-lbl">Кешбэк криптовалютой</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon">💵</span>
+        <div>
+          <div class="stat-val">$150 / мес</div>
+          <div class="stat-lbl">Бесплатное снятие наличных</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon">📈</span>
+        <div>
+          <div class="stat-val">8% APR</div>
+          <div class="stat-lbl">На остаток USDT</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon">🌍</span>
+        <div>
+          <div class="stat-val">160+ стран</div>
+          <div class="stat-lbl">Где работает карта</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="faq-section">
-  <div class="container">
-    <h2 class="faq-title">Вопросы и ответы</h2>
-    <p class="faq-sub">Нажмите на вопрос, чтобы увидеть ответ</p>
-
-    <details>
-      <summary>Что такое криптовалютная карта Bybit?</summary>
-      <div class="faq-answer">Криптовалютная карта Bybit — это дебетовая карта Mastercard, которая позволяет тратить Bitcoin, USDT и другую криптовалюту в любых магазинах, кафе и онлайн-сервисах по всему миру. Карта автоматически конвертирует крипту в фиатную валюту при оплате.</div>
-    </details>
-
-    <details>
-      <summary>Где принимается карта Bybit?</summary>
-      <div class="faq-answer">Карта принимается везде, где есть терминалы Mastercard — это более 100 миллионов точек по всему миру. Рестораны, магазины, АЗС, онлайн-покупки, снятие наличных в банкоматах.</div>
-    </details>
-
-    <details>
-      <summary>Какой кешбэк у карты Bybit?</summary>
-      <div class="faq-answer">Кешбэк составляет до 10% от суммы покупки и начисляется криптовалютой. Размер кешбэка зависит от вашего уровня аккаунта на Bybit и текущих акций платформы.</div>
-    </details>
-
-    <details>
-      <summary>Как долго ждать карту?</summary>
-      <div class="faq-answer">Виртуальная карта активируется мгновенно после одобрения заявки — её можно сразу использовать для онлайн-покупок. Физическая карта доставляется в течение 7–14 рабочих дней.</div>
-    </details>
-
-    <details>
-      <summary>Нужна ли верификация KYC?</summary>
-      <div class="faq-answer">Да, для получения карты необходимо пройти верификацию личности (KYC). Потребуется паспорт или водительские права + селфи. Процесс занимает 5–10 минут.</div>
-    </details>
-
-    <details>
-      <summary>Какие комиссии у карты?</summary>
-      <div class="faq-answer">Оплата покупок — без комиссии. Конвертация криптовалюты происходит по рыночному курсу. Снятие наличных в банкоматах — минимальная комиссия. Точные условия указаны в приложении Bybit.</div>
-    </details>
-
-    <details>
-      <summary>Безопасна ли карта Bybit?</summary>
-      <div class="faq-answer">Да. Bybit — одна из крупнейших криптобирж мира с 70 млн пользователями. Карта защищена стандартами безопасности Mastercard, поддерживает 2FA, есть мгновенная блокировка в приложении.</div>
-    </details>
-
-    <details>
-      <summary>Сколько зарабатывают с реферальной программы?</summary>
-      <div class="faq-answer">За каждого реферала, который получил карту и потратил 100 USDT, вы получаете 20 USDT. Также получаете до 30% от торговых комиссий рефералов в течение 365 дней. Количество рефералов не ограничено.</div>
-    </details>
-
-    <details>
-      <summary>Какие криптовалюты поддерживает карта?</summary>
-      <div class="faq-answer">Карта поддерживает Bitcoin (BTC), Ethereum (ETH), USDT, USDC, XRP и другие основные криптовалюты. Полный список доступен в приложении Bybit.</div>
-    </details>
-
-    <details>
-      <summary>Есть ли лимиты на снятие и покупки?</summary>
-      <div class="faq-answer">Суточный лимит снятия наличных — до 500 USDT. Лимит покупок — до 10 000 USDT в день. Лимиты могут быть увеличены в зависимости от уровня верификации аккаунта.</div>
-    </details>
-
-    <div class="cta-block">
-      <h2>Остались вопросы?</h2>
-      <p>Получите карту и убедитесь сами. Виртуальная карта — мгновенно.</p>
-      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Получить карту Bybit →</a>
+    <div class="sidebar-cta">
+      <h3>Готовы попробовать?</h3>
+      <p>Виртуальная карта активируется мгновенно. Физическая — бесплатная доставка.</p>
+      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">⚡ Получить карту бесплатно</a>
+      <div class="badge-list">
+        <span class="badge">✅ Mastercard</span>
+        <span class="badge">✅ Без комиссий</span>
+        <span class="badge">✅ Мгновенно</span>
+      </div>
     </div>
 
-  </div>
-</section>
+  </aside>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -298,9 +400,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 24p
 
 <script>
 document.getElementById('burger').addEventListener('click', function(){
-  var menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('open');
-  this.textContent = menu.classList.contains('open') ? '✕' : '☰';
+  var m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+  this.textContent = m.classList.contains('open') ? '✕' : '☰';
 });
 </script>
 </body>
