@@ -127,8 +127,8 @@ nav{position:sticky!important;top:0!important;z-index:100!important;background:r
       </div>
     </div>
   </div>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.8rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;text-decoration:none;flex-shrink:0;">Войти</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:6px;">Регистрация →</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;flex-shrink:0;">Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -228,8 +228,15 @@ nav{position:sticky!important;top:0!important;z-index:100!important;background:r
 (function(){
   var more=document.getElementById('navMore');
   var drop=document.getElementById('navDropdown');
-  if(more&&drop){var t;more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});drop.addEventListener('mouseenter',function(){clearTimeout(t);});drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});}
-  var b=document.getElementById('navBurger');var m=document.getElementById('mobileMenu');
+  if(more&&drop){
+    var t;
+    more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
+    more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+    drop.addEventListener('mouseenter',function(){clearTimeout(t);});
+    drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+  }
+  var b=document.getElementById('navBurger');
+  var m=document.getElementById('mobileMenu');
   if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
 })();
 </script>
