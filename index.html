@@ -424,21 +424,6 @@ footer {
 }
 
 /* MOBILE MENU - injected */
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
-.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
-.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
-.nav-more{position:relative;}
-.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
-.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);}
-.nav-more:hover .nav-dropdown{display:flex;flex-direction:column;}
-.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
-.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
-.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
-@media(max-width:900px){.nav-links{display:none!important;}.nav-burger{display:flex!important;align-items:center;justify-content:center;}.nav-cta{display:none;}}
 </style>
 </head>
 <body>
@@ -446,6 +431,7 @@ footer {
 <!-- NAVBAR -->
 <nav>
   <a class="nav-logo" href="/">
+    <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
     Crypto<span>Card</span>Pro
   </a>
   <div class="nav-links">
@@ -461,31 +447,28 @@ footer {
       <button class="nav-more-btn" id="navMoreBtn">Ещё ▾</button>
       <div class="nav-dropdown" id="navDropdown">
         <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-      <a href="/o-birzhe/">🏦 О бирже</a>
-      <a href="/instrumenty/">🔧 Инструменты</a>
-      <a href="/konverter/">📊 Конвертер крипты</a>
-      <a href="/bezopasnost/">🔐 Безопасность</a>
-      <a href="/prilozhenie/">📱 Приложение Bybit</a>
-      <a href="/o-nas/">🌐 О нас</a>
-      
+        <a href="/o-birzhe/">🏦 О бирже</a>
+        <a href="/instrumenty/">🔧 Инструменты</a>
+        <a href="/konverter/">📊 Конвертер крипты</a>
+        <a href="/bezopasnost/">🔐 Безопасность</a>
+        <a href="/prilozhenie/">📱 Приложение Bybit</a>
+        <a href="/o-nas/">🌐 О нас</a>
       </div>
     </div>
   </div>
-  <div style="display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;">
-    <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 16px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;white-space:nowrap;font-family:'Sora',sans-serif;" onmouseover="this.style.color='#EAECEF';this.style.borderColor='rgba(247,166,0,0.4)'" onmouseout="this.style.color='#848E9C';this.style.borderColor='rgba(255,255,255,0.07)'">Войти</a>
-    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta">Регистрация →</a>
-    <button class="nav-burger">☰</button>
-  </div>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;text-decoration:none;transition:all .2s;font-family:'Sora',sans-serif;">Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
+  <button class="nav-burger" id="navBurger">☰</button>
 </nav>
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobileMenu">
   <a href="/" class="active">Главная</a>
-  <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
-  <a href="/kupit-kriptu/">Купить крипту</a>
-  <a href="/birzha/">Биржа Bybit</a>
-  <a href="/bonusy/">Бонусный центр</a>
-  <a href="/faq/">FAQ</a>
-  <a href="/blog/">Блог</a>
+  <a href="/kak-poluchit/" class="">Как получить</a>
+  <a href="/keshbek/" class="">Кешбэк</a>
+  <a href="/kupit-kriptu/" class="">Купить крипту</a>
+  <a href="/birzha/" class="">Биржа Bybit</a>
+  <a href="/bonusy/" class="">Бонусный центр</a>
+  <a href="/faq/" class="">FAQ</a>
+  <a href="/blog/" class="">Блог</a>
   <span class="mobile-section">Ещё</span>
   <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
   <a href="/o-birzhe/">🏦 О бирже</a>
@@ -494,10 +477,9 @@ footer {
   <a href="/bezopasnost/">🔐 Безопасность</a>
   <a href="/prilozhenie/">📱 Приложение Bybit</a>
   <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="text-align:center;">🔑 Войти в Bybit</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="text-align:center;border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти в Bybit</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
   <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
-  
 </div>
 <!-- TICKER -->
 <div class="ticker-wrap" style="margin-top:64px;">
@@ -842,52 +824,23 @@ footer {
 </footer>
 
 <script>
-// Ticker — реальные курсы Bybit API
-const PAIRS  = ['BTCUSDT','ETHUSDT','SOLUSDT','XRPUSDT','BNBUSDT','BGBUSDT','TONUSDT'];
-const LABELS = ['BTC/USDT','ETH/USDT','SOL/USDT','XRP/USDT','BNB/USDT','BGB/USDT','TON/USDT'];
-
-async function fetchTicker() {
-  try {
-    const res = await fetch('https://api.bybit.com/v5/market/tickers?category=spot');
-    const data = await res.json();
-    const items = data.result.list;
-    const coins = PAIRS.map((sym, i) => {
-      const t = items.find(x => x.symbol === sym);
-      if (!t) return null;
-      const price = parseFloat(t.lastPrice).toLocaleString('en-US', {maximumFractionDigits: 4});
-      const change = parseFloat(t.price24hPcnt * 100).toFixed(2);
-      const up = parseFloat(change) >= 0;
-      return {n: LABELS[i], p: price, c: (up?'+':'') + change + '%', up};
-    }).filter(Boolean);
-    const ticker = document.getElementById('ticker');
-    const html = coins.map(c=>`<div class="tick-item"><span class="name">${c.n}</span><span class="price">$${c.p}</span><span class="change ${c.up?'up':'down'}">${c.c}</span></div>`).join('');
-    ticker.innerHTML = html + html;
-  } catch(e) { console.log('Ticker error:', e); }
-}
-fetchTicker();
-setInterval(fetchTicker, 30000);
-
-// FAQ accordion
-document.querySelectorAll('.faq-q').forEach(function(q){
-  q.addEventListener('click',function(){
-    var item = q.parentElement;
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-    if(!isOpen) item.classList.add('open');
-  });
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  var burger=document.querySelector('.nav-burger');
-  var mobile=document.querySelector('.mobile-menu');
-  if(burger&&mobile){
-    burger.addEventListener('click',function(){
-      mobile.classList.toggle('open');
-      burger.textContent=mobile.classList.contains('open')?'✕':'☰';
-    });
-  }
-});
+// Dropdown
+(function(){
+  var more=document.getElementById('navMore');
+  var drop=document.getElementById('navDropdown');
+  if(!more||!drop)return;
+  var t;
+  more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
+  more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+  drop.addEventListener('mouseenter',function(){clearTimeout(t);});
+  drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+})();
+// Burger
+(function(){
+  var b=document.getElementById('navBurger');
+  var m=document.getElementById('mobileMenu');
+  if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
+})();
 </script>
 </body>
 </html>
