@@ -675,33 +675,93 @@ footer {
   <div class="section-inner">
     <div class="section-tag">FAQ</div>
     <h2 class="section-title">Часто задаваемые вопросы</h2>
-    <div style="margin-top:32px;display:grid;grid-template-columns:1fr 525px;gap:24px;">
+    <div style="margin-top:32px;display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start;">
+
+      <!-- Левая колонка: картинка + спойлеры -->
       <div style="display:flex;flex-direction:column;gap:16px;">
         <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/faq.webp"
              alt="Криптовалютная карта Bybit — FAQ"
-             style="width:100%;max-width:800px;border-radius:16px;display:block;">
+             style="width:100%;border-radius:16px;display:block;">
         <div class="faq-list" style="margin-top:0;">
-        <div class="faq-item">
-          <div class="faq-q">В каких странах работает Bybit Card? <span class="arrow">▼</span></div>
-          <div class="faq-a">Bybit Card работает в 160+ странах, где принимают Mastercard. Карта доступна для резидентов Европы, Азии и других регионов. Россия — уточняйте на сайте Bybit.</div>
+          <div class="faq-item">
+            <div class="faq-q">В каких странах работает Bybit Card? <span class="arrow">▼</span></div>
+            <div class="faq-a">Bybit Card работает в 160+ странах, где принимают Mastercard. Карта доступна для резидентов Европы, Азии и других регионов.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Какие монеты можно тратить? <span class="arrow">▼</span></div>
+            <div class="faq-a">USDT, BTC, ETH, USDC и другие основные активы. Конвертация в момент оплаты по рыночному курсу.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Есть ли комиссия за снятие наличных? <span class="arrow">▼</span></div>
+            <div class="faq-a">Первые 150 USD в месяц — бесплатно. Далее комиссия 5%.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Безопасна ли карта? <span class="arrow">▼</span></div>
+            <div class="faq-a">Bybit использует 2FA, биометрию, мгновенную блокировку и лимиты безопасности. Средства хранятся на защищённых счетах.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Как долго ждать физическую карту? <span class="arrow">▼</span></div>
+            <div class="faq-a">Виртуальная — мгновенно. Физическая карта доставляется 7–14 рабочих дней в зависимости от страны.</div>
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Какие монеты можно тратить? <span class="arrow">▼</span></div>
-          <div class="faq-a">USDT, BTC, ETH, BGB, USDC и другие основные активы. Конвертация в момент оплаты по рыночному курсу.</div>
+      </div>
+
+      <!-- Правая колонка: сайдбар -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+
+        <!-- Статистика карты -->
+        <div style="background:#161B26;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:24px;">
+          <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#848E9C;margin-bottom:18px;font-weight:600;">📊 Карта в цифрах</div>
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span style="font-size:1.4rem;">💳</span>
+              <div><div style="color:#F7A600;font-weight:700;font-size:1.05rem;">Бесплатно</div><div style="font-size:.78rem;color:#848E9C;">Выпуск и доставка карты</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span style="font-size:1.4rem;">🎁</span>
+              <div><div style="color:#F7A600;font-weight:700;font-size:1.05rem;">До 10%</div><div style="font-size:.78rem;color:#848E9C;">Кешбэк криптовалютой</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span style="font-size:1.4rem;">💵</span>
+              <div><div style="color:#F7A600;font-weight:700;font-size:1.05rem;">$150 / мес</div><div style="font-size:.78rem;color:#848E9C;">Бесплатное снятие наличных</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span style="font-size:1.4rem;">📈</span>
+              <div><div style="color:#F7A600;font-weight:700;font-size:1.05rem;">8% APR</div><div style="font-size:.78rem;color:#848E9C;">На остаток USDT</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:12px 0;">
+              <span style="font-size:1.4rem;">🌍</span>
+              <div><div style="color:#F7A600;font-weight:700;font-size:1.05rem;">160+ стран</div><div style="font-size:.78rem;color:#848E9C;">Где работает карта</div></div>
+            </div>
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Есть ли комиссия за снятие наличных? <span class="arrow">▼</span></div>
-          <div class="faq-a">Первые 150 USD в месяц — бесплатно. Далее комиссия 5%.</div>
+
+        <!-- CTA блок -->
+        <div style="background:linear-gradient(135deg,rgba(247,166,0,.12),rgba(247,166,0,.04));border:1px solid rgba(247,166,0,.3);border-radius:16px;padding:28px 24px;text-align:center;">
+          <div style="font-size:1.1rem;font-weight:700;margin-bottom:8px;">Готовы попробовать?</div>
+          <div style="font-size:.85rem;color:#848E9C;margin-bottom:20px;line-height:1.5;">Виртуальная карта активируется мгновенно. Физическая — бесплатная доставка.</div>
+          <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1"
+             target="_blank" rel="noopener sponsored"
+             style="display:block;background:#F7A600;color:#0C0E12;font-weight:700;font-size:.95rem;padding:13px 20px;border-radius:10px;text-align:center;text-decoration:none;margin-bottom:14px;transition:opacity .2s;">
+            ⚡ Получить карту бесплатно
+          </a>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+            <span style="background:#1A1E28;border:1px solid rgba(255,255,255,0.07);border-radius:100px;padding:4px 12px;font-size:.75rem;color:#848E9C;">✅ Mastercard</span>
+            <span style="background:#1A1E28;border:1px solid rgba(255,255,255,0.07);border-radius:100px;padding:4px 12px;font-size:.75rem;color:#848E9C;">✅ Без комиссий</span>
+            <span style="background:#1A1E28;border:1px solid rgba(255,255,255,0.07);border-radius:100px;padding:4px 12px;font-size:.75rem;color:#848E9C;">✅ Мгновенно</span>
+          </div>
         </div>
-        <div class="faq-item">
-          <div class="faq-q">Безопасна ли карта? <span class="arrow">▼</span></div>
-          <div class="faq-a">Bybit использует двухфакторную аутентификацию, биометрию, мгновенную блокировку и лимиты безопасности. Средства хранятся на защищённых счетах.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Как долго ждать физическую карту? <span class="arrow">▼</span></div>
-          <div class="faq-a">Виртуальная — мгновенно. Физическая карта доставляется 7–14 рабочих дней в зависимости от страны.</div>
-        </div>
-        </div>
+
+        <!-- Ссылка на полный FAQ -->
+        <a href="/faq/" style="display:flex;align-items:center;justify-content:space-between;background:#161B26;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px 20px;text-decoration:none;transition:border-color .2s;"
+           onmouseover="this.style.borderColor='rgba(247,166,0,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
+          <div>
+            <div style="font-weight:600;font-size:.95rem;">Все вопросы и ответы</div>
+            <div style="font-size:.8rem;color:#848E9C;margin-top:2px;">Ещё 9 вопросов о карте Bybit</div>
+          </div>
+          <span style="color:#F7A600;font-size:1.2rem;">→</span>
+        </a>
+
       </div>
     </div>
   </div>
