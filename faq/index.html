@@ -3,83 +3,551 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FAQ — Часто задаваемые вопросы о криптовалютной карте Bybit</title>
-<meta name="description" content="Ответы на частые вопросы о карте Bybit. Как получить, где принимают, кешбэк, безопасность, лимиты и многое другое.">
-<link rel="canonical" href="https://cryptocardpro.com/faq/">
-<meta property="og:title" content="FAQ — Часто задаваемые вопросы о криптовалютной карте Bybit">
-<meta property="og:description" content="Ответы на частые вопросы о карте Bybit. Как получить, где принимают, кешбэк, безопасность, лимиты и многое другое.">
-<meta property="og:url" content="https://cryptocardpro.com/faq/">
+<title>Криптокарта Bybit — плати криптой везде, кешбэк до 10%</title>
+<meta name="description" content="Криптовалютная карта Bybit: тратьте BTC, ETH, USDT где принимают Mastercard. Кешбэк до 10%, 160+ стран. Бесплатное получение.">
+<link rel="canonical" href="https://cryptocardpro.com/">
+<meta property="og:title" content="Криптокарта Bybit — оплата криптой по всему миру">
+<meta property="og:description" content="Криптокарта Bybit: тратьте BTC, ETH, USDT везде. Кешбэк до 10%.">
+<meta property="og:url" content="https://cryptocardpro.com/">
+<meta property="og:image" content="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
-  --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
-  --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
-  --card:#161B26;--green:#0ECB81;--max:1200px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html,body{width:100%;overflow-x:hidden;}
-body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-.accent{color:var(--yellow);}
 
-/* ── NAV ── */
-nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
-.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
-.nav-logo span{color:var(--yellow);}
-.nav-logo svg{width:32px;height:32px;}
-.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-.nav-links a{padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;white-space:nowrap;}
-.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3);}
-.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700;border-radius:8px;padding:8px 16px;font-size:.82rem;white-space:nowrap;flex-shrink:0;transition:opacity .2s;}
-.nav-cta:hover{opacity:.85;}
-.nav-more{position:relative;}
-.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
-.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);}
-.nav-more:hover .nav-dropdown{display:flex;flex-direction:column;}
-.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
-.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
-.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;align-items:center;justify-content:center;}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
-.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
-.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
-/* NAV DESKTOP */
-nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;}
-.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;flex-shrink:0;}
-.nav-logo span{color:var(--yellow);}
-.nav-logo svg{width:32px;height:32px;}
-.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-.nav-links a{padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;white-space:nowrap;}
-.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3);}
-.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700;border-radius:8px;padding:8px 16px;font-size:.82rem;white-space:nowrap;flex-shrink:0;transition:opacity .2s;}
-.nav-cta:hover{opacity:.85;}
+body {
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
+  background: #0C0E12;
+  color: #EAECEF;
+  line-height: 1.5;
+}
 
-/* DROPDOWN */
-.nav-more{position:relative;}
-.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
-.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);z-index:200;}
-.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
-.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
+:root {
+  --bg: #0C0E12;
+  --bg2: #12151C;
+  --bg3: #1A1E28;
+  --yellow: #F7A600;
+  --yellow2: #FFB800;
+  --text: #EAECEF;
+  --text2: #848E9C;
+  --border: rgba(255,255,255,0.07);
+  --card: #161B26;
+  --green: #0ECB81;
+  --red: #F6465D;
+}
 
-/* BURGER */
-.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
+/* общие */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-/* MOBILE MENU */
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
-.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
-.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
+.section {
+  padding: 80px 0;
+}
 
-@media(max-width:900px){
-  .nav-links{display:none;}
-  .nav-burger{display:flex;align-items:center;justify-content:center;}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--text2);
+  font-size: 1.05rem;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.section-tag {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+/* навигация */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(12,14,18,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-logo span {
+  color: var(--yellow);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  padding: 7px 12px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: var(--text2);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--bg3);
+}
+
+.nav-cta {
+  background: var(--yellow) !important;
+  color: #0C0E12 !important;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 8px 18px !important;
+}
+
+.nav-burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  z-index: 99;
+  overflow-y: auto;
+  padding: 20px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text2);
+  border: 1px solid var(--border);
+  text-decoration: none;
+}
+
+.mobile-menu .mobile-cta {
+  background: var(--yellow);
+  color: #0C0E12;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+}
+
+/* hero */
+.hero {
+  padding: 80px 0 60px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(247,166,0,0.12);
+  border: 1px solid rgba(247,166,0,0.3);
+  border-radius: 40px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--text2);
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: #0C0E12;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-secondary {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.stat-item .num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--yellow);
+}
+
+.stat-item .label {
+  color: var(--text2);
+  font-size: 0.8rem;
+}
+
+.hero-card-wrap img {
+  width: 100%;
+  border-radius: 24px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+}
+
+/* фичи */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.feat-card h3 {
+  font-size: 1.1rem;
+  margin: 16px 0 8px;
+}
+
+.feat-card p {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+
+.feat-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* шаги получения */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-item {
+  display: flex;
+  gap: 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.step-num {
+  width: 48px;
+  height: 48px;
+  background: var(--yellow);
+  color: #0C0E12;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  color: var(--text2);
+  font-size: 0.85rem;
+}
+
+.step-link {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* кешбэк */
+.cashback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--card);
+  border-radius: 28px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.cb-tier {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cb-tier.featured {
+  background: rgba(247,166,0,0.1);
+  margin: 0 -12px;
+  padding: 16px 20px;
+  border-radius: 16px;
+}
+
+.cb-tier-rate {
+  font-weight: 800;
+  color: var(--yellow);
+  font-size: 1.2rem;
+}
+
+.cb-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.perk {
+  background: rgba(247,166,0,0.05);
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+}
+
+/* FAQ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-q .arrow {
+  color: var(--yellow);
+  transition: 0.2s;
+}
+
+.faq-item.open .faq-q .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-a {
+  display: none;
+  padding-bottom: 20px;
+  color: var(--text2);
+}
+
+.faq-item.open .faq-a {
+  display: block;
+}
+
+.sidebar-stats {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-cta {
+  background: linear-gradient(135deg, rgba(247,166,0,0.12), rgba(247,166,0,0.03));
+  border: 1px solid rgba(247,166,0,0.3);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* cta баннер */
+.cta-banner {
+  max-width: 1200px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #1A1E28, #0F1117);
+  border: 1px solid rgba(247,166,0,0.25);
+  border-radius: 32px;
+  padding: 70px 40px;
+  text-align: center;
+}
+
+/* футер */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.footer-links a {
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+/* адаптив */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-inner,
+  .steps-grid,
+  .cashback-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-stats {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner {
+    padding: 40px 24px;
+  }
+  .section {
+    padding: 48px 0;
+  }
 }
 </style>
 </head>
@@ -87,32 +555,19 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
 
 <nav>
   <a class="nav-logo" href="/">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
     Crypto<span>Card</span>Pro
   </a>
   <div class="nav-links">
-    <a href="/">Главная</a>
+    <a href="/" class="active">Главная</a>
     <a href="/kak-poluchit/">Как получить</a>
     <a href="/keshbek/">Кешбэк</a>
     <a href="/kupit-kriptu/">Купить крипту</a>
     <a href="/birzha/">Биржа Bybit</a>
     <a href="/bonusy/">Бонусный центр</a>
-    <a href="/faq/" class="active">FAQ</a>
-    <a href="/blog/">Блог</a>
-    <div class="nav-more" id="navMore">
-      <button class="nav-more-btn" id="navMoreBtn">Ещё ▾</button>
-      <div class="nav-dropdown" id="navDropdown">
-        <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-        <a href="/o-birzhe/">🏦 О бирже</a>
-        <a href="/instrumenty/">🔧 Инструменты</a>
-        <a href="/konverter/">📊 Конвертер крипты</a>
-        <a href="/bezopasnost/">🔐 Безопасность</a>
-        <a href="/prilozhenie/">📱 Приложение Bybit</a>
-        <a href="/o-nas/">🌐 О нас</a>
-      </div>
-    </div>
+    <a href="/faq/">FAQ</a>
   </div>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;flex-shrink:0;">Войти</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="color:var(--text2); font-size:0.8rem; border:1px solid var(--border); padding:6px 14px; border-radius:10px; text-decoration:none;">Войти</a>
   <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
@@ -124,230 +579,155 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.97);backdrop-fi
   <a href="/kupit-kriptu/">Купить крипту</a>
   <a href="/birzha/">Биржа Bybit</a>
   <a href="/bonusy/">Бонусный центр</a>
-  <a href="/faq/" class="active">FAQ</a>
-  <a href="/blog/">Блог</a>
-  <span class="mobile-section">Ещё</span>
-  <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-  <a href="/o-birzhe/">🏦 О бирже</a>
-  <a href="/instrumenty/">🔧 Инструменты</a>
-  <a href="/konverter/">📊 Конвертер крипты</a>
-  <a href="/bezopasnost/">🔐 Безопасность</a>
-  <a href="/prilozhenie/">📱 Приложение Bybit</a>
-  <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
-  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
+  <a href="/faq/">FAQ</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" class="mobile-cta">📝 Регистрация</a>
 </div>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-badge">❓ Ответы на вопросы</div>
-  <h1>Часто задаваемые <span class="accent">вопросы</span></h1>
-  <p>Всё что вы хотели знать о криптовалютной карте Bybit — собрано в одном месте.</p>
-</div>
-
-<!-- CONTENT: FAQ + SIDEBAR -->
-<div class="page-wrap">
-
-  <!-- FAQ -->
-  <div class="faq-col">
-    <p class="faq-heading">10 вопросов о карте Bybit</p>
-
-    <details>
-      <summary>Что такое криптовалютная карта Bybit? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Криптовалютная карта Bybit — это дебетовая карта Mastercard, которая позволяет тратить Bitcoin, USDT и другую криптовалюту в любых магазинах, кафе и онлайн-сервисах. Карта автоматически конвертирует крипту в фиатную валюту при оплате.</div>
-    </details>
-
-    <details>
-      <summary>В каких странах работает Bybit Card? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Карта доступна в 160+ странах мира. Принимается везде, где есть терминалы Mastercard — более 100 миллионов точек: рестораны, магазины, АЗС, онлайн-покупки, банкоматы.</div>
-    </details>
-
-    <details>
-      <summary>Какие монеты можно тратить? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Карта поддерживает Bitcoin (BTC), Ethereum (ETH), USDT, USDC, XRP и другие основные криптовалюты. При оплате нужная сумма автоматически конвертируется по рыночному курсу.</div>
-    </details>
-
-    <details>
-      <summary>Какой кешбэк у карты Bybit? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Кешбэк до 10% от суммы покупки — начисляется криптовалютой. Размер кешбэка зависит от вашего уровня аккаунта на Bybit и текущих акций платформы.</div>
-    </details>
-
-    <details>
-      <summary>Как долго ждать физическую карту? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Виртуальная карта активируется мгновенно — сразу для онлайн-покупок. Физическая карта доставляется бесплатно через DHL в течение 7–14 рабочих дней.</div>
-    </details>
-
-    <details>
-      <summary>Нужна ли верификация KYC? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Да. Потребуется паспорт или водительские права + селфи. Процесс занимает 5–10 минут. Это стандартное требование для любого финансового продукта.</div>
-    </details>
-
-    <details>
-      <summary>Есть ли комиссия за снятие наличных? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Первые $150 в месяц — бесплатно. Далее минимальная комиссия. Оплата покупок в магазинах — без комиссии. Конвертация по рыночному курсу.</div>
-    </details>
-
-    <details>
-      <summary>Безопасна ли карта? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Да. Bybit — одна из крупнейших бирж с 40+ млн пользователями. Карта защищена стандартами Mastercard, поддерживает 2FA и мгновенную блокировку прямо из приложения.</div>
-    </details>
-
-    <details>
-      <summary>Какой лимит на покупки и снятие? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Суточный лимит снятия наличных — до 500 USDT. Лимит покупок — до 10 000 USDT в день. Лимиты могут быть увеличены при повышении уровня верификации.</div>
-    </details>
-
-    <details>
-      <summary>Сколько зарабатывают с реферальной программы? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">За каждого реферала, потратившего 100 USDT — вы получаете 20 USDT. Плюс до 30% от торговых комиссий рефералов в течение 365 дней. Количество рефералов не ограничено.</div>
-    </details>
-
-    <details>
-      <summary>Можно ли привязать карту к Apple Pay и Google Pay? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Да. Карта Bybit поддерживает привязку к Apple Pay и Google Pay. После добавления карты в кошелёк вы можете оплачивать покупки одним касанием телефона или часов.</div>
-    </details>
-
-    <details>
-      <summary>Что происходит при падении курса криптовалюты? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Конвертация происходит в момент оплаты по текущему рыночному курсу. Вы тратите именно ту сумму в крипте, которая соответствует цене покупки на момент транзакции.</div>
-    </details>
-
-    <details>
-      <summary>Есть ли мобильное приложение для управления картой? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Да. Управление картой происходит прямо в приложении Bybit: пополнение, блокировка, просмотр транзакций, изменение лимитов и уведомления о каждой операции в реальном времени.</div>
-    </details>
-
-    <details>
-      <summary>Как пополнить баланс карты? <span class="faq-arrow">▼</span></summary>
-      <div class="faq-body">Баланс карты — это ваш крипто-кошелёк на Bybit. Пополнить можно переводом с биржи, покупкой крипты через P2P или банковской картой прямо в приложении Bybit.</div>
-    </details>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⚡ Официальный партнёр Bybit</div>
+      <h1>Криптокарта Bybit — плати <span style="color:#F7A600;">BTC, USDT</span> везде</h1>
+      <p>Кешбэк до 10%, работа в 160+ странах. Виртуальная карта мгновенно. Бесплатное получение.</p>
+      <div class="btn-group">
+        <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" class="btn-primary">💳 Получить карту</a>
+        <a href="#how" class="btn-secondary">Как работает</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="num">40M+</div><div class="label">пользователей</div></div>
+        <div class="stat-item"><div class="num">160+</div><div class="label">стран</div></div>
+        <div class="stat-item"><div class="num">10%</div><div class="label">кешбэк</div></div>
+      </div>
+    </div>
+    <div class="hero-card-wrap">
+      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp" alt="Bybit Card Mastercard">
+    </div>
   </div>
+</section>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-tag">Преимущества</div>
+    <h2 class="section-title">Всё в одной карте</h2>
+    <div class="features-grid">
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/CARD%20MASTER.webp"><h3>Виртуальная + физическая</h3><p>Виртуальная сразу, физическая — бесплатно DHL</p></div>
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/icon%20cripto.webp"><h3>BTC, ETH, USDT, USDC</h3><p>Тратьте любую популярную криптовалюту</p></div>
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/100%25%20CASHBEK.webp"><h3>100% кешбэк у партнёров</h3><p>Netflix, Spotify, ChatGPT, Amazon Prime</p></div>
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/8%25%20APR.webp"><h3>8% APR на остаток</h3><p>Зарабатывайте на свободных USDT</p></div>
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/150%20USD.webp"><h3>Бесплатное снятие $150/мес</h3><p>В любых банкоматах мира</p></div>
+      <div class="feat-card"><img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Apple%20Pay.webp"><h3>Apple Pay / Google Pay</h3><p>Платите телефоном — удобно и быстро</p></div>
+    </div>
+  </div>
+</section>
 
-    <img src="/images/faq.webp" alt="FAQ о карте Bybit" class="sidebar-img" loading="lazy">
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-tag">Инструкция</div>
+    <h2 class="section-title">Как получить карту</h2>
+    <div class="steps-grid">
+      <div class="steps-list">
+        <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>Регистрация</h3><p>Создайте аккаунт на Bybit по email или телефону.</p><a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" class="step-link">Зарегистрироваться →</a></div></div>
+        <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>Верификация (KYC)</h3><p>Паспорт или права — 5–15 минут.</p></div></div>
+        <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>Пополнение</h3><p>Купите USDT, BTC или внесите крипту.</p></div></div>
+        <div class="step-item"><div class="step-num">4</div><div class="step-content"><h3>Активация карты</h3><p>Раздел «Карта» → «Получить карту». Виртуальная карта готова.</p><a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" class="step-link">Активировать →</a></div></div>
+      </div>
+      <div class="video-box">
+        <video autoplay muted loop playsinline style="width:100%;border-radius:20px;">
+          <source src="https://www.bybit.com/bycsi-root/common-static/fiat-static/cards/landing/videos/hta_tutorial_video_ru-RU.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="sidebar-card">
-      <h3>📊 Карта в цифрах</h3>
-      <div class="stat-row">
-        <span class="stat-icon">💳</span>
-        <div>
-          <div class="stat-val">Бесплатно</div>
-          <div class="stat-lbl">Выпуск и доставка карты</div>
-        </div>
+<section id="cashback" class="section">
+  <div class="container">
+    <div class="section-tag">Кешбэк</div>
+    <h2 class="section-title">До 10% криптой за покупки</h2>
+    <div class="cashback-grid">
+      <div>
+        <div class="cb-tier"><div><strong>Стандарт</strong><br><span style="font-size:0.75rem; color:#848E9C;">базовый уровень</span></div><div class="cb-tier-rate">2%</div></div>
+        <div class="cb-tier featured"><div><strong>Серебро ⭐</strong><br><span style="font-size:0.75rem; color:#848E9C;">расширенный</span></div><div class="cb-tier-rate">4%</div></div>
+        <div class="cb-tier"><div><strong>Золото 🥇</strong><br><span style="font-size:0.75rem; color:#848E9C;">премиум</span></div><div class="cb-tier-rate">6%</div></div>
+        <div class="cb-tier"><div><strong>Платина 💎</strong><br><span style="font-size:0.75rem; color:#848E9C;">VIP</span></div><div class="cb-tier-rate">10%</div></div>
       </div>
-      <div class="stat-row">
-        <span class="stat-icon">🎁</span>
-        <div>
-          <div class="stat-val">До 10%</div>
-          <div class="stat-lbl">Кешбэк криптовалютой</div>
-        </div>
-      </div>
-      <div class="stat-row">
-        <span class="stat-icon">💵</span>
-        <div>
-          <div class="stat-val">$150 / мес</div>
-          <div class="stat-lbl">Бесплатное снятие наличных</div>
-        </div>
-      </div>
-      <div class="stat-row">
-        <span class="stat-icon">📈</span>
-        <div>
-          <div class="stat-val">8% APR</div>
-          <div class="stat-lbl">На остаток USDT</div>
-        </div>
-      </div>
-      <div class="stat-row">
-        <span class="stat-icon">🌍</span>
-        <div>
-          <div class="stat-val">160+ стран</div>
-          <div class="stat-lbl">Где работает карта</div>
+      <div>
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/logo.webp" style="width:100%; border-radius:16px;">
+        <div class="cb-perks">
+          <div class="perk">🎁 100% кешбэк: Netflix, Spotify, Prime, ChatGPT</div>
+          <div class="perk">💸 2–10% на все остальные покупки</div>
+          <div class="perk">⚡ Начисление в USDT автоматически</div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="sidebar-cta">
-      <h3>Готовы попробовать?</h3>
-      <p>Виртуальная карта активируется мгновенно. Физическая — бесплатная доставка.</p>
-      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">⚡ Получить карту бесплатно</a>
-      <div class="badge-list">
-        <span class="badge">✅ Mastercard</span>
-        <span class="badge">✅ Без комиссий</span>
-        <span class="badge">✅ Мгновенно</span>
+<section class="section">
+  <div class="container">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Частые вопросы</h2>
+    <div class="faq-grid">
+      <div>
+        <div class="faq-item"><div class="faq-q">В каких странах работает карта? <span class="arrow">▼</span></div><div class="faq-a">160+ стран, везде где принимают Mastercard.</div></div>
+        <div class="faq-item"><div class="faq-q">Какие монеты можно тратить? <span class="arrow">▼</span></div><div class="faq-a">USDT, BTC, ETH, USDC и другие основные активы.</div></div>
+        <div class="faq-item"><div class="faq-q">Есть ли комиссия за снятие? <span class="arrow">▼</span></div><div class="faq-a">Первые $150 в месяц — бесплатно, далее 5%.</div></div>
+        <div class="faq-item"><div class="faq-q">Это безопасно? <span class="arrow">▼</span></div><div class="faq-a">2FA, биометрия, мгновенная блокировка.</div></div>
+      </div>
+      <div>
+        <div class="sidebar-stats">
+          <div class="stat-row"><span style="font-size:1.2rem;">💳</span> <div><strong>Бесплатно</strong><br><span style="font-size:0.7rem;">выпуск и доставка</span></div></div>
+          <div class="stat-row"><span style="font-size:1.2rem;">🎁</span> <div><strong>До 10%</strong><br><span style="font-size:0.7rem;">кешбэк</span></div></div>
+          <div class="stat-row"><span style="font-size:1.2rem;">💰</span> <div><strong>$150/мес</strong><br><span style="font-size:0.7rem;">бесплатное снятие</span></div></div>
+        </div>
+        <div class="sidebar-cta">
+          <div style="font-weight:700;">Готовы попробовать?</div>
+          <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" style="display:block; background:#F7A600; color:#0C0E12; font-weight:700; padding:12px; border-radius:40px; margin-top:16px; text-decoration:none;">⚡ Получить карту</a>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-  </aside>
+<div class="cta-banner">
+  <h2>Всего три шага — и твоя карта Bybit</h2>
+  <p>Плати криптой где удобно. Кешбэк до 10%.</p>
+  <div class="btn-group" style="justify-content:center; margin-top:24px;">
+    <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" class="btn-primary">⚡ Получить карту</a>
+    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" class="btn-secondary">Регистрация</a>
+  </div>
 </div>
 
 <footer>
-  <div class="footer-inner">
-
-    <div class="footer-brand">
-      <div class="footer-logo">Crypto<span>Card</span>Pro</div>
-      <p class="footer-desc">Независимый информационный сайт о криптовалютной карте Bybit. Не является официальным ресурсом Bybit.</p>
-      <p class="disclaimer" style="margin-top:12px;">⚠️ Партнёрский сайт. Ссылки содержат реферальные коды. Криптовалюта — рисковый актив.</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Карта Bybit</h4>
-      <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
-      <a href="/gde-prinimaetsya/">Где принимают</a>
-      <a href="/bonusy/">Бонусный центр</a>
-      <a href="/bezopasnost/">Безопасность</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>О сайте</h4>
-      <a href="/">Главная</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-nas/">О нас</a>
-      <a href="/prilozhenie/">Приложение</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Bybit</h4>
-      <a href="/birzha/">Биржа Bybit</a>
-      <a href="/o-birzhe/">О бирже</a>
-      <a href="/konverter/">Конвертер крипты</a>
-      <a href="/instrumenty/">Инструменты</a>
-      <a href="/kupit-kriptu/">Купить крипту</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Помощь</h4>
-      <a href="https://www.bybit.com/ru-RU/help-center/?affiliate_id=158844&group_id=1850232&group_type=1" target="_blank" rel="noopener sponsored">📖 Руководство</a>
-      <a href="https://www.bybit.com/ru-RU/help-center/case-list?affiliate_id=158844&group_id=1850233&group_type=1" target="_blank" rel="noopener sponsored">🎧 Центр поддержки</a>
-      <a href="https://www.bybit.com/ru-RU/user-feedback?affiliate_id=158844&group_id=1850231&group_type=1" target="_blank" rel="noopener sponsored">💬 Обратная связь</a>
-      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored">💳 Получить карту</a>
-    </div>
-
+  <div class="footer-logo" style="justify-content:center; gap:8px;">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
+    Crypto<span style="color:#F7A600;">Card</span>Pro
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 CryptoCardPro — Информационный ресурс</span>
-    <span>Не является финансовой консультацией</span>
+  <div class="footer-links">
+    <a href="/kak-poluchit/">Как получить</a>
+    <a href="/keshbek/">Кешбэк</a>
+    <a href="/birzha/">Биржа</a>
+    <a href="/bonusy/">Бонусы</a>
   </div>
+  <p style="color:#848E9C; font-size:0.75rem;">© 2026 CryptoCardPro — официальный партнёр Bybit. Не финсовет.</p>
 </footer>
 
 <script>
-(function(){
-  var more=document.getElementById('navMore');
-  var drop=document.getElementById('navDropdown');
-  if(more&&drop){
-    var t;
-    more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
-    more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
-    drop.addEventListener('mouseenter',function(){clearTimeout(t);});
-    drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
+  // бургер-меню
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      burger.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰';
+    });
   }
-  var b=document.getElementById('navBurger');
-  var m=document.getElementById('mobileMenu');
-  if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
-})();
+  // FAQ аккордеон
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
 </script>
 </body>
 </html>
