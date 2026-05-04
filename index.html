@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Bybit Card — Криптовалютная карта Mastercard | CryptoCardPro</title>
-<meta name="description" content="Bybit Card: платите криптой где принимают Mastercard. Кешбэк до 10%, виртуальная карта мгновенно.">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Bybit Card: платите криптой где принимают Mastercard. Кешбэк до 10%, виртуальная карта мгновенно."/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--bg:#0B0E11;--bg2:#12151C;--bg3:#1A1E28;--yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);--text:#EAECEF;--text2:#848E9C;--text3:#5C6670;--border:rgba(255,255,255,0.07);--border-hover:rgba(247,166,0,0.25);--green:#0ECB81;--red:#F6465D;--radius:16px;--max:1200px;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Inter','Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}a{color:inherit;text-decoration:none;}
@@ -142,41 +141,150 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
 .footer-disclaimer{color:var(--text3);font-size:0.78rem;line-height:1.6;max-width:700px;}
 .footer-copy{color:var(--text3);font-size:0.75rem;}
 @media(max-width:600px){.section{padding:60px 0;}.hero{padding:60px 0 48px;}.cta-banner{padding:48px 24px;margin:0 16px;}}
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.steps-list{display:flex;flex-direction:column;gap:14px;}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 24px;display:flex;align-items:flex-start;gap:16px;transition:all 0.25s;}
+.step-card:hover{border-color:var(--border-hover);}
+.step-num{width:44px;height:44px;background:var(--yellow);color:#0B0E12;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;font-family:'Sora',sans-serif;flex-shrink:0;}
+.step-body h3{font-size:1.05rem;font-weight:600;margin-bottom:6px;font-family:'Sora',sans-serif;}
+.step-body p{color:var(--text2);font-size:0.88rem;line-height:1.6;}
+.step-link{color:var(--yellow);font-size:0.82rem;margin-top:8px;display:inline-block;}
+.step-link:hover{text-decoration:underline;}
+.steps-video video{width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.4);display:block;}
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr;}.steps-video{order:-1;}}
+
+/* DROPDOWN NAV */
+.nav-dropdown-wrap{position:relative;display:inline-block;}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 16px 40px rgba(0,0,0,.5);z-index:200;padding-top:12px;}
+.nav-dropdown a{padding:9px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;display:block;white-space:nowrap;}
+.nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
+.nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+.nav-main-link{padding:8px 10px;border-radius:10px;font-size:.82rem;color:var(--text2);font-weight:500;transition:all .25s;white-space:nowrap;display:inline-block;}
+.nav-main-link:hover,.nav-main-link.active{color:var(--text);background:var(--bg3);}
+.nav-dropdown-wrap{padding-bottom:20px;margin-bottom:-20px;}
+
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:10px 14px;border-radius:10px;font-size:.9rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;display:block;text-decoration:none;}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
+.mobile-menu .mobile-cta{background:var(--yellow);color:#0B0E12;font-weight:700;border:none;text-align:center;margin-top:12px;padding:14px;}
+
+/* COMPACT FOOTER */
+footer{padding:40px 24px 24px;}
+.footer-inner{gap:20px;}
+.footer-links{gap:6px 16px;}
+.footer-links a{font-size:.82rem;}
+.footer-copy{font-size:.75rem;max-width:600px;}
+
 </style>
-<base target="_blank">
-</head>
+<base target="_blank"/>
+<script src="https://www.kimi.com/sdk-seed.js" defer=""></script></head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="/">
-    <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/logo.webp" alt="CryptoCardPro">
+  <a class="nav-logo" href="index.html">
+    <img src="images/logo.png" alt="CryptoCardPro"/>
     Crypto<span>Card</span>Pro
   </a>
   <div class="nav-links">
-    <a href="/" class="active">Главная</a>
-    <a href="/kak-poluchit/">Как получить</a>
-    <a href="/keshbek/">Кешбэк</a>
-    <a href="/kupit-kriptu/">Купить крипту</a>
-    <a href="/komissii/">Комиссии</a>
-    <a href="/faq/">FAQ</a>
+    <a href="index.html" class="nav-main-link">Главная</a>
+
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">💳 Карта ▾</a>
+      <div class="nav-dropdown">
+        <a href="kak-poluchit.html">Как получить</a>
+        <a href="kak-popolnit.html">Как пополнить</a>
+        <a href="kak-platit.html">Как платить</a>
+        <a href="komissii.html">Комиссии</a>
+        <a href="limity.html">Лимиты</a>
+        <a href="gde-prinimaetsya.html">Где принимают</a>
+      </div>
+    </div>
+
+    <a href="keshbek.html" class="nav-main-link">🎁 Кешбэк</a>
+    <a href="kupit-kriptu.html" class="nav-main-link">💰 Купить крипту</a>
+
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">🏦 Биржа ▾</a>
+      <div class="nav-dropdown">
+        <a href="birzha.html">О бирже</a>
+        <a href="instrumenty.html">Инструменты</a>
+        <a href="konverter.html">Конвертер</a>
+      </div>
+    </div>
+
+    <a href="prilozhenie.html" class="nav-main-link">📱 Приложение</a>
+    <a href="bonusy.html" class="nav-main-link">🎁 Бонусы</a>
+
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">📰 Блог ▾</a>
+      <div class="nav-dropdown">
+        <a href="novosti.html">Новости</a>
+        <a href="stati.html">Статьи</a>
+      </div>
+    </div>
+
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">❓ Поддержка ▾</a>
+      <div class="nav-dropdown">
+        <a href="faq.html">FAQ</a>
+        <a href="bezopasnost.html">Безопасность</a>
+        <a href="kontakty.html">Контакты</a>
+        <a href="o-nas.html">О нас</a>
+      </div>
+    </div>
+
+
   </div>
-  <div style="display:flex;align-items:center;">
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
     <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844" target="_blank" class="nav-login">Войти</a>
     <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="nav-cta">Регистрация →</a>
   </div>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Главная</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">💳 Карта</div>
+  <a href="kak-poluchit.html">  Как получить</a>
+  <a href="kak-popolnit.html">  Как пополнить</a>
+  <a href="kak-platit.html">  Как платить</a>
+  <a href="komissii.html">  Комиссии</a>
+  <a href="limity.html">  Лимиты</a>
+  <a href="gde-prinimaetsya.html">  Где принимают</a>
+  <a href="keshbek.html">🎁 Кешбэк</a>
+  <a href="kupit-kriptu.html">💰 Купить крипту</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">🏦 Биржа</div>
+  <a href="birzha.html">  О бирже</a>
+  <a href="instrumenty.html">  Инструменты</a>
+  <a href="konverter.html">  Конвертер</a>
+  <a href="prilozhenie.html">📱 Приложение</a>
+  <a href="bonusy.html">🎁 Бонусы</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">📰 Блог</div>
+  <a href="novosti.html">  Новости</a>
+  <a href="stati.html">  Статьи</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">❓ Поддержка</div>
+  <a href="faq.html">  FAQ</a>
+  <a href="bezopasnost.html">  Безопасность</a>
+  <a href="kontakty.html">  Контакты</a>
+  <a href="o-nas.html">🌐 О нас</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844" target="_blank">🔑 Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
+  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844" target="_blank" class="mobile-cta">💳 Получить карту →</a>
+</div>
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div>
       <div class="hero-badge">Официальная партнёрская программа</div>
-      <h1>Bybit Card<br><span class="accent">Плати криптой везде</span></h1>
+      <h1>Bybit Card<br/><span class="accent">Плати криптой везде</span></h1>
       <p class="hero-desc">Тратьте Bitcoin, USDT и другую крипту как обычные деньги везде, где принимают Mastercard. Виртуальная карта — мгновенно. Физическая — доставка DHL.</p>
       <div class="hero-btns">
         <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844" target="_blank" class="btn btn-primary">⚡ Получить карту</a>
-        <a href="/kak-poluchit/" class="btn btn-secondary">Как получить →</a>
+        <a href="kak-poluchit.html" class="btn btn-secondary">Как получить →</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item"><div class="stat-num">2M+</div><div class="stat-label">держателей карт</div></div>
@@ -186,7 +294,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       <p style="color:var(--text3);font-size:0.75rem;margin-top:12px;">* Где принимают Mastercard. Выпуск доступен в выбранных регионах.</p>
     </div>
     <div class="hero-card-wrap">
-      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp" alt="Bybit Card Mastercard" class="hero-card">
+      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp" alt="Bybit Card Mastercard" class="hero-card"/>
     </div>
   </div>
 </section>
@@ -198,22 +306,118 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       <p>Bybit Card выпускается в ограниченном списке стран. Выберите ваш регион, чтобы узнать, можно ли оформить карту официально.</p>
       <select class="region-select" id="regionSelect">
         <option value="">Выберите страну...</option>
-        <option value="eea">🇪🇺 Страны ЕЭС / Европа</option>
-        <option value="ch">🇨🇭 Швейцария</option>
-        <option value="au">🇦🇺 Австралия</option>
-        <option value="ar">🇦🇷 Аргентина</option>
-        <option value="br">🇧🇷 Бразилия</option>
-        <option value="kz">🇰🇿 Казахстан (AIFC)</option>
-        <option value="mx">🇲🇽 Мексика</option>
-        <option value="ge">🇬🇪 Грузия</option>
-        <option value="apac">🌏 Азиатско-Тихоокеанский регион</option>
-        <option value="ru">🇷🇺 Россия</option>
-        <option value="ua">🇺🇦 Украина</option>
-        <option value="us">🇺🇸 США</option>
-        <option value="sg">🇸🇬 Сингапур</option>
-        <option value="ca">🇨🇦 Канада</option>
-        <option value="uk">🇬🇧 Великобритания</option>
-        <option value="other">🌐 Другая страна</option>
+        <option value="available">🇦🇽 Аландские острова</option>
+        <option value="available">🇦🇸 Американское Самоа</option>
+        <option value="available">🇦🇩 Андорра</option>
+        <option value="available">🇦🇷 Аргентина</option>
+        <option value="available">🇦🇲 Армения</option>
+        <option value="available">🇦🇼 Аруба</option>
+        <option value="available">🇦🇺 Австралия</option>
+        <option value="available">🇦🇿 Азербайджан</option>
+        <option value="available">🇧🇾 Беларусь</option>
+        <option value="available">🇧🇪 Бельгия</option>
+        <option value="available">🇧🇯 Бенин</option>
+        <option value="available">🇧🇲 Бермудские острова</option>
+        <option value="available">🇧🇶 Бонейр, Синт-Естатиус и Саба</option>
+        <option value="available">🇧🇷 Бразилия</option>
+        <option value="available">🇮🇴 Британская территория Индийского океана</option>
+        <option value="available">🇧🇳 Бруней Даруссалам</option>
+        <option value="available">🇧🇬 Болгария</option>
+        <option value="available">🇨🇦 Канада</option>
+        <option value="available">🇭🇷 Хорватия</option>
+        <option value="available">🇨🇼 Курасао</option>
+        <option value="available">🇨🇾 Кипр</option>
+        <option value="available">🇨🇿 Чехия</option>
+        <option value="available">🇩🇰 Дания</option>
+        <option value="available">🇩🇲 Доминика</option>
+        <option value="available">🇪🇪 Эстония</option>
+        <option value="available">🇸🇿 Эсватини</option>
+        <option value="available">🇫🇴 Фарерские острова</option>
+        <option value="available">🇫🇮 Финляндия</option>
+        <option value="available">🇫🇷 Франция</option>
+        <option value="available">🇵🇫 Французская Полинезия</option>
+        <option value="available">🇬🇦 Габон</option>
+        <option value="available">🇬🇲 Гамбия</option>
+        <option value="available">🇬🇪 Грузия</option>
+        <option value="available">🇩🇪 Германия</option>
+        <option value="available">🇬🇷 Греция</option>
+        <option value="available">🇬🇱 Гренландия</option>
+        <option value="available">🇬🇩 Гренада</option>
+        <option value="available">🇬🇵 Гваделупа</option>
+        <option value="available">🇬🇺 Гуам</option>
+        <option value="available">🇬🇬 Гернси</option>
+        <option value="available">🇬🇾 Гайана</option>
+        <option value="available">🇻🇦 Святой Престол</option>
+        <option value="available">🇭🇰 Гонконг</option>
+        <option value="available">🇭🇺 Венгрия</option>
+        <option value="available">🇮🇸 Исландия</option>
+        <option value="available">🇮🇳 Индия</option>
+        <option value="available">🇮🇪 Ирландия</option>
+        <option value="available">🇮🇱 Израиль</option>
+        <option value="available">🇮🇹 Италия</option>
+        <option value="available">🇯🇵 Япония</option>
+        <option value="available">🇰🇿 Казахстан</option>
+        <option value="available">🇰🇪 Кения</option>
+        <option value="available">🇰🇮 Кирибати</option>
+        <option value="available">🇰🇷 Республика Корея</option>
+        <option value="available">🇱🇦 Лаосская Демократическая Республика</option>
+        <option value="available">🇱🇻 Латвия</option>
+        <option value="available">🇱🇸 Лесото</option>
+        <option value="available">🇱🇮 Лихтенштейн</option>
+        <option value="available">🇱🇹 Литва</option>
+        <option value="available">🇲🇬 Мадагаскар</option>
+        <option value="available">🇲🇼 Малави</option>
+        <option value="available">🇲🇾 Малайзия</option>
+        <option value="available">🇲🇻 Мальдивские острова</option>
+        <option value="available">🇫🇲 Федеративные Штаты Микронезии</option>
+        <option value="available">🇲🇩 Республика Молдова</option>
+        <option value="available">🇲🇨 Монако</option>
+        <option value="available">🇲🇪 Черногория</option>
+        <option value="available">🇲🇿 Мозамбик</option>
+        <option value="available">🇳🇱 Нидерланды</option>
+        <option value="available">🇳🇨 Новая Каледония</option>
+        <option value="available">🇳🇿 Новая Зеландия</option>
+        <option value="available">🇳🇬 Нигерия</option>
+        <option value="available">🇳🇴 Норвегия</option>
+        <option value="available">🇵🇼 Палау</option>
+        <option value="available">🇵🇬 Папуа-Новая Гвинея</option>
+        <option value="available">🇵🇾 Парагвай</option>
+        <option value="available">🇵🇪 Перу</option>
+        <option value="available">🇵🇭 Филиппины</option>
+        <option value="available">🇵🇱 Польша</option>
+        <option value="available">🇵🇹 Португалия</option>
+        <option value="available">🇷🇴 Румыния</option>
+        <option value="ru">🇷🇺 Российская Федерация</option>
+        <option value="available">🇷🇪 Реюньон</option>
+        <option value="available">🇧🇱 Сен-Бартелеми</option>
+        <option value="available">🇲🇫 Сент-Мартин (французская часть)</option>
+        <option value="available">🇻🇨 Сент-Винсент и Гренадины</option>
+        <option value="available">🇸🇲 Сан-Марино</option>
+        <option value="available">🇸🇳 Сенегал</option>
+        <option value="available">🇸🇨 Сейшельские острова</option>
+        <option value="available">🇸🇰 Словакия</option>
+        <option value="available">🇸🇮 Словения</option>
+        <option value="available">🇿🇦 Южная Африка</option>
+        <option value="available">🇪🇸 Испания</option>
+        <option value="available">🇱🇰 Шри-Ланка</option>
+        <option value="available">🇸🇷 Суринам</option>
+        <option value="available">🇸🇯 Свалбард и Ян Мэйэн</option>
+        <option value="available">🇸🇪 Швеция</option>
+        <option value="available">🇹🇼 Тайвань (Китайская Республика)</option>
+        <option value="available">🇹🇯 Таджикистан</option>
+        <option value="available">🇹🇿 Танзания</option>
+        <option value="available">🇹🇬 Объединенная Республика Того</option>
+        <option value="available">🇹🇷 Турция</option>
+        <option value="available">🇹🇲 Туркменистан</option>
+        <option value="available">🇹🇨 Теркс и Кайкос</option>
+        <option value="available">🇺🇦 Украина</option>
+        <option value="available">🇬🇧 Соединённое Королевство Великобритании и Северной Ирландии</option>
+        <option value="available">🇺🇲 Внешние малые острова США</option>
+        <option value="available">🇺🇾 Уругвай</option>
+        <option value="available">🇺🇿 Узбекистан</option>
+        <option value="available">🇻🇬 Виргинские Острова (Великобритании)</option>
+        <option value="available">🇻🇮 Виргинские острова Соединённых Штатов</option>
+        <option value="available">🇿🇲 Замбия</option>
       </select>
       <div class="region-result available" id="regionAvailable">
         <strong style="color:var(--green);font-size:1.1rem;">✅ Карта доступна!</strong>
@@ -223,7 +427,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       <div class="region-result unavailable" id="regionUnavailable">
         <strong style="color:var(--red);font-size:1.1rem;">❌ Официальный выпуск недоступен</strong>
         <p style="margin-top:8px;color:var(--text2);font-size:0.9rem;">К сожалению, Bybit Card пока не выпускается официально в вашем регионе. Но карта работает в 160+ странах где принимают Mastercard.</p>
-        <p style="margin-top:8px;color:var(--text3);font-size:0.82rem;">Доступные регионы выпуска: ЕЭС, Швейцария, Австралия, Аргентина, Бразилия, Казахстан (AIFC), Мексика, Грузия, Азиатско-Тихоокеанский регион.</p>
       </div>
     </div>
 
@@ -254,46 +457,95 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
     </div>
     <div class="features-grid">
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/CARD%20MASTER.webp" alt="Виртуальная и физическая карта Bybit" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/CARD%20MASTER.webp" alt="Виртуальная и физическая карта Bybit" class="feat-img"/>
         <div class="feat-icon">💳</div>
         <h3>Виртуальная + физическая</h3>
         <p>Виртуальная карта активируется мгновенно после одобрения. Физическая Mastercard доставляется DHL.</p>
         <span class="feat-note">Виртуальная — бесплатно | Физическая — $5</span>
       </div>
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/icon%20cripto.webp" alt="BTC ETH XRP TON USDT USDC MNT BNB" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/icon%20cripto.webp" alt="BTC ETH XRP TON USDT USDC MNT BNB" class="feat-img"/>
         <div class="feat-icon">₿</div>
         <h3>BTC, ETH, USDT и другие</h3>
         <p>Поддерживаются BTC, ETH, XRP, TON, USDT, USDC, MNT, BNB. Конвертация в фиат при оплате.</p>
         <span class="feat-note">Конвертация: 0.9% за транзакцию</span>
       </div>
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/100%25%20CASHBEK.webp" alt="100% кешбэк у партнёров" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/100%25%20CASHBEK.webp" alt="100% кешбэк у партнёров" class="feat-img"/>
         <div class="feat-icon">🎁</div>
         <h3>Кешбэк до 10%</h3>
         <p>6 тиров кешбэка. До 10% на покупки. 100% ребейты на подписки (Netflix, Spotify, Prime) — с Tier 2.</p>
         <span class="feat-note">Tier 1: 2%, лимит $5/мес | Tier 6: 10%</span>
       </div>
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/8%25%20APR.webp" alt="8% APR на баланс" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/8%25%20APR.webp" alt="8% APR на баланс" class="feat-img"/>
         <div class="feat-icon">📈</div>
         <h3>До 8% APR на баланс</h3>
         <p>Auto-Earn начисляет до 8% годовых на свободные USDT. Требует активации в приложении.</p>
         <span class="feat-note">Переменная ставка, не гарантирована</span>
       </div>
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/150%20USD.webp" alt="150 USD снятие бесплатно" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/150%20USD.webp" alt="150 USD снятие бесплатно" class="feat-img"/>
         <div class="feat-icon">💵</div>
         <h3>$100 снятие бесплатно</h3>
         <p>Первые $100 USD/EUR в месяц в банкомате — без комиссии. Далее — 2% + комиссия банкомата.</p>
         <span class="feat-note">Лимит: $100/мес | Далее: 2%</span>
       </div>
       <div class="feat-card animate">
-        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Apple%20Pay.webp" alt="Apple Pay Google Pay Samsung Pay" class="feat-img">
+        <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Apple%20Pay.webp" alt="Apple Pay Google Pay Samsung Pay" class="feat-img"/>
         <div class="feat-icon">📱</div>
-        <h3>Apple Pay & Google Pay</h3>
+        <h3>Apple Pay &amp; Google Pay</h3>
         <p>Google Pay — во всех программах. Apple Pay — в ЕЭС, Австралии, Аргентине, Бразилии.</p>
         <span class="feat-note">Samsung Pay — AIFC и Азиатско-Тихоокеанский регион</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header animate">
+      <div class="section-tag">Инструкция</div>
+      <h2 class="section-title">Как получить карту</h2>
+      <p class="section-sub">4 простых шага — и вы платите криптовалютой везде.</p>
+    </div>
+    <div class="steps-grid animate">
+      <div class="steps-list">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Регистрация</h3>
+            <p>Создайте аккаунт на Bybit по email или телефону.</p>
+            <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="step-link">Зарегистрироваться →</a>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Верификация (KYC)</h3>
+            <p>Паспорт или права — 5–15 минут.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Пополнение</h3>
+            <p>Купите USDT, BTC или внесите крипту.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Активация карты</h3>
+            <p>Раздел «Карта» → «Получить карту». Виртуальная карта готова.</p>
+            <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844" target="_blank" class="step-link">Активировать →</a>
+          </div>
+        </div>
+      </div>
+      <div class="steps-video">
+        <video autoplay="" muted="" loop="" playsinline="">
+          <source src="https://www.bybit.com/bycsi-root/common-static/fiat-static/cards/landing/videos/hta_tutorial_video_ru-RU.mp4" type="video/mp4"/>
+        </video>
       </div>
     </div>
   </div>
@@ -311,25 +563,25 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
         <div class="quick-icon">📝</div>
         <h3>Как получить карту</h3>
         <p>Пошаговая инструкция: регистрация, KYC, пополнение, активация. Всё за 10 минут.</p>
-        <a href="/kak-poluchit/" class="btn btn-secondary">Подробнее →</a>
+        <a href="kak-poluchit.html" class="btn btn-secondary">Подробнее →</a>
       </div>
       <div class="quick-card animate">
         <div class="quick-icon">🎁</div>
         <h3>Кешбэк и тиры</h3>
         <p>Таблица всех тиров, калькулятор доходности, список партнёров с 100% ребейтом.</p>
-        <a href="/keshbek/" class="btn btn-secondary">Подробнее →</a>
+        <a href="keshbek.html" class="btn btn-secondary">Подробнее →</a>
       </div>
       <div class="quick-card animate">
         <div class="quick-icon">💳</div>
         <h3>Купить криптовалюту</h3>
         <p>3 способа пополнения: P2P, быстрая покупка картой, спотовая торговля.</p>
-        <a href="/kupit-kriptu/" class="btn btn-secondary">Подробнее →</a>
+        <a href="kupit-kriptu.html" class="btn btn-secondary">Подробнее →</a>
       </div>
       <div class="quick-card animate">
         <div class="quick-icon">📊</div>
         <h3>Комиссии и лимиты</h3>
         <p>Все комиссии прозрачно: выпуск, обслуживание, конвертация, снятие, FX.</p>
-        <a href="/komissii/" class="btn btn-secondary">Подробнее →</a>
+        <a href="komissii.html" class="btn btn-secondary">Подробнее →</a>
       </div>
     </div>
   </div>
@@ -348,7 +600,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
     <div class="reviews-track" id="reviewsTrack">
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Получил виртуальную карту за 5 минут. Сразу привязал к Google Pay — плачу в супермаркете телефоном. Кешбэк приходит в USDT на следующий день. Отличная штука!"</p>
+        <p class="review-text">&#34;Получил виртуальную карту за 5 минут. Сразу привязал к Google Pay — плачу в супермаркете телефоном. Кешбэк приходит в USDT на следующий день. Отличная штука!&#34;</p>
         <div class="review-author">
           <div class="review-avatar">AK</div>
           <div>
@@ -360,7 +612,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Физическая карта пришла в Берлин за 10 дней. Дизайн крутой, чёрная с золотым логотипом. 100% ребейт на Netflix и Spotify — это просто бесплатные подписки."</p>
+        <p class="review-text">&#34;Физическая карта пришла в Берлин за 10 дней. Дизайн крутой, чёрная с золотым логотипом. 100% ребейт на Netflix и Spotify — это просто бесплатные подписки.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">MN</div>
           <div>
@@ -372,7 +624,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★☆</div>
-        <p class="review-text">"Хорошая карта, но Tier 1 почти бесполезен — $5 лимит кешбэка. Пришлось докупать крипту, чтобы дойти до Tier 2. С Tier 2 уже нормально — ребейты на подписки спасают."</p>
+        <p class="review-text">&#34;Хорошая карта, но Tier 1 почти бесполезен — $5 лимит кешбэка. Пришлось докупать крипту, чтобы дойти до Tier 2. С Tier 2 уже нормально — ребейты на подписки спасают.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">DS</div>
           <div>
@@ -384,7 +636,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Живу в Бразилии, Apple Pay работает идеально. Оплачиваю Uber, iFood, Netflix — всё мгновенно. Конвертация 0.9% не заметна на фоне 6% кешбэка. Рекомендую!"</p>
+        <p class="review-text">&#34;Живу в Бразилии, Apple Pay работает идеально. Оплачиваю Uber, iFood, Netflix — всё мгновенно. Конвертация 0.9% не заметна на фоне 6% кешбэка. Рекомендую!&#34;</p>
         <div class="review-author">
           <div class="review-avatar">RS</div>
           <div>
@@ -396,7 +648,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Пользуюсь 8 месяцев. Auto-Earn на USDT приносит стабильно ~7% годовых. Плюс кешбэк 8% на покупки. В сумме выхожу в хороший плюс каждый месяц."</p>
+        <p class="review-text">&#34;Пользуюсь 8 месяцев. Auto-Earn на USDT приносит стабильно ~7% годовых. Плюс кешбэк 8% на покупки. В сумме выхожу в хороший плюс каждый месяц.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">JL</div>
           <div>
@@ -408,7 +660,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★☆</div>
-        <p class="review-text">"Карта хорошая, но хотелось бы больше стран для выпуска. Жду, когда добавят Турцию. А так — кешбэк реальный, подписки бесплатные, комиссии прозрачные."</p>
+        <p class="review-text">&#34;Карта хорошая, но хотелось бы больше стран для выпуска. Жду, когда добавят Турцию. А так — кешбэк реальный, подписки бесплатные, комиссии прозрачные.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">EO</div>
           <div>
@@ -420,7 +672,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Оформила для поездок по Европе. Работает везде — от Парижа до Праги. FX-комиссия 0.5% гораздо выгоднее банковских карт. Кешбэк покрывает все расходы на конвертацию."</p>
+        <p class="review-text">&#34;Оформила для поездок по Европе. Работает везде — от Парижа до Праги. FX-комиссия 0.5% гораздо выгоднее банковских карт. Кешбэк покрывает все расходы на конвертацию.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">SW</div>
           <div>
@@ -432,7 +684,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Как фрилансер, получаю доход в крипте. Раньше конвертировал через обменники — терял 3-5%. С Bybit Card трачу напрямую, кешбэк 10% — это просто бонус сверху. Идеально!"</p>
+        <p class="review-text">&#34;Как фрилансер, получаю доход в крипте. Раньше конвертировал через обменники — терял 3-5%. С Bybit Card трачу напрямую, кешбэк 10% — это просто бонус сверху. Идеально!&#34;</p>
         <div class="review-author">
           <div class="review-avatar">AM</div>
           <div>
@@ -444,7 +696,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Оформил через Казахстан (AIFC) из России. VPN + грузинский номер — всё работает. Карта пришла за 2 недели через пересылку. Плачу ChatGPT и Midjourney без проблем."</p>
+        <p class="review-text">&#34;Оформил через Казахстан (AIFC) из России. VPN + грузинский номер — всё работает. Карта пришла за 2 недели через пересылку. Плачу ChatGPT и Midjourney без проблем.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">IV</div>
           <div>
@@ -456,7 +708,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★☆</div>
-        <p class="review-text">"Полгода использую в Мексике. Снятие в банкоматах работает, но иногда банк берёт дополнительную комиссию. Лучше платить картой напрямую — тогда всё бесплатно до $100."</p>
+        <p class="review-text">&#34;Полгода использую в Мексике. Снятие в банкоматах работает, но иногда банк берёт дополнительную комиссию. Лучше платить картой напрямую — тогда всё бесплатно до $100.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">CM</div>
           <div>
@@ -468,7 +720,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Студент в Аргентине. Папа отправляет USDT, я трачу через карту. Нет комиссий за переводы, кешбэк 4% — отлично для бюджета. Спасибо Bybit!"</p>
+        <p class="review-text">&#34;Студент в Аргентине. Папа отправляет USDT, я трачу через карту. Нет комиссий за переводы, кешбэк 4% — отлично для бюджета. Спасибо Bybit!&#34;</p>
         <div class="review-author">
           <div class="review-avatar">LF</div>
           <div>
@@ -480,7 +732,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       </div>
       <div class="review-card animate">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Получил карту через Грузию из России. KYC1 прошёл за 10 минут, виртуальная карта сразу активна. Оплачиваю Steam, Spotify, Netflix — всё работает идеально."</p>
+        <p class="review-text">&#34;Получил карту через Грузию из России. KYC1 прошёл за 10 минут, виртуальная карта сразу активна. Оплачиваю Steam, Spotify, Netflix — всё работает идеально.&#34;</p>
         <div class="review-author">
           <div class="review-avatar">NP</div>
           <div>
@@ -502,7 +754,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
 <section style="padding:40px 0 100px;">
   <div class="container">
     <div class="cta-banner animate">
-      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/cta-bg.webp" alt="" class="cta-bg">
+      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/cta-bg.webp" alt="" class="cta-bg"/>
       <h2>Готовы начать?</h2>
       <p>Виртуальная карта активируется за минуты. Физическая — с бесплатной доставкой DHL.</p>
       <div class="cta-btns">
@@ -522,23 +774,21 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/logo.webp" alt="CryptoCardPro">
+      <img src="images/logo.png" alt="CryptoCardPro"/>
       Crypto<span>Card</span>Pro
     </div>
     <div class="footer-links">
-      <a href="/">Главная</a>
-      <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
-      <a href="/kupit-kriptu/">Купить крипту</a>
-      <a href="/komissii/">Комиссии</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/blog/">Блог</a>
-      <a href="/o-nas/">О нас</a>
+      <a href="index.html">Главная</a>
+      <a href="kak-poluchit.html">Карта</a>
+      <a href="keshbek.html">Кешбэк</a>
+      <a href="kupit-kriptu.html">Купить крипту</a>
+      <a href="birzha.html">Биржа</a>
+      <a href="prilozhenie.html">Приложение</a>
+      <a href="bonusy.html">Бонусы</a>
+      <a href="faq.html">FAQ</a>
+      <a href="o-nas.html">О нас</a>
     </div>
-    <p class="footer-disclaimer">
-      CryptoCardPro — независимый партнёрский сайт Bybit. Вся информация предоставлена в ознакомительных целях и не является финансовой консультацией. Условия могут изменяться. Актуальные тарифы уточняйте на <a href="https://www.bybit.com" target="_blank" style="color:var(--yellow);">bybit.com</a>.
-    </p>
-    <p class="footer-copy">© 2025–2026 CryptoCardPro. Все права защищены.</p>
+    <p class="footer-copy">© 2025–2026 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
   </div>
 </footer>
 
@@ -552,7 +802,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
   var avail=document.getElementById('regionAvailable');
   var unavail=document.getElementById('regionUnavailable');
   var russiaBlock=document.getElementById('russiaBlock');
-  var availableRegions=['eea','ch','au','ar','br','kz','mx','ge','apac'];
   if(select){
     select.addEventListener('change',function(){
       var val=this.value;
@@ -563,10 +812,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
       if(val==='ru'){
         if(russiaBlock)russiaBlock.style.display='block';
         unavail.classList.add('show');
-      }else if(availableRegions.includes(val)){
-        avail.classList.add('show');
       }else{
-        unavail.classList.add('show');
+        avail.classList.add('show');
       }
     });
   }
@@ -627,5 +874,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 24p
   });
 })();
 </script>
-</body>
-</html>
+
+
+</body></html>
