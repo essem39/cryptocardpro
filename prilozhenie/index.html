@@ -1,336 +1,375 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Приложение Bybit — скачать на iPhone и Android</title>
-<meta name="description" content="Скачайте приложение Bybit для iOS и Android. Торговля, криптовалютная карта, переводы — всё в одном приложении.">
-<link rel="canonical" href="https://cryptocardpro.com/prilozhenie/">
-<meta property="og:title" content="Приложение Bybit — скачать на iPhone и Android">
-<meta property="og:description" content="Скачайте приложение Bybit для iOS и Android. Торговля, криптовалютная карта, переводы — всё в одном приложении.">
-<meta property="og:url" content="https://cryptocardpro.com/prilozhenie/">
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Приложение Bybit — торгуйте и платите с телефона | CryptoCardPro</title>
+<meta name="description" content="Мобильное приложение Bybit: торговля криптовалютой, Bybit Card, кешбэк, TradeGPT AI. iOS и Android."/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#0C0E12;--bg2:#12151C;--bg3:#1A1E28;
-  --yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);
-  --text:#EAECEF;--text2:#848E9C;--border:rgba(255,255,255,0.07);
-  --card:#161B26;--green:#0ECB81;--red:#F6465D;
-  --radius:12px;--max:1200px;
-}
-body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-.accent{color:var(--yellow);}
+:root{--bg:#0B0E11;--bg2:#12151C;--bg3:#1A1E28;--yellow:#F7A600;--yellow2:#FFB800;--yellow-glow:rgba(247,166,0,0.15);--text:#EAECEF;--text2:#848E9C;--text3:#5C6670;--border:rgba(255,255,255,0.07);--border-hover:rgba(247,166,0,0.25);--green:#0ECB81;--red:#F6465D;--radius:16px;--max:1200px;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Inter','Sora',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}a{color:inherit;text-decoration:none;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.animate{opacity:0;transform:translateY(30px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1);}
+.animate.visible{opacity:1;transform:translateY(0);}
 
-/* NAV DESKTOP */
-nav {
-  position:sticky; top:0; z-index:100;
-  background:rgba(12,14,18,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 40px;
-  height: 64px;
-  display:flex; align-items:center; gap:8px;
-}
-.nav-logo {
-  font-size:18px; font-weight:700; color:var(--text);
-  text-decoration:none; margin-right:24px; flex-shrink:0;
-}
-.nav-logo span { color: var(--yellow); }
-.nav-links { display:flex; gap:4px; flex:1; }
-.nav-links a {
-  padding: 6px 12px; border-radius:8px;
-  font-size:13px; color:var(--text2); text-decoration:none;
-  transition: all 0.2s; white-space:nowrap;
-}
-.nav-links a:hover { color:var(--text); background:var(--bg3); }
-.nav-links a.active { color:var(--yellow); }
-.nav-cta {
-  background: var(--yellow) !important;
-  color: #0C0E12 !important;
-  font-weight: 700;
-  border-radius: 8px;
-  padding: 8px 18px;
-  font-size: 13px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: all 0.2s;
-}
-.nav-cta:hover { background: var(--yellow2) !important; transform:translateY(-1px); }
-.nav-more{position:relative;}
-.nav-more-btn{background:none;border:none;cursor:pointer;padding:7px 11px;border-radius:8px;font-size:.82rem;color:var(--text2);font-family:'Sora',sans-serif;transition:all .2s;}
-.nav-more-btn:hover{color:var(--text);background:var(--bg3);}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.5);}
-.nav-more:hover .nav-dropdown{display:flex;flex-direction:column;}
-.nav-dropdown a{padding:10px 14px;border-radius:8px;font-size:.85rem;color:var(--text2);transition:all .2s;display:block;}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,14,17,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;font-family:'Sora',sans-serif;}
+.nav-logo span{color:var(--yellow);}
+.nav-logo img{height:64px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
+.nav-links a{padding:8px 14px;border-radius:10px;font-size:0.82rem;color:var(--text2);font-weight:500;transition:all 0.25s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3);}
+.nav-cta{background:var(--yellow)!important;color:#0B0E12!important;font-weight:700;border-radius:10px;padding:9px 18px;font-size:0.82rem;white-space:nowrap;transition:all 0.25s;}
+.nav-cta:hover{background:var(--yellow2)!important;}
+.nav-login{padding:8px 16px;border-radius:10px;font-size:0.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;transition:all 0.25s;margin-right:8px;}
+.nav-login:hover{border-color:var(--yellow);color:var(--yellow);}
+.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:42px;height:42px;border-radius:10px;font-size:1.3rem;cursor:pointer;}
+@media(max-width:1024px){.nav-links{display:none;}.nav-burger{display:flex;}}
+@media(max-width:640px){.nav-login{display:none;}}
+
+/* DROPDOWN NAV */
+.nav-dropdown-wrap{position:relative;display:inline-block;}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:8px;min-width:200px;box-shadow:0 16px 40px rgba(0,0,0,.5);z-index:200;padding-top:12px;}
+.nav-dropdown a{padding:9px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);transition:all .2s;display:block;white-space:nowrap;}
 .nav-dropdown a:hover{color:var(--text);background:var(--bg3);}
-.nav-burger{display:none;background:none;border:1px solid var(--border);color:var(--text);width:40px;height:40px;border-radius:8px;font-size:1.2rem;cursor:pointer;flex-shrink:0;}
-@media(max-width:900px){.nav-links{display:none!important;}.nav-burger{display:flex!important;align-items:center;justify-content:center;}}
+.nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+.nav-main-link{padding:8px 10px;border-radius:10px;font-size:.82rem;color:var(--text2);font-weight:500;transition:all .25s;white-space:nowrap;display:inline-block;}
+.nav-main-link:hover,.nav-main-link.active{color:var(--text);background:var(--bg3);}
+.nav-dropdown-wrap{padding-bottom:20px;margin-bottom:-20px;}
+
 /* MOBILE MENU */
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);z-index:99;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;}
 .mobile-menu.open{display:flex;}
-.mobile-menu a{padding:14px 16px;border-radius:10px;font-size:1rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;text-decoration:none;display:block;}
+.mobile-menu a{padding:10px 14px;border-radius:10px;font-size:.9rem;color:var(--text2);border:1px solid var(--border);transition:all .2s;display:block;text-decoration:none;}
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--text);background:var(--bg3);border-color:var(--yellow);}
-.mobile-menu .mobile-cta{background:var(--yellow);color:#0C0E12;font-weight:700;border:none;text-align:center;margin-top:8px;}
-.mobile-menu .mobile-section{font-size:.75rem;color:var(--text2);padding:16px 4px 4px;text-transform:uppercase;letter-spacing:.1em;}
-/* NAV OVERRIDE */
-nav{position:sticky!important;top:0!important;z-index:100!important;background:rgba(12,14,18,0.97)!important;backdrop-filter:blur(12px)!important;border-bottom:1px solid var(--border)!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:64px!important;gap:8px!important;flex-wrap:nowrap!important;}
-.nav-logo{display:flex!important;align-items:center!important;gap:10px!important;font-weight:700!important;font-size:1.1rem!important;flex-shrink:0!important;text-decoration:none!important;color:var(--text)!important;}
-.nav-logo span{color:var(--yellow)!important;}
-.nav-logo svg{width:32px!important;height:32px!important;flex-shrink:0!important;}
-.nav-links{display:flex!important;align-items:center!important;gap:2px!important;flex:1!important;justify-content:flex-start!important;margin:0 12px!important;overflow:visible!important;}
-.nav-links a{padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;text-decoration:none!important;}
-.nav-links a:hover,.nav-links a.active{color:var(--text)!important;background:var(--bg3)!important;}
-.nav-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;border-radius:8px!important;padding:8px 14px!important;font-size:.8rem!important;white-space:nowrap!important;flex-shrink:0!important;text-decoration:none!important;display:inline-block!important;}
-.nav-more{position:relative!important;flex-shrink:0!important;}
-.nav-more-btn{background:none!important;border:none!important;cursor:pointer!important;padding:6px 10px!important;border-radius:8px!important;font-size:.8rem!important;color:var(--text2)!important;white-space:nowrap!important;}
-.nav-dropdown{display:none;position:absolute!important;top:calc(100% + 8px)!important;right:0!important;background:var(--bg2)!important;border:1px solid var(--border)!important;border-radius:12px!important;padding:8px!important;min-width:220px!important;box-shadow:0 16px 40px rgba(0,0,0,.5)!important;z-index:200!important;}
-.nav-dropdown a{padding:10px 14px!important;border-radius:8px!important;font-size:.85rem!important;color:var(--text2)!important;display:block!important;white-space:nowrap!important;text-decoration:none!important;}
-.nav-dropdown a:hover{color:var(--text)!important;background:var(--bg3)!important;}
-.nav-burger{display:none;background:none!important;border:1px solid var(--border)!important;color:var(--text)!important;width:36px!important;height:36px!important;border-radius:8px!important;font-size:1.1rem!important;cursor:pointer!important;flex-shrink:0!important;align-items:center!important;justify-content:center!important;}
-.mobile-menu{display:none;position:fixed!important;top:64px!important;left:0!important;right:0!important;bottom:0!important;background:var(--bg)!important;z-index:99!important;overflow-y:auto!important;padding:16px!important;flex-direction:column!important;gap:4px!important;}
-.mobile-menu.open{display:flex!important;}
-.mobile-menu a{padding:14px 16px!important;border-radius:10px!important;font-size:1rem!important;color:var(--text2)!important;border:1px solid var(--border)!important;text-decoration:none!important;display:block!important;}
-.mobile-menu a:hover,.mobile-menu a.active{color:var(--text)!important;background:var(--bg3)!important;border-color:var(--yellow)!important;}
-.mobile-menu .mobile-cta{background:var(--yellow)!important;color:#0C0E12!important;font-weight:700!important;text-align:center!important;margin-top:8px!important;}
-.mobile-menu .mobile-section{font-size:.75rem!important;color:var(--text2)!important;padding:16px 4px 4px!important;text-transform:uppercase!important;letter-spacing:.1em!important;}
-@media(max-width:900px){nav .nav-links{display:none!important;}nav .nav-more{display:none!important;}.nav-burger{display:flex!important;}}
+.mobile-menu .mobile-cta{background:var(--yellow);color:#0B0E12;font-weight:700;border:none;text-align:center;margin-top:12px;padding:14px;}
+
+/* CONTAINER */
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-tag{display:inline-block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--yellow);font-weight:700;margin-bottom:16px;background:var(--yellow-glow);padding:6px 16px;border-radius:100px;border:1px solid rgba(247,166,0,0.15);}
+.section-title{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:16px;}
+.section-sub{color:var(--text2);font-size:1.05rem;max-width:560px;margin:0 auto;line-height:1.7;}
+
+/* ШАХМАТНЫЕ БЛОКИ */
+.chess-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:80px;}
+.chess-row.reverse .chess-image{order:2;}
+.chess-row.reverse .chess-text{order:1;}
+.chess-image{width:100%;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;}
+.chess-image img{width:100%;height:auto;display:block;}
+.chess-text h3{font-size:1.6rem;margin-bottom:16px;font-family:'Sora',sans-serif;}
+.chess-text p{color:var(--text2);font-size:1rem;line-height:1.7;margin-bottom:20px;}
+.chess-text ul{list-style:none;}
+.chess-text ul li{padding:8px 0;padding-left:28px;position:relative;color:var(--text2);}
+.chess-text ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;}
+@media(max-width:900px){.chess-row{grid-template-columns:1fr;gap:30px;text-align:center;}.chess-row.reverse .chess-image{order:1;}.chess-row.reverse .chess-text{order:2;}.chess-text ul li{text-align:left;}}
+
+/* КНОПКИ СКАЧИВАНИЯ */
+.download-buttons{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:32px 0;}
+.download-btn{display:flex;align-items:center;gap:12px;background:var(--bg2);border:1px solid var(--border);border-radius:50px;padding:12px 24px;transition:all 0.3s;}
+.download-btn:hover{border-color:var(--yellow);transform:translateY(-2px);}
+.download-btn span{font-size:1.5rem;}
+.download-btn div{text-align:left;}
+.download-btn .small{font-size:0.7rem;color:var(--text2);}
+.download-btn .big{font-size:1rem;font-weight:600;}
+
+/* FEATURES GRID */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0;}
+.feature-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all 0.3s;text-align:center;}
+.feature-card:hover{border-color:var(--border-hover);transform:translateY(-4px);}
+.feature-img{width:100%;height:160px;object-fit:cover;border-bottom:1px solid var(--border);}
+.feature-card h3{font-size:1rem;margin:20px 16px 8px;}
+.feature-card p{color:var(--text2);font-size:0.8rem;padding:0 16px 20px;}
+@media(max-width:800px){.features-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.features-grid{grid-template-columns:1fr;}}
+
+/* INFO BLOCK */
+.info-block{background:linear-gradient(135deg,rgba(247,166,0,0.05),var(--bg2));border:1px solid rgba(247,166,0,0.15);border-radius:var(--radius);padding:32px;margin:48px 0;}
+.info-block h3{font-family:'Sora',sans-serif;font-size:1.2rem;margin-bottom:16px;color:var(--yellow);}
+.info-block ul{list-style:none;}
+.info-block ul li{padding:8px 0;padding-left:24px;position:relative;color:var(--text2);}
+.info-block ul li::before{content:'✓';position:absolute;left:0;color:var(--green);}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.25s;border:none;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--yellow);color:#0B0E12;}
+.btn-primary:hover{background:var(--yellow2);transform:translateY(-2px);}
+.btn-secondary{background:var(--bg3);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{border-color:var(--yellow);color:var(--yellow);}
+
+/* CTA */
+.cta-banner{background:linear-gradient(135deg,var(--bg3),rgba(247,166,0,0.05));border:1px solid rgba(247,166,0,0.15);border-radius:var(--radius);padding:60px 40px;text-align:center;margin:0 24px;}
+.cta-banner h2{font-family:'Sora',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:16px;}
+.cta-banner p{color:var(--text2);margin-bottom:32px;font-size:1rem;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 24px 24px;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;}
+.footer-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;font-family:'Sora',sans-serif;}
+.footer-logo img{height:64px;width:auto;}
+.footer-links{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;}
+.footer-links a{color:var(--text2);font-size:0.82rem;transition:color 0.2s;}
+.footer-links a:hover{color:var(--yellow);}
+.footer-copy{color:var(--text3);font-size:0.75rem;max-width:600px;}
+@media(max-width:600px){.section{padding:50px 0;}.cta-banner{padding:40px 24px;margin:0 16px;}}
 </style>
-</head>
+<base target="_blank"/>
+<script src="https://www.kimi.com/sdk-seed.js" defer=""></script></head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a class="nav-logo" href="/">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#F7A600"/><path d="M8 10h10c2.2 0 4 1.8 4 4s-1.8 4-4 4H8V10zm0 0v12" stroke="#0C0E12" stroke-width="2.5" stroke-linecap="round"/></svg>
-    Crypto<span>Card</span>Pro
+  <a class="nav-logo" href="index.html">
+    <img src="https://cryptocardpro.com/images/Oregina-Logo.png" alt="CryptoCardPro"/>
   </a>
   <div class="nav-links">
-    <a href="/">Главная</a>
-    <a href="/kak-poluchit/">Как получить</a>
-    <a href="/keshbek/">Кешбэк</a>
-    <a href="/kupit-kriptu/">Купить крипту</a>
-    <a href="/birzha/">Биржа Bybit</a>
-    <a href="/bonusy/">Бонусный центр</a>
-    <a href="/faq/">FAQ</a>
-    <a href="/blog/">Блог</a>
-    <div class="nav-more" id="navMore">
-      <button class="nav-more-btn" id="navMoreBtn">Ещё ▾</button>
-      <div class="nav-dropdown" id="navDropdown">
-        <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-        <a href="/o-birzhe/">🏦 О бирже</a>
-        <a href="/instrumenty/">🔧 Инструменты</a>
-        <a href="/konverter/">📊 Конвертер крипты</a>
-        <a href="/bezopasnost/">🔐 Безопасность</a>
-        <a href="/prilozhenie/">📱 Приложение Bybit</a>
-        <a href="/o-nas/">🌐 О нас</a>
+    <a href="index.html" class="nav-main-link">Главная</a>
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">💳 Карта ▾</a>
+      <div class="nav-dropdown">
+        <a href="kak-poluchit.html">Как получить</a>
+        <a href="kak-popolnit.html">Как пополнить</a>
+        <a href="kak-platit.html">Как платить</a>
+        <a href="komissii.html">Комиссии</a>
+        <a href="limity.html">Лимиты</a>
+        <a href="gde-prinimaetsya.html">Где принимают</a>
+      </div>
+    </div>
+    <a href="keshbek.html" class="nav-main-link">🎁 Кешбэк</a>
+    <a href="kupit-kriptu.html" class="nav-main-link">💰 Купить крипту</a>
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">🏦 Биржа ▾</a>
+      <div class="nav-dropdown">
+        <a href="birzha.html">О бирже</a>
+        <a href="instrumenty.html">Инструменты</a>
+        <a href="konverter.html">Конвертер</a>
+      </div>
+    </div>
+    <a href="prilozhenie.html" class="nav-main-link active">📱 Приложение</a>
+    <a href="bonusy.html" class="nav-main-link">🎁 Бонусы</a>
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">📰 Блог ▾</a>
+      <div class="nav-dropdown">
+        <a href="novosti.html">Новости</a>
+        <a href="stati.html">Статьи</a>
+      </div>
+    </div>
+    <div class="nav-dropdown-wrap">
+      <a class="nav-main-link" style="cursor:pointer;">❓ Поддержка ▾</a>
+      <div class="nav-dropdown">
+        <a href="faq.html">FAQ</a>
+        <a href="bezopasnost.html">Безопасность</a>
+        <a href="kontakty.html">Контакты</a>
+        <a href="o-nas.html">О нас</a>
       </div>
     </div>
   </div>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored" style="padding:8px 14px;border-radius:8px;font-size:.82rem;color:var(--text2);border:1px solid var(--border);white-space:nowrap;flex-shrink:0;">Войти</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" class="nav-cta" style="margin-left:8px;">Регистрация →</a>
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844" target="_blank" class="nav-login">Войти</a>
+    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="nav-cta">Регистрация →</a>
+  </div>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/">Главная</a>
-  <a href="/kak-poluchit/">Как получить</a>
-  <a href="/keshbek/">Кешбэк</a>
-  <a href="/kupit-kriptu/">Купить крипту</a>
-  <a href="/birzha/">Биржа Bybit</a>
-  <a href="/bonusy/">Бонусный центр</a>
-  <a href="/faq/">FAQ</a>
-  <a href="/blog/">Блог</a>
-  <span class="mobile-section">Ещё</span>
-  <a href="/gde-prinimaetsya/">🌍 Где принимают</a>
-  <a href="/o-birzhe/">🏦 О бирже</a>
-  <a href="/instrumenty/">🔧 Инструменты</a>
-  <a href="/konverter/">📊 Конвертер крипты</a>
-  <a href="/bezopasnost/">🔐 Безопасность</a>
-  <a href="/prilozhenie/">📱 Приложение Bybit</a>
-  <a href="/o-nas/">🌐 О нас</a>
-  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844&group_id=1850234&group_type=1" target="_blank" rel="noopener sponsored">🔑 Войти</a>
-  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844&group_id=1850235&group_type=1" target="_blank" rel="noopener sponsored" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
-  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored" class="mobile-cta">💳 Получить карту →</a>
+  <a href="index.html">🏠 Главная</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">💳 Карта</div>
+  <a href="kak-poluchit.html">  Как получить</a>
+  <a href="kak-popolnit.html">  Как пополнить</a>
+  <a href="kak-platit.html">  Как платить</a>
+  <a href="komissii.html">  Комиссии</a>
+  <a href="limity.html">  Лимиты</a>
+  <a href="gde-prinimaetsya.html">  Где принимают</a>
+  <a href="keshbek.html">🎁 Кешбэк</a>
+  <a href="kupit-kriptu.html">💰 Купить крипту</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">🏦 Биржа</div>
+  <a href="birzha.html">  О бирже</a>
+  <a href="instrumenty.html">  Инструменты</a>
+  <a href="konverter.html">  Конвертер</a>
+  <a href="prilozhenie.html">📱 Приложение</a>
+  <a href="bonusy.html">🎁 Бонусы</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">📰 Блог</div>
+  <a href="novosti.html">  Новости</a>
+  <a href="stati.html">  Статьи</a>
+  <div style="padding:10px 16px;color:var(--yellow);font-size:.85rem;font-weight:600;border-bottom:1px solid var(--border);">❓ Поддержка</div>
+  <a href="faq.html">  FAQ</a>
+  <a href="bezopasnost.html">  Безопасность</a>
+  <a href="kontakty.html">  Контакты</a>
+  <a href="o-nas.html">🌐 О нас</a>
+  <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844" target="_blank">🔑 Войти</a>
+  <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" style="border-color:rgba(247,166,0,0.4);color:#F7A600;">📝 Регистрация</a>
+  <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844" target="_blank" class="mobile-cta">💳 Получить карту →</a>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-<div class="container">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-badge">🔥 Бонус до 5,100 USDT для новых пользователей</div>
-      <h1>
-        <span class="line1">Приложение <span class="accent">Bybit</span></span>
-        <span class="line2">торгуй криптовалютой везде</span>
-      </h1>
-      <p>Скачайте приложение и получите доступ к спотовой и маржинальной торговле, фьючерсам, Earn-продуктам и копи-трейдингу прямо с телефона.</p>
-      <div class="btn-group">
-        <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Скачать приложение →</a>
-        <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-secondary">Получить карту</a>
-      </div>
-    </div>
-    <div style="position:relative;text-align:center;">
-      <img src="/images/apps.png"
-           alt="Приложение Bybit — торговля криптовалютой на телефоне"
-           style="width:100%;max-width:560px;border-radius:24px;display:block;margin:0 auto;
-                  box-shadow:0 40px 80px rgba(0,0,0,0.5), 0 0 60px rgba(247,166,0,0.1);">
-      <div class="floating-elements">
-        <div class="float-card">
-          <div style="color:var(--green);font-weight:700;">+15.3%</div>
-          <div style="font-size:12px;color:var(--text2);">BTC за 24ч</div>
-        </div>
-        <div class="float-card">
-          <div style="color:var(--yellow);font-weight:700;">$2.4M</div>
-          <div style="font-size:12px;color:var(--text2);">Объём торгов</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="stats-grid">
-    <div>
-      <div class="stat-value">20M+</div>
-      <div class="stat-label">Пользователей по всему миру</div>
-    </div>
-    <div>
-      <div class="stat-value">$7B+</div>
-      <div class="stat-label">Суточный объём торгов</div>
-    </div>
-    <div>
-      <div class="stat-value">500+</div>
-      <div class="stat-label">Криптовалют</div>
-    </div>
-    <div>
-      <div class="stat-value">0.1%</div>
-      <div class="stat-label">Минимальная комиссия</div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
 <section class="section">
-<div class="container">
-  <div style="text-align:center;margin-bottom:48px;">
-    <h2 class="section-title">Всё для торговли в одном приложении</h2>
-    <p class="section-sub">Профессиональные инструменты, доступные каждому. Торгуйте, инвестируйте и зарабатывайте на крипте.</p>
-  </div>
-  <div class="cards">
-    <div class="card">
-      <div class="card-icon">📊</div>
-      <h3>Спот и Фьючерсы</h3>
-      <p>Торгуйте более чем 500 криптовалютами с кредитным плечом до 100x. Мгновенное исполнение ордеров и глубокая ликвидность.</p>
+  <div class="container">
+    <div class="section-header animate">
+      <div class="section-tag">Мобильный трейдинг</div>
+      <h1 class="section-title">Приложение Bybit</h1>
+      <p class="section-sub">Вся биржа и карта в вашем телефоне. Торгуйте, платите, зарабатывайте — где угодно.</p>
     </div>
-    <div class="card">
-      <div class="card-icon">🤖</div>
-      <h3>Торговые боты</h3>
-      <p>Автоматизируйте торговлю с помощью готовых стратегий. Спотовые и фьючерсные боты работают 24/7.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">💰</div>
-      <h3>Bybit Earn</h3>
-      <p>Пассивный доход с гибкими и фиксированными ставками. Доходность до 10% годовых на стейкинг.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">👥</div>
-      <h3>Копи-трейдинг</h3>
-      <p>Копируйте сделки топовых трейдеров в один клик. Следите за их стратегиями и дублируйте успех.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">💳</div>
-      <h3>Криптовалютная карта</h3>
-      <p>Оплачивайте покупки криптой повсюду. Кешбэк до 10% и мгновенные конвертации.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🛡️</div>
-      <h3>Максимальная безопасность</h3>
-      <p>Холодное хранение активов, 2FA, страховой фонд и лицензии в Европе и Азии.</p>
-    </div>
-  </div>
 
-  <div class="cta-block">
-    <h2>Скачайте приложение Bybit прямо сейчас</h2>
-    <p>Доступно для iPhone и Android. Более 50 миллионов загрузок.</p>
-    <a href="https://www.bybit.com/ru-RU/download?affiliate_id=158844&group_id=1850025&group_type=1" target="_blank" rel="noopener sponsored" class="btn btn-primary">Скачать бесплатно →</a>
+    <!-- Блок 1: Картинка слева → Текст справа -->
+    <div class="chess-row animate">
+      <div class="chess-image">
+        <img src="images/app1.jpg" alt="Мобильное приложение Bybit"/>
+      </div>
+      <div class="chess-text">
+        <h3>Всё в одном приложении</h3>
+        <p>Bybit объединил спотовую и фьючерсную торговлю, копитрейдинг, Bybit Card и кешбэк в одном приложении.</p>
+        <ul>
+          <li>800+ торговых пар</li>
+          <li>Bybit Card — виртуальная и физическая</li>
+          <li>Кешбэк до 10% в USDT</li>
+          <li>TradeGPT — AI-помощник</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Блок 2: Текст слева → Картинка справа (reverse) -->
+    <div class="chess-row reverse animate">
+      <div class="chess-text">
+        <h3>Удобство и безопасность</h3>
+        <p>Face ID, Touch ID, двухфакторная аутентификация — ваши средства под надёжной защитой.</p>
+        <ul>
+          <li>Вход по биометрии</li>
+          <li>Холодные кошельки для хранения</li>
+          <li>Push-уведомления о сделках</li>
+          <li>Страховой фонд 200M+ USDT</li>
+        </ul>
+      </div>
+      <div class="chess-image">
+        <img src="images/app2.jpg" alt="Безопасность приложения Bybit"/>
+      </div>
+    </div>
+
+    <!-- Блок 3: Картинка слева → Текст справа -->
+    <div class="chess-row animate">
+      <div class="chess-image">
+        <img src="images/app3.jpg" alt="Bybit Card в приложении"/>
+      </div>
+      <div class="chess-text">
+        <h3>Bybit Card в телефоне</h3>
+        <p>Управляйте картой прямо из приложения: блокируйте, меняйте лимиты, отслеживайте кешбэк.</p>
+        <ul>
+          <li>Виртуальная карта — мгновенно</li>
+          <li>Привязка к Google Pay / Apple Pay</li>
+          <li>Просмотр транзакций и кешбэка</li>
+          <li>Пополнение карты в один клик</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Кнопки скачивания -->
+    <div class="download-buttons animate">
+      <a href="https://apps.apple.com/app/bybit/id1488296980" target="_blank" class="download-btn">
+        <span>🍎</span>
+        <div>
+          <div class="small">Скачать в</div>
+          <div class="big">App Store</div>
+        </div>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.bybit.app" target="_blank" class="download-btn">
+        <span>🤖</span>
+        <div>
+          <div class="small">Скачать в</div>
+          <div class="big">Google Play</div>
+        </div>
+      </a>
+      <a href="https://www.bybit.com/ru-RU/" target="_blank" class="download-btn">
+        <span>💻</span>
+        <div>
+          <div class="small">Веб-версия</div>
+          <div class="big">Bybit Web</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Преимущества приложения с картинками -->
+    <div class="features-grid animate">
+      <div class="feature-card">
+        <img src="images/feat-term.jpg" alt="Торговый терминал" class="feature-img"/>
+        <h3>Полноценный терминал</h3>
+        <p>Все типы ордеров, индикаторы TradingView, свечные графики.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/feat-gpt.jpg" alt="TradeGPT AI" class="feature-img"/>
+        <h3>TradeGPT AI</h3>
+        <p>Аналитика рынка, сигналы и торговые идеи от искусственного интеллекта.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/feat-copy.jpg" alt="Копитрейдинг" class="feature-img"/>
+        <h3>Копитрейдинг</h3>
+        <p>Копируйте сделки лучших трейдеров автоматически.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/feat-buy.jpg" alt="Быстрая покупка крипты" class="feature-img"/>
+        <h3>Быстрая покупка крипты</h3>
+        <p>Покупайте USDT, BTC за фиат через P2P или карту.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/feat-alerts.jpg" alt="Умные уведомления" class="feature-img"/>
+        <h3>Умные уведомления</h3>
+        <p>Сигналы о ценах, исполнении ордеров, новостях рынка.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/feat-earn.jpg" alt="Earn пассивный доход" class="feature-img"/>
+        <h3>Earn — пассивный доход</h3>
+        <p>Зарабатывайте на стейкинге и DeFi без лишних действий.</p>
+      </div>
+    </div>
+
+    <div class="info-block animate">
+      <h3>📌 Системные требования</h3>
+      <ul>
+        <li><strong>iOS:</strong> 13.0 или новее — iPhone, iPad, iPod touch</li>
+        <li><strong>Android:</strong> 8.0 или новее — телефоны, планшеты</li>
+        <li><strong>Веб-версия:</strong> Chrome, Firefox, Safari, Edge (последние версии)</li>
+        <li><strong>Языки:</strong> русский, английский, китайский, корейский, японский и другие</li>
+      </ul>
+    </div>
+
   </div>
-</div>
 </section>
 
-<!-- FOOTER -->
+<section style="padding:0 0 80px;">
+  <div class="container">
+    <div class="cta-banner animate">
+      <h2>Скачайте приложение Bybit</h2>
+      <p>Торгуйте, получайте кешбэк и управляйте картой с телефона.</p>
+      <div class="cta-btns">
+        <a href="https://apps.apple.com/app/bybit/id1488296980" target="_blank" class="btn btn-primary">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bybit.app" target="_blank" class="btn btn-primary">🤖 Google Play</a>
+        <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="btn btn-secondary">📝 Регистрация</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
-
-    <div class="footer-brand">
-      <div class="footer-logo">Crypto<span>Card</span>Pro</div>
-      <p class="footer-desc">Независимый информационный сайт о криптовалютной карте Bybit. Не является официальным ресурсом Bybit.</p>
-      <p class="disclaimer" style="margin-top:12px;">⚠️ Партнёрский сайт. Ссылки содержат реферальные коды. Криптовалюта — рисковый актив.</p>
+    <div class="footer-logo">
+      <img src="https://cryptocardpro.com/images/Oregina-Logo.png" alt="CryptoCardPro"/>
     </div>
-
-    <div class="footer-col">
-      <h4>Карта Bybit</h4>
-      <a href="/kak-poluchit/">Как получить</a>
-      <a href="/keshbek/">Кешбэк</a>
-      <a href="/gde-prinimaetsya/">Где принимают</a>
-      <a href="/bonusy/">Бонусный центр</a>
-      <a href="/bezopasnost/">Безопасность</a>
+    <div class="footer-links">
+      <a href="index.html">Главная</a>
+      <a href="kak-poluchit.html">Карта</a>
+      <a href="keshbek.html">Кешбэк</a>
+      <a href="kupit-kriptu.html">Купить крипту</a>
+      <a href="birzha.html">Биржа</a>
+      <a href="prilozhenie.html">Приложение</a>
+      <a href="bonusy.html">Бонусы</a>
+      <a href="novosti.html">Блог</a>
+      <a href="faq.html">FAQ</a>
+      <a href="kontakty.html">Поддержка</a>
     </div>
-
-    <div class="footer-col">
-      <h4>О сайте</h4>
-      <a href="/">Главная</a>
-      <a href="/blog/">Блог</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-nas/">О нас</a>
-      <a href="/prilozhenie/">Приложение</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Bybit</h4>
-      <a href="/birzha/">Биржа Bybit</a>
-      <a href="/o-birzhe/">О бирже</a>
-      <a href="/konverter/">Конвертер крипты</a>
-      <a href="/instrumenty/">Инструменты</a>
-      <a href="/kupit-kriptu/">Купить крипту</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Помощь</h4>
-      <a href="https://www.bybit.com/ru-RU/help-center/?affiliate_id=158844&group_id=1850232&group_type=1" target="_blank" rel="noopener sponsored">📖 Руководство</a>
-      <a href="https://www.bybit.com/ru-RU/help-center/case-list?affiliate_id=158844&group_id=1850233&group_type=1" target="_blank" rel="noopener sponsored">🎧 Центр поддержки</a>
-      <a href="https://www.bybit.com/ru-RU/user-feedback?affiliate_id=158844&group_id=1850231&group_type=1" target="_blank" rel="noopener sponsored">💬 Обратная связь</a>
-      <a href="https://www.bybit.com/ru-RU/cards/?affiliate_id=158844&group_id=1847429&group_type=1" target="_blank" rel="noopener sponsored">💳 Получить карту</a>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 CryptoCardPro — Информационный ресурс</span>
-    <span>Не является финансовой консультацией</span>
+    <p class="footer-copy">© 2025–2026 CryptoCardPro — партнёрский сайт Bybit. Не является финансовой консультацией.</p>
   </div>
 </footer>
 
 <script>
-(function(){
-  var more=document.getElementById('navMore');
-  var drop=document.getElementById('navDropdown');
-  if(more&&drop){
-    var t;
-    more.addEventListener('mouseenter',function(){clearTimeout(t);drop.style.display='flex';drop.style.flexDirection='column';});
-    more.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
-    drop.addEventListener('mouseenter',function(){clearTimeout(t);});
-    drop.addEventListener('mouseleave',function(){t=setTimeout(function(){drop.style.display='none';},400);});
-  }
-  var b=document.getElementById('navBurger');
-  var m=document.getElementById('mobileMenu');
-  if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';});}
-})();
+(function(){var b=document.getElementById('navBurger');var m=document.getElementById('mobileMenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');b.textContent=m.classList.contains('open')?'✕':'☰';document.body.style.overflow=m.classList.contains('open')?'hidden':'';});m.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){m.classList.remove('open');b.textContent='☰';document.body.style.overflow='';});});}})();
+(function(){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.animate').forEach(function(el){observer.observe(el);});})();
 </script>
-</body>
-</html>
 
+</body></html>
