@@ -13,6 +13,7 @@
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
 .animate{opacity:0;transform:translateY(30px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1);}
 .animate.visible{opacity:1;transform:translateY(0);}
+@media(max-width:640px){.hide-mobile{display:none!important;}}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(11,14,17,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;}
@@ -240,7 +241,7 @@ footer{padding:40px 24px 24px;}
   </div>
   <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
     <a href="https://www.bybit.com/ru-RU/login/?affiliate_id=158844" target="_blank" class="nav-login">Войти</a>
-    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="nav-cta">Регистрация →</a>
+    <a href="https://www.bybit.com/ru-RU/register/?affiliate_id=158844" target="_blank" class="nav-cta hide-mobile">Регистрация →</a>
   </div>
   <button class="nav-burger" id="navBurger">☰</button>
 </nav>
@@ -294,7 +295,9 @@ footer{padding:40px 24px 24px;}
       <p style="color:var(--text3);font-size:0.75rem;margin-top:12px;">* Где принимают <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp" alt="Mastercard" style="height:1.1em;width:auto;display:inline-block;vertical-align:text-bottom;margin:0 2px;"> Mastercard. Выпуск доступен в выбранных регионах.</p>
     </div>
     <div class="hero-card-wrap">
-      <img src="https://raw.githubusercontent.com/essem39/cryptocardpro/main/images/Mastercard.webp" alt="Bybit Card Mastercard" class="hero-card">
+      <video autoplay muted loop playsinline class="hero-card">
+        <source src="images/full-body-shot-of-the-woman-from-the-original-imag.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
