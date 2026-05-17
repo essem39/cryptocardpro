@@ -361,4 +361,5 @@ var faqItems=document.querySelectorAll('.faq-item');
 categoryBtns.forEach(function(btn){btn.addEventListener('click',function(){var cat=this.dataset.cat;categoryBtns.forEach(function(b){b.classList.remove('active');});this.classList.add('active');faqItems.forEach(function(item){if(cat==='all'||item.dataset.cat===cat){item.style.display='block';}else{item.style.display='none';}});});});
 </script>
 
+<script src="/cryptocardpro-widget.js"></script>
 </body></html>
