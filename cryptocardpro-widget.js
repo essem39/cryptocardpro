@@ -38,7 +38,7 @@
     #cc-btn:hover { transform: scale(1.1); }
     #cc-chat {
       position: fixed; bottom: 100px; right: 24px; z-index: 9999;
-      width: 370px; height: 680px;
+      width: 380px; height: 750px;
       background: #0f172a; border-radius: 20px;
       box-shadow: 0 8px 48px rgba(0,0,0,0.6);
       display: none; flex-direction: column; overflow: hidden;
